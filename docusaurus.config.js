@@ -5,13 +5,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Meta-System',
   tagline: 'A system to be any system',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://mapikit.github.io',
+  baseUrl: '/meta-system-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'mapikit', // Usually your GitHub org/user name.
-  projectName: 'meta-system', // Usually your repo name.
+  projectName: 'meta-system-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Meta-System',
@@ -36,15 +36,6 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
         {
           title: 'More',
           items: [
