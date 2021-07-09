@@ -17,8 +17,8 @@
   --ifm-code-font-size: 95%;
   --ifm-color-black: #000000;
   --ifm-color-white: #ffffff;
-  --ifm-color-secondary: #ebedf0;
-  --ifm-color-secondary-dark: rgb(212, 213, 216);
+  --ifm-color-secondary: #3cf691ff;
+  --ifm-color-secondary-dark: rgb(34, 180, 100);
   --ifm-color-secondary-darker: rgb(200, 201, 204);
   --ifm-color-secondary-darkest: rgb(164, 166, 168);
   --ifm-color-secondary-light: rgb(238, 240, 242);
@@ -58,7 +58,7 @@
   --ifm-footer-background-color: #171730ff !important;
   --ifm-color-content: #ff00dd; /*??*/
   --ifm-color-content-inverse: #ff00dd; /*??*/
-  --ifm-color-content-secondary: #000000; /* next page button name */
+  --ifm-color-content-secondary: rgb(104, 104, 133); /* next page button name */
   --ifm-color-emphasis-100: #ff00dd;
   --ifm-color-emphasis-200: #ff00dd;
   --ifm-color-emphasis-300: #37375bff; /* comment block */
@@ -74,8 +74,8 @@
   --ifm-hero-text-color: #ff00dd;
   --ifm-footer-link-color: #54dcf2;
   --ifm-menu-color: rgb(70, 70, 90); /* sidebar navigation inactive */ 
-  --ifm-blockquote-color:rgb(70, 70, 90); /*comment block sidediv*/
-  --ifm-code-background: rgba(255, 255, 255, 0.199);
+  --ifm-blockquote-color:rgb(104, 104, 133); /*comment block sidediv*/
+  --ifm-code-background: rgba(185, 185, 206, 0.192);
 }
 
 .hero--primary {
