@@ -13,6 +13,10 @@ module.exports = {
   organizationName: 'mapikit', // Usually your GitHub org/user name.
   projectName: 'meta-system-docs', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true
+    },
     navbar: {
       title: 'Meta-System',
       logo: {
@@ -34,7 +38,6 @@ module.exports = {
       ],
     },
     footer: {
-      style: 'dark',
       links: [
         {
           title: 'More',
@@ -49,7 +52,7 @@ module.exports = {
       copyright: `Meta-System was built by Mapikit and follows the GPL-3.0 License. Documentation page built with Docusaurus.`,
     },
     prism: {
-      theme: lightCodeTheme,
+      theme: darkCodeTheme,
       darkTheme: darkCodeTheme,
     },
   },

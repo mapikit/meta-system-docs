@@ -7,15 +7,81 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: #3cf691ff;
   --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darker: rgb(82, 148, 112);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
   --ifm-color-primary-light: rgb(70, 203, 174);
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --ifm-color-black: #000000;
+  --ifm-color-white: #ffffff;
+  --ifm-color-secondary: #ebedf0;
+  --ifm-color-secondary-dark: rgb(212, 213, 216);
+  --ifm-color-secondary-darker: rgb(200, 201, 204);
+  --ifm-color-secondary-darkest: rgb(164, 166, 168);
+  --ifm-color-secondary-light: rgb(238, 240, 242);
+  --ifm-color-secondary-lighter: rgb(241, 242, 245);
+  --ifm-color-secondary-lightest: rgb(245, 246, 248);
+  --ifm-color-success: #00a400;
+  --ifm-color-success-dark: rgb(0, 148, 0);
+  --ifm-color-success-darker: rgb(0, 139, 0);
+  --ifm-color-success-darkest: rgb(0, 115, 0);
+  --ifm-color-success-light: rgb(38, 178, 38);
+  --ifm-color-success-lighter: rgb(77, 191, 77);
+  --ifm-color-success-lightest: rgb(128, 210, 128);
+  --ifm-color-info: #54c7ec;
+  --ifm-color-info-dark: rgb(76, 179, 212);
+  --ifm-color-info-darker: rgb(71, 169, 201);
+  --ifm-color-info-darkest: rgb(59, 139, 165);
+  --ifm-color-info-light: rgb(110, 207, 239);
+  --ifm-color-info-lighter: rgb(135, 216, 242);
+  --ifm-color-info-lightest: rgb(170, 227, 246);
+  --ifm-color-warning: #ffaf35ff;
+  --ifm-color-warning-dark: rgb(230, 167, 0);
+  --ifm-color-warning-darker: rgb(217, 158, 0);
+  --ifm-color-warning-darkest: rgb(179, 130, 0);
+  --ifm-color-warning-light: rgb(255, 196, 38);
+  --ifm-color-warning-lighter: rgb(255, 207, 77);
+  --ifm-color-warning-lightest: rgb(255, 221, 128);
+  --ifm-color-danger: #df263aff;
+  --ifm-color-danger-dark: rgb(225, 50, 56);
+  --ifm-color-danger-darker: rgb(213, 48, 53);
+  --ifm-color-danger-darkest: rgb(175, 39, 43);
+  --ifm-color-danger-light: rgb(251, 86, 91);
+  --ifm-color-danger-lighter: rgb(251, 116, 120);
+  --ifm-color-danger-lightest: rgb(253, 156, 159);
+  --ifm-background-color: #101023ff;
+  --ifm-background-surface-color: #171730ff; /*Header*/
+  --ifm-button-background-color: #ca15ca;
+  --ifm-footer-background-color: #171730ff !important;
+  --ifm-color-content: #ff00dd; /*??*/
+  --ifm-color-content-inverse: #ff00dd; /*??*/
+  --ifm-color-content-secondary: #000000; /* next page button name */
+  --ifm-color-emphasis-100: #ff00dd;
+  --ifm-color-emphasis-200: #ff00dd;
+  --ifm-color-emphasis-300: #37375bff; /* comment block */
+  --ifm-color-emphasis-400: #ff00dd;
+  --ifm-color-emphasis-600: #ff00dd;
+  --ifm-color-emphasis-900: #ff00dd;
+  --ifm-font-color-base: #ffffff;
+  --ifm-font-color-base-inverse: #ffffff; /* Page Title */
+  --ifm-font-color-secondary: #ff00dd;
+  --ifm-toc-border-color: rgb(70, 70, 90); /* Sidebar line */
+  --ifm-toc-link-color: rgb(70, 70, 90); /* Page Anchor right sidebar inactive */
+  --ifm-tabs-color-active: #ff00dd;
+  --ifm-hero-text-color: #ff00dd;
+  --ifm-footer-link-color: #54dcf2;
+  --ifm-menu-color: rgb(70, 70, 90); /* sidebar navigation inactive */ 
+  --ifm-blockquote-color:rgb(70, 70, 90); /*comment block sidediv*/
+  --ifm-code-background: rgba(255, 255, 255, 0.199);
 }
+
+.hero--primary {
+  background-color: #171730ff;
+}
+
 z
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
