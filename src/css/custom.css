@@ -76,10 +76,22 @@
   --ifm-menu-color: rgb(70, 70, 90); /* sidebar navigation inactive */ 
   --ifm-blockquote-color:rgb(104, 104, 133); /*comment block sidediv*/
   --ifm-code-background: rgba(185, 185, 206, 0.192);
+  --ifm-menu-color-background-active: rgba(185, 185, 206, 0.116);
+  --ifm-menu-color-background-hover: rgba(185, 185, 206, 0.068);
+  --ifm-menu-link-sublist-icon: url(/static/img/arrow.svg);
 }
 
 .hero--primary {
   background-color: #171730ff;
+}
+
+.menu__link--sublist:after {
+  background-repeat: no-repeat;
+  background: var(--ifm-menu-link-sublist-icon) 50% / 2rem 2rem;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: var(--ifm-menu-color-background-active);
 }
 
 z
@@ -91,5 +103,5 @@ z
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
