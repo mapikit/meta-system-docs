@@ -78,7 +78,6 @@
   --ifm-code-background: rgba(185, 185, 206, 0.192) !important;
   --ifm-menu-color-background-active: rgba(185, 185, 206, 0.116) !important;
   --ifm-menu-color-background-hover: rgba(185, 185, 206, 0.068) !important;
-  --ifm-menu-link-sublist-icon: url(/static/img/arrow.svg) !important;
 }
 
 .hero--primary {
@@ -87,7 +86,7 @@
 
 .menu__link--sublist:after {
   background-repeat: no-repeat;
-  background: var(--ifm-menu-link-sublist-icon) 50% / 2rem 2rem;
+  background: url(/static/img/arrow.svg) 50% / 2rem 2rem !important;
 }
 
 .menu__link--active:not(.menu__link--sublist) {
