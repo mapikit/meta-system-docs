@@ -7,78 +7,78 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #3cf691ff;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(82, 148, 112);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
-  --ifm-color-black: #000000;
-  --ifm-color-white: #ffffff;
-  --ifm-color-secondary: #3cf691ff;
-  --ifm-color-secondary-dark: rgb(34, 180, 100);
-  --ifm-color-secondary-darker: rgb(200, 201, 204);
-  --ifm-color-secondary-darkest: rgb(164, 166, 168);
-  --ifm-color-secondary-light: rgb(238, 240, 242);
-  --ifm-color-secondary-lighter: rgb(241, 242, 245);
-  --ifm-color-secondary-lightest: rgb(245, 246, 248);
-  --ifm-color-success: #00a400;
-  --ifm-color-success-dark: rgb(0, 148, 0);
-  --ifm-color-success-darker: rgb(0, 139, 0);
-  --ifm-color-success-darkest: rgb(0, 115, 0);
-  --ifm-color-success-light: rgb(38, 178, 38);
-  --ifm-color-success-lighter: rgb(77, 191, 77);
-  --ifm-color-success-lightest: rgb(128, 210, 128);
-  --ifm-color-info: #54c7ec;
-  --ifm-color-info-dark: rgb(76, 179, 212);
-  --ifm-color-info-darker: rgb(71, 169, 201);
-  --ifm-color-info-darkest: rgb(59, 139, 165);
-  --ifm-color-info-light: rgb(110, 207, 239);
-  --ifm-color-info-lighter: rgb(135, 216, 242);
-  --ifm-color-info-lightest: rgb(170, 227, 246);
-  --ifm-color-warning: #ffaf35ff;
-  --ifm-color-warning-dark: rgb(230, 167, 0);
-  --ifm-color-warning-darker: rgb(217, 158, 0);
-  --ifm-color-warning-darkest: rgb(179, 130, 0);
-  --ifm-color-warning-light: rgb(255, 196, 38);
-  --ifm-color-warning-lighter: rgb(255, 207, 77);
-  --ifm-color-warning-lightest: rgb(255, 221, 128);
-  --ifm-color-danger: #df263aff;
-  --ifm-color-danger-dark: rgb(225, 50, 56);
-  --ifm-color-danger-darker: rgb(213, 48, 53);
-  --ifm-color-danger-darkest: rgb(175, 39, 43);
-  --ifm-color-danger-light: rgb(251, 86, 91);
-  --ifm-color-danger-lighter: rgb(251, 116, 120);
-  --ifm-color-danger-lightest: rgb(253, 156, 159);
-  --ifm-background-color: #101023ff;
-  --ifm-background-surface-color: #171730ff; /*Header*/
-  --ifm-button-background-color: #ca15ca;
+  --ifm-color-primary: #3cf691ff !important;
+  --ifm-color-primary-dark: rgb(33, 175, 144) !important;
+  --ifm-color-primary-darker: rgb(82, 148, 112) !important;
+  --ifm-color-primary-darkest: rgb(26, 136, 112) !important;
+  --ifm-color-primary-light: rgb(70, 203, 174) !important;
+  --ifm-color-primary-lighter: rgb(102, 212, 189) !important;
+  --ifm-color-primary-lightest: rgb(146, 224, 208) !important;
+  --ifm-code-font-size: 95% !important;
+  --ifm-color-black: #000000 !important;
+  --ifm-color-white: #ffffff !important;
+  --ifm-color-secondary: #3cf691ff !important;
+  --ifm-color-secondary-dark: rgb(34, 180, 100) !important;
+  --ifm-color-secondary-darker: rgb(200, 201, 204) !important;
+  --ifm-color-secondary-darkest: rgb(164, 166, 168) !important;
+  --ifm-color-secondary-light: rgb(238, 240, 242) !important;
+  --ifm-color-secondary-lighter: rgb(241, 242, 245) !important;
+  --ifm-color-secondary-lightest: rgb(245, 246, 248) !important;
+  --ifm-color-success: #00a400 !important;
+  --ifm-color-success-dark: rgb(0, 148, 0) !important;
+  --ifm-color-success-darker: rgb(0, 139, 0) !important;
+  --ifm-color-success-darkest: rgb(0, 115, 0) !important;
+  --ifm-color-success-light: rgb(38, 178, 38) !important;
+  --ifm-color-success-lighter: rgb(77, 191, 77) !important;
+  --ifm-color-success-lightest: rgb(128, 210, 128) !important;
+  --ifm-color-info: #54c7ec !important;
+  --ifm-color-info-dark: rgb(76, 179, 212) !important;
+  --ifm-color-info-darker: rgb(71, 169, 201) !important;
+  --ifm-color-info-darkest: rgb(59, 139, 165) !important;
+  --ifm-color-info-light: rgb(110, 207, 239) !important;
+  --ifm-color-info-lighter: rgb(135, 216, 242) !important;
+  --ifm-color-info-lightest: rgb(170, 227, 246) !important;
+  --ifm-color-warning: #ffaf35ff !important;
+  --ifm-color-warning-dark: rgb(230, 167, 0) !important;
+  --ifm-color-warning-darker: rgb(217, 158, 0) !important;
+  --ifm-color-warning-darkest: rgb(179, 130, 0) !important;
+  --ifm-color-warning-light: rgb(255, 196, 38) !important;
+  --ifm-color-warning-lighter: rgb(255, 207, 77) !important;
+  --ifm-color-warning-lightest: rgb(255, 221, 128) !important;
+  --ifm-color-danger: #df263aff !important;
+  --ifm-color-danger-dark: rgb(225, 50, 56) !important;
+  --ifm-color-danger-darker: rgb(213, 48, 53) !important;
+  --ifm-color-danger-darkest: rgb(175, 39, 43) !important;
+  --ifm-color-danger-light: rgb(251, 86, 91) !important;
+  --ifm-color-danger-lighter: rgb(251, 116, 120) !important;
+  --ifm-color-danger-lightest: rgb(253, 156, 159) !important;
+  --ifm-background-color: #101023ff !important;
+  --ifm-background-surface-color: #171730ff !important; /*Header*/
+  --ifm-button-background-color: #ca15ca !important;
   --ifm-footer-background-color: #171730ff !important;
-  --ifm-color-content: #ff00dd; /*??*/
-  --ifm-color-content-inverse: #ff00dd; /*??*/
-  --ifm-color-content-secondary: rgb(104, 104, 133); /* next page button name */
-  --ifm-color-emphasis-100: #ff00dd;
-  --ifm-color-emphasis-200: #ff00dd;
-  --ifm-color-emphasis-300: #37375bff; /* comment block */
-  --ifm-color-emphasis-400: #ff00dd;
-  --ifm-color-emphasis-600: #ff00dd;
-  --ifm-color-emphasis-900: #ff00dd;
-  --ifm-font-color-base: #ffffff;
-  --ifm-font-color-base-inverse: #ffffff; /* Page Title */
-  --ifm-font-color-secondary: #ff00dd;
-  --ifm-toc-border-color: rgb(70, 70, 90); /* Sidebar line */
-  --ifm-toc-link-color: rgb(70, 70, 90); /* Page Anchor right sidebar inactive */
-  --ifm-tabs-color-active: #ff00dd;
-  --ifm-hero-text-color: #ff00dd;
-  --ifm-footer-link-color: #54dcf2;
-  --ifm-menu-color: rgb(70, 70, 90); /* sidebar navigation inactive */ 
-  --ifm-blockquote-color:rgb(104, 104, 133); /*comment block sidediv*/
-  --ifm-code-background: rgba(185, 185, 206, 0.192);
-  --ifm-menu-color-background-active: rgba(185, 185, 206, 0.116);
-  --ifm-menu-color-background-hover: rgba(185, 185, 206, 0.068);
-  --ifm-menu-link-sublist-icon: url(/static/img/arrow.svg);
+  --ifm-color-content: #ff00dd !important; /*??*/
+  --ifm-color-content-inverse: #ff00dd !important; /*??*/
+  --ifm-color-content-secondary: rgb(104, 104, 133) !important; /* next page button name */
+  --ifm-color-emphasis-100: #ff00dd !important;
+  --ifm-color-emphasis-200: #ff00dd !important;
+  --ifm-color-emphasis-300: #37375bff !important; /* comment block */
+  --ifm-color-emphasis-400: #ff00dd !important;
+  --ifm-color-emphasis-600: #ff00dd !important;
+  --ifm-color-emphasis-900: #ff00dd !important;
+  --ifm-font-color-base: #ffffff !important;
+  --ifm-font-color-base-inverse: #ffffff !important; /* Page Title */
+  --ifm-font-color-secondary: #ff00dd !important;
+  --ifm-toc-border-color: rgb(70, 70, 90) !important; /* Sidebar line */
+  --ifm-toc-link-color: rgb(70, 70, 90) !important; /* Page Anchor right sidebar inactive */
+  --ifm-tabs-color-active: #ff00dd !important;
+  --ifm-hero-text-color: #ff00dd !important;
+  --ifm-footer-link-color: #54dcf2 !important;
+  --ifm-menu-color: rgb(70, 70, 90) !important; /* sidebar navigation inactive */ 
+  --ifm-blockquote-color:rgb(104, 104, 133) !important; /*comment block sidediv*/
+  --ifm-code-background: rgba(185, 185, 206, 0.192) !important;
+  --ifm-menu-color-background-active: rgba(185, 185, 206, 0.116) !important;
+  --ifm-menu-color-background-hover: rgba(185, 185, 206, 0.068) !important;
+  --ifm-menu-link-sublist-icon: url(/static/img/arrow.svg) !important;
 }
 
 .hero--primary {
