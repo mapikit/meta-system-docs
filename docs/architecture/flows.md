@@ -12,7 +12,7 @@ The Meta-System provides a framework for planning your flows and reusing common 
 Those operations are composed of small steps called "modules" or "BOps Functions". By chaining them together we can build any functionality a system may perform.
 
 :::warning Glossary Disambiguation
-By saying **BOps**, we're refferring to the flows. By saying **module** or **BOps Function**, we are talking about each of the said "steps" of a BOps function. Finally, **BOps Engine** is the engine responsible for "compiling" your configuration, *[see below](./flows#bops-engine-using-declared-bops)*.
+By saying **BOps**, we're refferring to the flows. By saying **module** or **BOps Function**, we are talking about each of the said "steps" of a BOps function. Finally, **BOps Engine** is the engine responsible for "compiling" your configuration, *[see below](#bops-engine-using-declared-bops)*.
 :::
 
 ## Declaring BOps
