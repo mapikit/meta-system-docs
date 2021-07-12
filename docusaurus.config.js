@@ -21,7 +21,7 @@ module.exports = {
       title: 'Meta-System',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo_metasystem.svg',
       },
       items: [
         {
