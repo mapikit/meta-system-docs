@@ -87,6 +87,7 @@
 .menu__link--sublist:after {
   background-repeat: no-repeat;
   background: url(/static/img/arrow.svg) 50% / 2rem 2rem !important;
+  filter: none !important;
 }
 
 .menu__link--active:not(.menu__link--sublist) {
