@@ -13,7 +13,7 @@ So, in order to answer most of those questions, let's begin with the famous thre
  
 The idea behind the Meta-System is to simplify the creation and maintenance of simple as well complex systems; from a simple local supermarket backend server to a full blown multinational marketplace. If you are a solitary developer, with low programming knowledge who wants to create an app, meta-system might help you! However, if you represent an already large company which is currently looking to reduce the costs of maintaining a server running properly, well, then Meta-System is also for you and your team!
  
-The idea behind it is to be simple, capable and `extensible`(Link to Meta-Function). Just give the Meta System a configuration file as seen here and watch as it builds http routes, databases, functions and *voilà!* your system should be up and running!
+The idea behind it is to be simple, capable and [extensible](./architecture/extending-functionality.md). Just give the Meta System a configuration file as seen here and watch as it builds http routes, databases, functions and *voilà!* your system should be up and running!
  
 ----
 ## Download & Execution
