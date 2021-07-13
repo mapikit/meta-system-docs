@@ -20,7 +20,7 @@ The idea behind it is to be simple, capable and [extensible](./architecture/exte
 So, now you know what it is, what it does and the basics of configuring your system. But how and where do you start?
  
 ### First Steps
-The Meta-System can be downloaded through [NPM](https://www.npmjs.com/). If you have node installed you probably already have npm and it is a matter of installing with the command
+The Meta-System can be downloaded through [NPM](https://www.npmjs.com/package/meta-system). If you have node installed you probably already have npm and it is a matter of installing with the command
 `npm install -g meta-system`
 > Note: If you don't have node and/or npm installed more info on those can be found [here](https://nodejs.org/en/)
  
