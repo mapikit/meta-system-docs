@@ -47,4 +47,4 @@ Furthermore, the BOps Engine takes care of transforming the Functions List in th
 
 ### Runtime details
 
-In order to avoid a single module being executed multiple times din a case where it is a dependency for multiple other functions, Meta-System caches the result of each function. In other words: A function is only executed once, given if that it is a same key being required twice.
+In order to avoid a single module being executed multiple times in a case where it is a dependency for multiple other functions, Meta-System caches the result of each function. In other words: A function is only executed once, given if that it is a same key being required twice.
