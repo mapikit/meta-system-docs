@@ -1,0 +1,76 @@
+{
+  "name": "ExampleSystem",
+  "version": "0.1.0",
+  "envs": [],
+  "schemas": [],
+  "dbConnectionString": "",
+  "businessOperations": [
+    {
+      "name": "sayHello",
+      "version": "0.1.0",
+      "description": "Greets the name given",
+      "customObjects": [],
+      "input" : {
+        "name": { "type": "string" }
+      },
+      "output" : {
+        "greet": { "type": "string" }
+      },
+      "constants": [
+        { "name": "helloString", "type": "string", "value": "Hello" },
+        { "name": "exclamationMark", "type": "string", "value": "!" },
+        { "name": "space", "type": "string", "value": " " }
+      ],
+      "variables": [],
+      "configuration": [
+        {
+          "moduleRepo": "#push",
+          "key": 3,
+          "dependencies": [
+            { "origin": "constants", "originPath": "helloString", "targetPath": "newItems.hello" },
+            { "origin": "inputs",  "originPath": "name", "targetPath": "newItems.name" },
+            { "origin": "constants",  "originPath": "exclamationMark", "targetPath": "newItems.mark" }
+          ]
+        },
+        {
+          "moduleRepo": "#join",
+          "key": 2,
+          "dependencies": [
+            { "origin": 3, "originPath": "result.result", "targetPath": "array" },
+            { "origin": "constants", "originPath": "space", "targetPath": "separator" }
+          ]
+        },
+        {
+          "moduleRepo": "%output",
+          "key": 1,
+          "dependencies": [
+            { "origin": 2, "originPath": "result.result", "targetPath": "greet" }
+          ]
+        }
+      ]
+    }
+  ],
+  "protocols": [
+    {
+      "protocolType": "HTTP_JSONBODY",
+      "configuration": {
+        "port": 8080,
+        "routes": [
+          {
+            "route": "/myFirstSystem/:hello",
+            "businessOperation": "sayHello",
+            "method": "GET",
+            "inputMapConfiguration": [
+              { "origin": "route", "originPath": "hello", "targetPath": "name" }
+            ],
+            "resultMapConfiguration": {
+              "body": { "result": "greet" },
+              "headers": [],
+              "statusCode": 200
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
