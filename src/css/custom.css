@@ -59,7 +59,7 @@
   --ifm-color-content: #ff00dd !important; /*??*/
   --ifm-color-content-inverse: #ff00dd !important; /*??*/
   --ifm-color-content-secondary: rgb(104, 104, 133) !important; /* next page button name */
-  --ifm-color-emphasis-100: #ff00dd !important;
+  --ifm-color-emphasis-100: #00000000 !important; /* Table cell BG */
   --ifm-color-emphasis-200: #ff00dd !important;
   --ifm-color-emphasis-300: #37375bff !important; /* comment block */
   --ifm-color-emphasis-400: #54dcf2 !important;
