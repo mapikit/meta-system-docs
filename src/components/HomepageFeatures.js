@@ -2,44 +2,34 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 
+const defaultImage = '/static/img/logo_metasystem.svg';
+
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Built-In Boilerplate',
+    Img: '/static/img/features/TRANSPARENT_Built_in_BoilerPlate_trait_illust.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Start creating your system without wasting any time with configuring projects, libraries, and environments!
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Purpose Driven',
+    Img: '/static/img/features/TRANSPARENT_Purpose_Driven_trait_illust.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we'll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        With Meta-System you don't need to fight with the code, just develop your system guided by the problems you want to solve!
       </>
     ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
+  }
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Img, title, description}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--6')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
+        <img className={styles.featureSvg} alt={title} src={Img}/>
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

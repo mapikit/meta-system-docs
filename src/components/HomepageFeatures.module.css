@@ -8,6 +8,14 @@
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  width: 300px;
+  min-width: 250px;
+  min-height: 250px;
+  object-fit: contain;
+}
+
+.wipWarning {
+  text-align: center;
+  padding: 0.4rem;
+  background-color: var(--ifm-color-warning-darkest);
 }

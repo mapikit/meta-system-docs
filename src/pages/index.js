@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import WipWarning from '../components/WipPageWarning';
 const SVGLogo = require('../../static/img/logo_metasystem.svg').default;
 
 function HomepageHeader() {
@@ -13,7 +14,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <SVGLogo />
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <h1 className={"hero__title " + styles.title}>{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
@@ -33,6 +34,7 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="A system to be any system">
+      <WipWarning />
       <HomepageHeader />
       <main>
         <HomepageFeatures />
