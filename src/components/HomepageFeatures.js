@@ -2,12 +2,12 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 
-const defaultImage = '/static/img/logo_metasystem.svg';
+const defaultImage = 'img/logo_metasystem.svg';
 
 const FeatureList = [
   {
     title: 'Built-In Boilerplate',
-    Img: '/static/img/features/TRANSPARENT_Built_in_BoilerPlate_trait_illust.png',
+    Img: 'img/features/TRANSPARENT_Built_in_BoilerPlate_trait_illust.png',
     description: (
       <>
         Start creating your system without wasting any time with configuring projects, libraries, and environments!
@@ -16,7 +16,7 @@ const FeatureList = [
   },
   {
     title: 'Purpose Driven',
-    Img: '/static/img/features/TRANSPARENT_Purpose_Driven_trait_illust.png',
+    Img: 'img/features/TRANSPARENT_Purpose_Driven_trait_illust.png',
     description: (
       <>
         With Meta-System you don't need to fight with the code, just develop your system guided by the problems you want to solve!

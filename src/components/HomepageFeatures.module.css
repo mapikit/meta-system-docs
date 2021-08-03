@@ -17,5 +17,5 @@
 .wipWarning {
   text-align: center;
   padding: 0.4rem;
-  background-color: var(--ifm-color-warning-darkest);
+  background-color: var(--ifm-toc-border-color);
 }
