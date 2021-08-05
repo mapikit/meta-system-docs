@@ -35,6 +35,11 @@ module.exports = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://discord.gg/ndGsnbTW7V',
+          label: 'Discord',
+          position: 'right'
+        }
       ],
     },
     footer: {
@@ -46,6 +51,10 @@ module.exports = {
               label: 'GitHub',
               href: 'https://github.com/mapikit/meta-system',
             },
+            {
+              label: 'Discord',
+              href: 'https://discord.gg/ndGsnbTW7V'
+            }
           ],
         },
       ],
