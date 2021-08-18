@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Sotware Design Behind Meta-System
+# Software Design Behind Meta-System
 
 Meta-System was built from the ground up to be as extensible and modular as possible. If you strip all the extras and helpers built in, this software can be understood as a function-based flow executor.
 
