@@ -1,0 +1,45 @@
+export const objectify = (string) => {
+  let objectified = string;
+  while (objectified.includes("$ob")) objectified = objectified.replace("$ob", "{");
+  while (objectified.includes("$cb")) objectified = objectified.replace("$cb", "}")
+  return objectified;
+}
+
+export function ExamplesTable ({children}) {
+  const rows = children.split("| |");
+  const headers = rows[0];
+  const IO = headers.split("||");
+  const inputs = IO[0].split("|").filter(value => value !== "")
+  const outputs = IO[1].split("|").filter(value => value !== "")
+  const content = rows.slice(1);
+  return (
+  <table style={{ textAlign: "center" }}>
+    <tr>
+      <th colspan={inputs.length} style={{ fontSize: "135%", borderRightWidth: 4 }}> Inputs </th>
+      <th colspan={outputs.length} style={{ fontSize: "135%" }}> Outputs </th>
+    </tr>
+    <tr>
+      { 
+        inputs.map((input, index) => {
+          if(index === inputs.length-1)
+            return (<th style={{ borderBottomWidth: 3, borderRightWidth: 4 }}>{ input }</th>)
+          return (<th style={{ borderBottomWidth: 3 }}>{ input }</th>)
+        }) 
+      }
+      { outputs.map(output => <th style={{ borderBottomWidth: 3 }}>{ output }</th>) }
+    </tr>
+      { 
+        content.map(line => {
+          return (<tr> 
+            { line.split("|").filter(value => value !== "").map((value, index) => {
+              if(index === inputs.length-1) 
+                return (<td style={{ borderRightWidth: 4 }}><code>{objectify(value)}</code></td>)
+              else
+                return (<td><code>{objectify(value)}</code></td>)
+            }) } 
+          </tr>) 
+        })
+      }
+  </table>
+  )
+};
