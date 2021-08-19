@@ -19,29 +19,11 @@ The `stringToNumber` function receives a numeric string and atempts to convert i
 `errorMessage` will only be deefined if the given string cannot be converted to a number.
 
 ## Examples
-<table style={{ textAlign: "center" }}>
-  <tr>
-    <th colspan="1">Inputs</th>
-    <th colspan="2">Outputs</th>
-  </tr>
-  <tr>
-    <th>string</th>
-    <th>result</th>
-    <th>errorMessage</th>
-  </tr>
-  <tr>
-    <td><code>"73"</code></td>
-    <td><code>73</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>"44.2"</code></td>
-    <td><code>44.2</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>"seventeen"</code></td>
-    <td><code>undefined</code></td>
-    <td><code>"Given string is not convertible to a number"</code></td>
-  </tr>
-</table>
+import { ExamplesTable } from "../_ExamplesTable_.mdx"
+
+<ExamplesTable>
+| string || result | errorMessage |
+| "73" | 73 | undefined |
+| "44.2" | 44.2 | undefined |
+| "seventeen" | undefined | "Given string is not convertible to a number" |
+</ExamplesTable>

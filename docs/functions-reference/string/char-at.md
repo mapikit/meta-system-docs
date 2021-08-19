@@ -20,33 +20,11 @@ The `charAt` function receives a string and a number and returns character found
 The `notFoundMessage` property will only be defined if there is no character at the given index (index is out of bounds).
 
 ## Examples
-<table style={{ textAlign: "center" }}>
-  <tr>
-    <th colspan="2">Inputs</th>
-    <th colspan="2">Outputs</th>
-  </tr>
-  <tr>
-    <th>string</th>
-    <th>index</th>
-    <th>found</th>
-    <th>notFoundMessage</th>
-  </tr>
-  <tr>
-    <td><code>"abcde"</code></td>
-    <td><code>0</code></td>
-    <td><code>"a"</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>"abcde"</code></td>
-    <td><code>2</code></td>
-    <td><code>"c"</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>"abcde"</code></td>
-    <td><code>5</code></td>
-    <td><code>undefined</code></td>
-    <td><code>"There is no character present at the given index"</code></td>
-  </tr>
-</table>
+import { ExamplesTable } from "../_ExamplesTable_.mdx"
+
+<ExamplesTable>
+| string | index || found | notFoundMessage |
+| "abcde" | 0 | "a" | undefined |
+| "abcde" | 2 | "c" | undefined |
+| "abcde" | 5 | undefined | "There is no character present at the given index" |
+</ExamplesTable>

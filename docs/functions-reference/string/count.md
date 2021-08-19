@@ -17,29 +17,11 @@ The `countString` function receives a string and a substring and counts how many
 | `count` | `string` |
 
 ## Examples
-<table style={{ textAlign: "center" }}>
-  <tr>
-    <th colspan="2">Inputs</th>
-    <th colspan="1">Outputs</th>
-  </tr>
-  <tr>
-    <th>string</th>
-    <th>search</th>
-    <th>count</th>
-  </tr>
-  <tr>
-    <td><code>"Hello Yellow Submarine"</code></td>
-    <td><code>"e"</code></td>
-    <td><code>3</code></td>
-  </tr>
-  <tr>
-    <td><code>"Hello Yellow Submarine"</code></td>
-    <td><code>"ello"</code></td>
-    <td><code>2</code></td>
-  </tr>
-  <tr>
-    <td><code>"Hello Yellow Submarine"</code></td>
-    <td><code>"foo"</code></td>
-    <td><code>0</code></td>
-  </tr>
-</table>
+import { ExamplesTable } from "../_ExamplesTable_.mdx"
+
+<ExamplesTable>
+| string | search || count |
+| "Hello Yellow Submarine" | "e" | 3 |
+| "Hello Yellow Submarine" | "ello" | 2 |
+| "Hello Yellow Submarine" | "foo" | 0 |
+</ExamplesTable>

@@ -18,33 +18,11 @@ The `stringReplace` function receives a base string, a search substring, and a r
 | `result` | `string` |
 
 ## Examples
-<table style={{ textAlign: "center" }}>
-  <tr>
-    <th colspan="3">Inputs</th>
-    <th colspan="1">Outputs</th>
-  </tr>
-  <tr>
-    <th>baseString</th>
-    <th>search</th>
-    <th>replacer</th>
-    <th>result</th>
-  </tr>
-  <tr>
-    <td><code>"Meta System"</code></td>
-    <td><code>"Meta"</code></td>
-    <td><code>"Michael's"</code></td>
-    <td><code>"Michael's System"</code></td>
-  </tr>
-  <tr>
-    <td><code>"Meta System"</code></td>
-    <td><code>"System"</code></td>
-    <td><code>"Language"</code></td>
-    <td><code>"Meta Language"</code></td>
-  </tr>
-  <tr>
-    <td><code>"Meta System"</code></td>
-    <td><code>"foo"</code></td>
-    <td><code>"bar"</code></td>
-    <td><code>"Meta System"</code></td>
-  </tr>
-</table>
+import { ExamplesTable } from "../_ExamplesTable_.mdx"
+
+<ExamplesTable>
+| baseString | search | replacer || result |
+| "Meta System" | "Meta" | "My" | "My System" |
+| "Meta System" | "System" | "Language" | "Meta Language" |
+| "Meta System" | "foo" | "bar" | "Meta System" |
+</ExamplesTable>
