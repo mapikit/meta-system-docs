@@ -23,44 +23,12 @@ The `errorDivisionByZero` property will only be defined if property `B` is equal
 
 
 ## Examples
-<table style={{ textAlign: "center" }}>
-  <tr>
-    <th colspan="2">Inputs</th>
-    <th colspan="3">Outputs</th>
-  </tr>
-  <tr>
-    <th>A</th>
-    <th>B</th>
-    <th>result</th>
-    <th>errorNotANumber</th>
-    <th>errorDivisionByZero</th>
-  </tr>
-  <tr>
-    <td><code>10</code></td>
-    <td><code>2</code></td>
-    <td><code>0</code></td>
-    <td><code>undefined</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>10</code></td>
-    <td><code>3</code></td>
-    <td><code>1</code></td>
-    <td><code>undefined</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>5</code></td>
-    <td><code>0</code></td>
-    <td><code>undefined</code></td>
-    <td><code>undefined</code></td>
-    <td><code>"Cannot Divide By Zero"</code></td>
-  </tr>
-  <tr>
-    <td><code>5</code></td>
-    <td><code>"foo"</code></td>
-    <td><code>undefined</code></td>
-    <td><code>"One of the arguments provided was not a number"</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-</table>
+import { ExamplesTable } from "../_ExamplesTable_.mdx"
+
+<ExamplesTable>
+| A | B || result | errorNotANumber | errorDivisionByZero |
+| 10 | 2 | 0 | undefined | undefined |
+| 10 | 3 | 1 | undefined | undefined |
+| 5 | 0 | undefined | undefined | "Cannot Divide By Zero" |
+| 5 | "foo" | undefined | "One of the arguments provided was not a number" | undefined |
+</ExamplesTable>

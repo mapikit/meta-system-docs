@@ -19,29 +19,11 @@ The `absolute` function receives a number and returns its absolute value.
 The `errorMessage` property will only be defined if the given `input` is not a number.
 
 ## Examples
-<table style={{ textAlign: "center" }}>
-  <tr>
-    <th colspan="1">Inputs</th>
-    <th colspan="2">Outputs</th>
-  </tr>
-  <tr>
-    <th>input</th>
-    <th>result</th>
-    <th>errorMessage</th>
-  </tr>
-  <tr>
-    <td><code>45.3</code></td>
-    <td><code>45.3</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>-45.3</code></td>
-    <td><code>45.3</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>"foo"</code></td>
-    <td><code>undefined</code></td>
-    <td><code>"One of the arguments provided was not a number"</code></td>
-  </tr>
-</table>
+import { ExamplesTable } from "../_ExamplesTable_.mdx"
+
+<ExamplesTable>
+| input || result | errorMessage |
+| 45.3 | 45.3 | undefined |
+| -45.3 | 45.3 | undefined |
+| "foo" | undefined | "One of the arguments provided was not a number" |
+</ExamplesTable>

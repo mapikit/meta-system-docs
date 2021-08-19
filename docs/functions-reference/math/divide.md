@@ -25,44 +25,13 @@ The `errorNaN` property will only be defined if any of B or A are not numbers.
 The `errorDivideByZero` will only be defined if B is equal to zero.
 
 ## Examples
-<table style={{ textAlign: "center" }}>
-  <tr>
-    <th colspan="2">Inputs</th>
-    <th colspan="3">Outputs</th>
-  </tr>
-  <tr>
-    <th>A</th>
-    <th>B</th>
-    <th>result</th>
-    <th>errorDivideByZero</th>
-    <th>errorNaN</th>
-  </tr>
-  <tr>
-    <td><code>10</code></td>
-    <td><code>2</code></td>
-    <td><code>5</code></td>
-    <td><code>undefined</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>5</code></td>
-    <td><code>-2</code></td>
-    <td><code>-2.5</code></td>
-    <td><code>undefined</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-  <tr>
-    <td><code>2</code></td>
-    <td><code>"foo"</code></td>
-    <td><code>undefined</code></td>
-    <td><code>undefined</code></td>
-    <td><code>"One of the arguments provided was not a number"</code></td>
-  </tr>
-  <tr>
-    <td><code>2</code></td>
-    <td><code>0</code></td>
-    <td><code>undefined</code></td>
-    <td><code>"Cannot divide by zero"</code></td>
-    <td><code>undefined</code></td>
-  </tr>
-</table>
+import { ExamplesTable } from "../_ExamplesTable_.mdx"
+
+<ExamplesTable>
+| A | B || result | errorDivideByZero | errorNaN |
+| 10 | 2 | 5 | undefined | undefined |
+| 5 | -2 | -2.5 | undefined | undefined |
+| 2 | "foo" | undefined | undefined | "One of the arguments provided was not a number" |
+| 2 | 0 | undefined | "Cannot divide by zero" | undefined |
+</ExamplesTable>
+
