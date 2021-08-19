@@ -9,9 +9,9 @@ Referred as `#multiply`
 The `multiply` function multiplies the list of numbers provided.
 
 ## Inputs
-| Name | Type | Optional |
+| Name | Type | Required |
 |------|------|:---------:|
-| `numbersToMultiply` | `Array<number>` | <span style={{ color: "red" }}> ✖ </span>
+| `numbersToMultiply` | `Array<number>` | <a style={{ color: "green" }}> ✔ </a>
 
 ## Outputs
 | Name | Type |

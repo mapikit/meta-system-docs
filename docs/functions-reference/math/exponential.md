@@ -5,10 +5,10 @@ Referred as `#exponential`
 The `exponential` function raises A to the power of B.
 
 ## Inputs
-| Name | Type | Optional |
+| Name | Type | Required |
 |------|------|:--------:|
-| `A` | `number` | <span style={{ color: "red" }}> ✖ </span>
-| `B` | `number` | <span style={{ color: "red" }}> ✖ </span>
+| `A` | `number` | <a style={{ color: "green" }}> ✔ </a>
+| `B` | `number` | <a style={{ color: "green" }}> ✔ </a>
 
 
 ## Outputs

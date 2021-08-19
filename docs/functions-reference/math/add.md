@@ -9,9 +9,9 @@ Referred as `#add`
 The `add` function takes a list of numbers and return their sum.
 
 ## Inputs
-| Name | Type | Optional |
+| Name | Type | Required |
 |------|------|:--------:|
-| `numbersToAdd` | `Array<number>` | <span style={{ color: "red" }}> ✖ </span>
+| `numbersToAdd` | `Array<number>` | <a style={{ color: "green" }}> ✔ </a> _(Default: `1`)_
 
 
 ## Outputs

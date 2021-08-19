@@ -9,10 +9,10 @@ Referred as `#subtract`
 The `subtract` function subtracts `B` from `A`.
 
 ## Inputs
-| Name | Type | Optional |
+| Name | Type | Required |
 |------|------|:---------:|
-| `A` | `number` | <span style={{ color: "red" }}> ✖ </span>
-| `B` | `number` | <span style={{ color: "red" }}> ✖ </span>
+| `A` | `number` | <a style={{ color: "green" }}> ✔ </a>
+| `B` | `number` | <a style={{ color: "green" }}> ✔ </a>
 
 ## Outputs
 | Name | Type |

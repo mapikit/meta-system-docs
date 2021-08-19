@@ -5,10 +5,10 @@ Referred as `#round`
 The `round` function rounds a number to the nearest value within the given precision. If no precision is given, a precision of `1` will be used.
 
 ## Inputs
-| Name | Type | Optional |
+| Name | Type | Required |
 |------|------|:--------:|
-| `input` | `number` | <a style={{ color: "red" }}> ✖ </a>
-| `precision` | `number` | <a style={{ color: "green" }}> ✔ </a> _(Default: `1`)_
+| `input` | `number` | <a style={{ color: "green" }}> ✔ </a>
+| `precision` | `number` | <a style={{ color: "green" }}> ✖ </a> _(Default: `1`)_
 
 ## Outputs
 | Name | Type |

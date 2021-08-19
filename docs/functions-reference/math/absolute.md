@@ -5,9 +5,9 @@ Referred as `#absulute`
 The `absolute` function receives a number and returns its absolute value.
 
 ## Inputs
-| Name | Type | Optional
+| Name | Type | Required
 |------|------|:-----:|
-| `input` | `number` | <span style={{ color: "red" }}> ✖ </span>
+| `input` | `number` | <a style={{ color: "green" }}> ✔ </a>
 
 
 ## Outputs

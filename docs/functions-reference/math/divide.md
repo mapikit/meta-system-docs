@@ -9,10 +9,10 @@ Referred as `#divide`
 The `divide` function divides `A` by `B`.
 
 ## Inputs
-| Name | Type | Optional |
+| Name | Type | Required |
 |------|------|:---------:|
-| `A` | `number` | <span style={{ color: "red" }}> ✖ </span>
-| `B` | `number` | <span style={{ color: "red" }}> ✖ </span>
+| `A` | `number` | <a style={{ color: "green" }}> ✔ </a>
+| `B` | `number` | <a style={{ color: "green" }}> ✔ </a>
 
 ## Outputs
 | Name | Type |
