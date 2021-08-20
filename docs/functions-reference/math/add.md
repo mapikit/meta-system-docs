@@ -11,7 +11,7 @@ The `add` function takes a list of numbers and return their sum.
 ## Inputs
 | Name | Type | Required |
 |------|------|:--------:|
-| `numbersToAdd` | `Array<number>` | <a style={{ color: "green" }}> ✔ </a> _(Default: `1`)_
+| `numbersToAdd` | `Array<number>` | <a style={{ color: "green" }}> ✔ </a>
 
 
 ## Outputs

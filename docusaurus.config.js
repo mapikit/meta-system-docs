@@ -31,6 +31,10 @@ module.exports = {
           label: 'Docs',
         },
         {
+          type: 'search',
+          position: 'right'
+        },
+        {
           href: 'https://github.com/mapikit/meta-system',
           label: 'GitHub',
           position: 'right',
@@ -39,7 +43,7 @@ module.exports = {
           href: 'https://discord.gg/ndGsnbTW7V',
           label: 'Discord',
           position: 'right'
-        }
+        },
       ],
     },
     footer: {
@@ -81,4 +85,7 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    require.resolve('@cmfcmf/docusaurus-search-local')
+  ]
 };
