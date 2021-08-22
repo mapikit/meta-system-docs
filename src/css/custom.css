@@ -35,6 +35,8 @@
   --ifm-color-info-dark: rgb(76, 179, 212) !important;
   --ifm-color-info-darker: rgb(71, 169, 201) !important;
   --ifm-color-info-darkest: rgb(59, 139, 165) !important;
+  --ifm-color-info-contrast-background: #18445583 !important;
+  --ifm-color-info-contrast-foreground: #cbe4ee !important;
   --ifm-color-info-light: rgb(110, 207, 239) !important;
   --ifm-color-info-lighter: rgb(135, 216, 242) !important;
   --ifm-color-info-lightest: rgb(170, 227, 246) !important;
@@ -74,7 +76,8 @@
   --ifm-hero-text-color: #ff00dd !important;
   --ifm-footer-link-color: #54dcf2 !important;
   --ifm-menu-color: rgb(70, 70, 90) !important; /* sidebar navigation inactive */ 
-  --ifm-blockquote-color:rgb(104, 104, 133) !important; /*comment block sidediv*/
+  --ifm-blockquote-border-color:rgb(104, 104, 133) !important; /*comment block sidediv*/
+  --ifm-blockquote-background-color:rgb(34, 34, 51) !important; /*comment block sidediv*/
   --ifm-code-background: rgba(185, 185, 206, 0.192) !important;
   --ifm-menu-color-background-active: rgba(185, 185, 206, 0.116) !important;
   --ifm-menu-color-background-hover: rgba(185, 185, 206, 0.068) !important;
