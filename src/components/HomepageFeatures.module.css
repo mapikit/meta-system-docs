@@ -7,6 +7,10 @@
   width: 100%;
 }
 
+.features .col {
+  margin-top: 1rem !important; 
+}
+
 .featureSvg {
   width: 300px;
   min-width: 250px;

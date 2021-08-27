@@ -22,6 +22,24 @@ const FeatureList = [
         With Meta-System you don't need to fight with the code, just develop your system guided by the problems you want to solve!
       </>
     ),
+  },
+  {
+    title: 'Modular and Extensible',
+    Img: 'img/features/Modularidade-Expansibilidade_Trait3.png',
+    description: (
+      <>
+        Meta-System is completely modular. You can add new functionality to your system by using compatible NPM libraries, or even create your own novel solution. All of this without re-building the core.
+      </>
+    )
+  },
+  {
+    title: 'Open Source',
+    Img: defaultImage,
+    description: (
+      <>
+        Anyone can use, contribute, or even review Meta-System's code free of charge. Use it to your heart's content!
+      </>
+    )
   }
 ];
 
