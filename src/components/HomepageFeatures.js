@@ -34,7 +34,7 @@ const FeatureList = [
   },
   {
     title: 'Open Source',
-    Img: defaultImage,
+    Img: 'img/features/Open_Source_trait_illust1.png',
     description: (
       <>
         Anyone can use, contribute, or even review Meta-System's code free of charge. Use it to your heart's content!
@@ -45,7 +45,7 @@ const FeatureList = [
 
 function Feature({Img, title, description}) {
   return (
-    <div className={clsx('col col--6')}>
+    <div className={clsx('col col--3')}>
       <div className="text--center">
         <img className={styles.featureSvg} alt={title} src={Img}/>
       </div>

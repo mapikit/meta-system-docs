@@ -17,7 +17,7 @@ By saying **BOps**, we're refferring to the flows. By saying **module** or **BOp
 
 ## Declaring BOps
 
-When configuring a BOps, we must specify each function that needs to be executed in that specific BOp. This takes place in the property `configuration` on your business operation data.
+When configuring a BOps, we must specify each function that needs to be executed in that specific BOp. This takes place in the property [`"configuration"`](../configuring/bops/bops-configuration) on your business operation data.
 
 For Meta-System this property is a list that contains every function, their dependencies, and an **attributed key**. This means that you don't explicitly describe the flow, you declare the BOps Functions that need to be executed, what their input data is, and their **functional dependencies**.
 
@@ -28,6 +28,8 @@ For Meta-System this property is a list that contains every function, their depe
 Every BOps function may have dependencies bound to them, and each dependency is resolved before the current function is executed.
 
 The dependencies can be either **functional** (when the dependency data is not needed, but its execution is required), or **normal**, when the data is required and mapped to the input of the next function.
+
+> It is important to take note that BOps Functions can take functions as parameters too. Meta-System provides a way of passing a module as a parameter by setting [`"originPath"`](../configuring/bops/dependencies/#origin-path) to `"module"`.
 
 ### Dependencies During Runtime
 
