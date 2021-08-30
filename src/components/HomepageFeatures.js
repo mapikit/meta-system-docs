@@ -2,24 +2,22 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 
-const defaultImage = 'img/logo_metasystem.svg';
-
 const FeatureList = [
+  {
+    title: 'Open Source',
+    Img: 'img/features/Open_Source_trait_illust1.png',
+    description: (
+      <>
+        Anyone can use, contribute, or even review Meta-System's code free of charge. Use it to your heart's content!
+      </>
+    )
+  },
   {
     title: 'Built-In Boilerplate',
     Img: 'img/features/TRANSPARENT_Built_in_BoilerPlate_trait_illust.png',
     description: (
       <>
         Start creating your system without wasting any time with configuring projects, libraries, and environments!
-      </>
-    ),
-  },
-  {
-    title: 'Purpose Driven',
-    Img: 'img/features/TRANSPARENT_Purpose_Driven_trait_illust.png',
-    description: (
-      <>
-        With Meta-System you don't need to fight with the code, just develop your system guided by the problems you want to solve!
       </>
     ),
   },
@@ -33,14 +31,14 @@ const FeatureList = [
     )
   },
   {
-    title: 'Open Source',
-    Img: 'img/features/Open_Source_trait_illust1.png',
+    title: 'Purpose Driven',
+    Img: 'img/features/TRANSPARENT_Purpose_Driven_trait_illust.png',
     description: (
       <>
-        Anyone can use, contribute, or even review Meta-System's code free of charge. Use it to your heart's content!
+        With Meta-System you don't need to fight with the code, just develop your system guided by the problems you want to solve!
       </>
-    )
-  }
+    ),
+  },
 ];
 
 function Feature({Img, title, description}) {

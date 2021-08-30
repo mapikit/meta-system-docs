@@ -41,6 +41,27 @@ On the other hand, in a valid configuration which contains the module `A`, `B`, 
 1. `B` and `C` are executed in a sequence that depends on their order in the dependencies list.
 2. `A` is executed.
 
+## Determining Flow
+From the configuration to the execution of the BOps flow, there are two stages: The Stitching stage, when Meta-System turns your configuration in a JS function, and the Execution stage, that is when the produced function is executed.
+
+If you're looking for how to configure it, check [this page](../configuring/bops/flows/flows).
+
+### Stitching Stage
+Firstly, Meta-System looks to the `"output"` function, and check its dependencies. For each dependency, this process is repeated: Get the module, find the dependencies, and do the same for them; Until we have all the function structure mapped for the BOps. This looks like we're traversing the flow backwards.
+
+<img src="/static/img/docs/stitch-process.png" height="380px" />
+
+The arrows represent the dicovery direction.
+
+When the process is done, all the functions and intermediary mappers are "stitched", and you're left with a pure javascript function.
+
+### Execution Stage
+This stage only happens when the function is called, either manually of from a Protocol. It is the data propagating through each function, and being mapped to the next on the chain until the output, then the final value is returned.
+
+<img src="/static/img/docs/execution-process.png" height="380px" />
+
+The arrows represent the data flow direction.
+
 ## BOps Engine: Using Declared BOps
 
 The name of the mechanism behind this feature in Meta-System is called **BOps Engine**. It is responsible for binding the data and functions together, and outputs a single JavaScript function with the interface specified in its configuration.

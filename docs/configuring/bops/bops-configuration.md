@@ -8,7 +8,7 @@ The configuration property is a list of objects, each of them resolves to a func
 ## Declaring Modules
 Here are the properties Meta-System reads of the objects in the list, in order to get and configure the flow:
 
-### `"moduleRepo"` - String (required)
+### `"moduleName"` - String (required)
 This is where to find the function to be executed. If the module is a package, this is name of the function. If it is a standalone function, it is the NPM name.
 
 ### `"moduleType"` - ENUM (required)
@@ -26,7 +26,7 @@ This is the property responsible for pointing to the correct function package na
 
 If the `moduleType` is `protocol`, the package name must be the name of the protocol. Similarly, if the type is `schemaFunction`, package name must be the name of the schema. If this is not respected, the system will fail to boot.
 
-Another important interplay of this property is with `moduleRepo`; When the package name is present, it will be what meta-system will try to download. If it omitted, Meta-System assumes that the `moduleRepo` is the name of the module in the NPM registry.
+Another important interplay of this property is with `moduleName`; When the package name is present, it will be what meta-system will try to download. If it omitted, Meta-System assumes that the `moduleName` is the name of the module in the NPM registry.
 
 ### `"version"` - String (optional)
 The "version" property is used by Meta-System to download the correct version when required. If omitted, the assumed value is `latest`. When present, it must be [SemVer](https://semver.org/).
