@@ -26,9 +26,15 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'getting-started',
+          docId: 'api-docs/getting-started',
           position: 'left',
           label: 'Docs',
+        },
+        {
+          type: 'doc',
+          docId: 'guides/guides-introduction',
+          position: 'left',
+          label: 'Guides',
         },
         {
           type: 'search',
@@ -75,7 +81,6 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl:
             'https://github.com/mapikit/meta-system-docs/edit/main/',
         },
