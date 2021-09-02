@@ -1,5 +1,5 @@
-# If
-Referred as `#tryCatch` 
+# Try Catch
+Referred as `#tryCatch`
 
 ## Description
 The `tryCatch` function receives a single function an tries to execute it. Then returns the result of the function or, if a problem occoured, returns the error message.
