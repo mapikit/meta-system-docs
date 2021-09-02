@@ -2,7 +2,7 @@
 Referred as `#arrayLength`
 
 ## Description
-The `arrayLength` function returns the total lengthof an array.
+The `arrayLength` function returns the total length of an array.
 
 ## Inputs
 | Name | Type | Required
