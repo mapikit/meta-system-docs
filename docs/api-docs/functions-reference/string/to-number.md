@@ -1,5 +1,9 @@
 # String to Number
-Referred as `#stringToNumber`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "stringToNumber"
+```
 
 ## Description
 The `stringToNumber` function receives a numeric string and atempts to convert it to its numeric value.

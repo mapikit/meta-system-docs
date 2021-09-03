@@ -1,5 +1,9 @@
 # Create
-Referred as `#createObject`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "createObject"
+```
 
 ## Description
 The `createObject` function receives a key (`string`) and a value. Then returns an object with a property key which contains the given value.

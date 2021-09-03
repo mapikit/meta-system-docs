@@ -1,5 +1,9 @@
 # Try Catch
-Referred as `#tryCatch`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "tryCatch"
+```
 
 ## Description
 The `tryCatch` function receives a single function an tries to execute it. Then returns the result of the function or, if a problem occoured, returns the error message.

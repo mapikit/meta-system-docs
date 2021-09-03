@@ -1,5 +1,9 @@
 # Object Keys
-Referred as `#objectKeys`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "objectKeys"
+```
 
 ## Description
 The `objectKeys` function receives an object and returns an array with its keys (properties names)

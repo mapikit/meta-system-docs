@@ -1,5 +1,9 @@
 # Absolute
-Referred as `#absulute`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "absulute"
+```
 
 ## Description
 The `absolute` function receives a number and returns its absolute value.

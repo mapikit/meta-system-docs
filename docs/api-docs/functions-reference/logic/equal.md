@@ -1,5 +1,9 @@
 # Equal
-Referred as `#equalTo`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "equalTo"
+```
 
 ## Description
 The `equalTo` function compares two values and returns true if both values are (deep) equal.

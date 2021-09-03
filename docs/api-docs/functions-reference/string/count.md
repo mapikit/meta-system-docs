@@ -1,5 +1,9 @@
 # Count
-Referred as `#countString`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "countString"
+```
 
 ## Description
 The `countString` function receives a string and a substring and counts how many times the substring appears in the string.

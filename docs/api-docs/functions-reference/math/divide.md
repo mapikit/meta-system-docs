@@ -3,7 +3,11 @@ sidebar_position: 4
 ---
 
 # Divide
-Referred as `#divide`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "divide"
+```
 
 ## Description
 The `divide` function divides `A` by `B`.

@@ -1,5 +1,9 @@
 # Includes
-Referred as `#includes`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "includes"
+```
 
 ## Description
 The `includes` function returns true or false weather the given array includes the searched item  or not.

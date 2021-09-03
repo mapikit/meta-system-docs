@@ -1,5 +1,9 @@
 # Get Value
-Referred as `#getObjectValue`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "getObjectValue"
+```
 
 ## Description
 The `getObjectValue` function receives an object and a property name, then returns the value of the property.

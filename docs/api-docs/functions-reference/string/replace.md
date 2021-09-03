@@ -1,5 +1,9 @@
 # Replace
-Referred as `#stringReplace`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "stringReplace"
+```
 
 ## Description
 The `stringReplace` function receives a base string, a search substring, and a replacer string, then finds every occurrence of the search substring in the base string and replaces it with the replacer substring. After all of this, returns the resulting modified string.

@@ -1,5 +1,9 @@
 # Index Of
-Referred as `#indexOf`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "indexOf"
+```
 
 ## Description
 The `indexOf` function receives a string and a search substring, then returns the index of the first occurrence substring inside the primary string. If the substring does not exist inside the string `-1` is returned.

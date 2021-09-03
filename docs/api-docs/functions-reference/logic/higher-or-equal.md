@@ -1,5 +1,9 @@
 # Higher or Equal
-Referred as `#higherOrEqualTo`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "higherOrEqualTo"
+```
 
 ## Description
 The `higherOrEqualTo` function compares two values and returns true the first value (`A`) is higher or equal to the second value (`B`).

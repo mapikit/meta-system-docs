@@ -3,7 +3,11 @@ sidebar_position: 2
 ---
 
 # Subtract
-Referred as `#subtract`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "subtract"
+```
 
 ## Description
 The `subtract` function subtracts `B` from `A`.

@@ -1,5 +1,9 @@
 # Bool to Number
-Referred as `#boolToNumber`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "boolToNumber"
+```
 
 ## Description
 The `boolToNumber` function receives a boolean value and returns its numeric value.

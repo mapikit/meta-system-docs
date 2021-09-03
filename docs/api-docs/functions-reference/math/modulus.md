@@ -1,5 +1,9 @@
 # Modulus
-Referred as `#modulus`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "modulus"
+```
 
 ## Description
 The `modulus` function returns the modulus (remainder) of `A` divided by `B`

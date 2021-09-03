@@ -1,5 +1,9 @@
 # Array Join
-Referred as `#join`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "join"
+```
 
 ## Description
 The `join` function joins all the items in an array into a single string

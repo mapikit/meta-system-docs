@@ -1,5 +1,9 @@
 # And
-Referred as `#and`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "and"
+```
 
 ## Description
 The `and` function compares two boolean values, outputting wether or not bot values are simultaneously `true`

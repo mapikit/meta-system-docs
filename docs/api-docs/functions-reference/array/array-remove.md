@@ -1,5 +1,9 @@
 # Array Remove
-Referred as `#arrayRemove`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "arrayRemove"
+```
 
 ## Description
 The `arrayRemove` receives an array and an index, then removes the item at the given index and returns the new array.

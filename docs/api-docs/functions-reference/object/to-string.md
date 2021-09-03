@@ -1,5 +1,9 @@
 # Object to String
-Referred as `#objectToString`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "objectToString"
+```
 
 ## Description
 The `objectToString` function receives an object and returns the string equivalent of that object.

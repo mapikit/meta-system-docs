@@ -1,5 +1,9 @@
 # Combine Object
-Referred as `#combineObject`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "combineObject"
+```
 
 ## Description
 The `combineObject` function receives two objects and combines both objects into one.

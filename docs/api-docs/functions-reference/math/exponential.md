@@ -1,5 +1,9 @@
 # Exponential
-Referred as `#exponential`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "exponential"
+```
 
 ## Description
 The `exponential` function raises A to the power of B.

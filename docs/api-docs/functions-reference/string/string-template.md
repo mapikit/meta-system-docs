@@ -3,7 +3,11 @@
 This section refers to a feature that will only be available in the v0.2.0 of Meta-System
 :::
 
-Referred as `#stringTemplate`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "stringTemplate"
+```
 
 ## Description
 The `stringTemplate` function receives a string template and a `replacers` object with the expected values for the corresponding strings inside the template

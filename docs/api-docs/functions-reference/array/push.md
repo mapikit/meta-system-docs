@@ -1,5 +1,9 @@
 # Array Push
-Referred as `#push`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "push"
+```
 
 ## Description
 The `push` function inserts an item in an array or into a new one if no existing array is given.

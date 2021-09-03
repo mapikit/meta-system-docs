@@ -1,5 +1,9 @@
 # Object Values
-Referred as `#objectValues`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "objectValues"
+```
 
 ## Description
 The `objectValues` function receives an object and returns an array with its values.

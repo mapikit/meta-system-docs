@@ -1,5 +1,9 @@
 # Date Now
-Referred as `#dateNow`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "dateNow"
+```
 
 ## Description
 The `dateNow` function has no inputs, it simply returns the current date .

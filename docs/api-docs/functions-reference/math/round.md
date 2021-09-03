@@ -1,5 +1,9 @@
 # Round
-Referred as `#round`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "round"
+```
 
 ## Description
 The `round` function rounds a number to the nearest value within the given precision. If no precision is given, a precision of `1` will be used.

@@ -1,5 +1,9 @@
 # Higher Than
-Referred as `#higherThan`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "higherThan"
+```
 
 ## Description
 The `higherThan` function compares two values and returns true the first value (`A`) is higher than the second value (`B`).

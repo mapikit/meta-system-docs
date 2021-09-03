@@ -1,5 +1,9 @@
 # If
-Referred as `#if`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "if"
+```
 
 ## Description
 The `if` function receives a boolean and two other values and returns one or the other wether the given boolean is true or false. Optionally, you can also input functions instead of static values.

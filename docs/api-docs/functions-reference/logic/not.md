@@ -1,5 +1,9 @@
 # Not
-Referred as `#not`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "not"
+```
 
 ## Description
 The `not` function receives a boolean value and returns its oposite

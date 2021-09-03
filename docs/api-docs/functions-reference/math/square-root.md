@@ -1,5 +1,9 @@
 # Square Root
-Referred as `#sqrt`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "sqrt"
+```
 
 ## Description
 The `sqrt` function extracts the square root of a number, as long as the given number is a non-negative real number. 

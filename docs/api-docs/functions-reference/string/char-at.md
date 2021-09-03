@@ -1,5 +1,9 @@
 # Char At
-Referred as `#charAt`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "charAt"
+```
 
 ## Description
 The `charAt` function receives a string and a number and returns character found at that numeric index. Do note however that the index for the first character is `0`, the second is `1` and so on. 

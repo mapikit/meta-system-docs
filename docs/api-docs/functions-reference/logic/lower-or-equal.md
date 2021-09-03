@@ -1,5 +1,9 @@
 # Lower or Equal
-Referred as `#lowerOrEqualTo`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "lowerOrEqualTo"
+```
 
 ## Description
 The `lowerOrEqualTo` function compares two values and returns true the first value (`A`) is lower or equal to the second value (`B`).

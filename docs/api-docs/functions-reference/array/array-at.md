@@ -1,5 +1,9 @@
 # Array At
-Referred as `#arrayAt`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "arrayAt"
+```
 
 ## Description
 The `arrayAt` function gets the value of the item in the nth position of the array.

@@ -3,7 +3,11 @@
 This section refers to a feature that will only be available in the v0.2.0 of Meta-System
 :::
 
-Referred as `#stringConcat`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "stringConcat"
+```
 
 ## Description
 The `stringConcat` function receives a number of strings and concatenates all of the string in order.

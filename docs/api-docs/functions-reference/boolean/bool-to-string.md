@@ -1,5 +1,9 @@
 # Bool to String
-Referred as `#boolToString`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "boolToString"
+```
 
 ## Description
 The `boolToNumber` function receives a boolean value and returns its string equivalent.

@@ -1,5 +1,9 @@
 # Is Nill
-Referred as `#isNill`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "isNill"
+```
 
 ## Description
 The `isNill` function receives a value and verifies if it is defined or nill (null or undefined).

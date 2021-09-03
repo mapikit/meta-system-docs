@@ -3,7 +3,11 @@ sidebar_position: 3
 ---
 
 # Multiply
-Referred as `#multiply`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "multiply"
+```
 
 ## Description
 The `multiply` function multiplies the list of numbers provided.

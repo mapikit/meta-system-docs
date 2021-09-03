@@ -1,5 +1,9 @@
 # Find Index
-Referred as `#findIndex`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "findIndex"
+```
 
 ## Description
 The `findIndex` function looks for an item inside an array and returns its index.

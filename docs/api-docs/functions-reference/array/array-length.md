@@ -1,5 +1,9 @@
 # Array Length
-Referred as `#arrayLength`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "arrayLength"
+```
 
 ## Description
 The `arrayLength` function returns the total length of an array.

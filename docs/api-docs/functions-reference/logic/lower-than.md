@@ -1,5 +1,9 @@
 # Lower Than
-Referred as `#lowerThan`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "lowerThan"
+```
 
 ## Description
 The `lowerThan` function compares two values and returns true the first value (`A`) is lower than the second value (`B`).

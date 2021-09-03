@@ -1,5 +1,9 @@
 # Or
-Referred as `#or`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "or"
+```
 
 ## Description
 The `or` function receives two boolean values and returns true if either of the given values are true.

@@ -3,7 +3,11 @@ sidebar_position: 1
 ---
 
 # Add
-Referred as `#add`
+### Module Info: 
+```
+moduleType: "internal",
+moduleName: "add"
+```
 
 ## Description
 The `add` function takes a list of numbers and return their sum.
