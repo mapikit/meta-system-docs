@@ -28,7 +28,7 @@ Starting by the Protocols, all available protocols are actually NPM libraries. T
 This means you can either use ones that were already made, or create your own. For the latter option, check the [Guides](../../guides/guides-introduction) page.
 
 ### Functions (BOps Functions/Modules)
-For the functions, Meta-System contains some already built in, called Internal Functions, and you can check them in the [Functions Reference](../functions-reference/index).
+For the functions, Meta-System contains some already built in, called Internal Functions, and you can check them in the Functions API Reference in the sidebar.
 
 There are also the External functions (and packages of functions). Some examples are the [logger](https://www.npmjs.com/package/logger-meta-functions), which is a function package, and the [bops-hello-world](https://www.npmjs.com/package/bops-function-hello-world), which is a standalone function. Meta-System downloads them from npm if you require them, this means that if you publish a function or package with a compatible interface, you can also start using it on your BOps rightaway.
 
