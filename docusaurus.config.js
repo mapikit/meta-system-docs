@@ -37,6 +37,12 @@ module.exports = {
           label: 'Guides',
         },
         {
+          type: 'doc',
+          docId: 'tutorials/tutorials',
+          position: 'left',
+          label: 'Tutorials',
+        },
+        {
           type: 'search',
           position: 'right'
         },

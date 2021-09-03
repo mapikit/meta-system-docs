@@ -12,12 +12,24 @@ Meta-System's architecture shares many similarities with a [functional programmi
 
 Each flow uses small pieces of code to execute specific tasks in each step, to then achieve the desired functionality. Since such tasks are no different from eachother for the engine behind the execution of them, **you may add any custom function to extend functionalities in the system**.
 
-## Beyond the Built In Functions
+Another extensible aspect of Meta-System lies in the mechanism to launch those flows. As explained in [the Building Blocks](./software-design#the-building-blocks), the Protocols are what we use for interacting with the system, and they can also be created and extended.
 
-Directly on the source code, Meta-System comes packed with many functions that only by themselves, can be used to compose plenty of systems. However, there may be something that either cannot be done with the built in functions or is too complex to do using them.
+## And How do We Extend It?
 
-In theses cases, it is possible to create a function and import it through an NPM repository, or directly add it to the Function Manager in runtime, before your Business Operation (BOp) is computed and validated.
+Firstly, there are mechanisms for you to do that without any change in the source code of Meta-System; By design, it is expected for you to find the best solutions that suit your problem, or create your own.
 
-## Future Releases
+There are many places in the configuration file, in which, if you specify an external package, Meta-System will try to download it from NPM and add it to your system. **Protocols** are always external, always downloaded, and the **Functions** are mostly external, with a few exceptions of frequently used data manipulation, and mathematical operations ones.
 
-We are planning, on the next releases, to make Meta-System possible to be extended in the protocols as well. You will be able to read messages from Kafka and SQS, and even implement your own IoT custom protocol. This is planned to be released on the `v0.2.0`.
+For more information on the configuration, start by reading [the basics](../configuring/basics).
+
+### Protocols
+Starting by the Protocols, all available protocols are actually NPM libraries. The team behind Meta-System developed some of them, like the [CronJob](https://www.npmjs.com/package/cronjob-protocol) or [HttpJson](https://www.npmjs.com/package/http-json-meta-protocol).
+
+This means you can either use ones that were already made, or create your own. For the latter option, check the [Guides](../../guides/guides-introduction) page.
+
+### Functions (BOps Functions/Modules)
+For the functions, Meta-System contains some already built in, called Internal Functions, and you can check them in the [Functions Reference](../functions-reference/index).
+
+There are also the External functions (and packages of functions). Some examples are the [logger](https://www.npmjs.com/package/logger-meta-functions), which is a function package, and the [bops-hello-world](https://www.npmjs.com/package/bops-function-hello-world), which is a standalone function. Meta-System downloads them from npm if you require them, this means that if you publish a function or package with a compatible interface, you can also start using it on your BOps rightaway.
+
+Check the guides for doing that: [Writing Packages and Functions](../../guides/writing-packages-and-functions).
