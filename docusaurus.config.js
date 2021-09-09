@@ -43,6 +43,12 @@ module.exports = {
           label: 'Tutorials',
         },
         {
+          type: 'doc',
+          docId: 'our-packages/our-packages-intro',
+          position: 'left',
+          label: 'Our Packages',
+        },
+        {
           type: 'search',
           position: 'right'
         },

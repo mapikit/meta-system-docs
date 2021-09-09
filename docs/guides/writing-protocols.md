@@ -56,6 +56,9 @@ This is the method that stops your protocol from calling any BOp. You may also u
 #### **`validateConfiguration`** - returns `void`
 This method is required and is executed by Meta-System in order to be sure that a valid configuration for your protocol was provided. It should validate every parameter specified in your user configuration.
 
+:::info Errors
+Every validation in this method should throw an error if failed. Prefer error messages that guide the user to solving the configuration issues encountered.
+:::
 #### **`getProtocolPublicMethods`** - returns an object containing functions to be used in BOps
 This is the method you should use when you want to provide a way of interacting with your protocol from the BOps flow, such as forcibly send an error to the user, or getting a connection value. If there are no such interactions for your protocol, return an empty object.
 
