@@ -44,7 +44,7 @@ On the other hand, in a valid configuration which contains the module `A`, `B`, 
 ## Determining Flow
 From the configuration to the execution of the BOps flow, there are two stages: The Stitching stage, when Meta-System turns your configuration in a JS function, and the Execution stage, that is when the produced function is executed.
 
-If you're looking for how to configure it, check [this page](../configuring/bops/flows/flows).
+If you're looking for how to configure it, check [this page](../configuring/bops/flows).
 
 ### Stitching Stage
 Firstly, Meta-System looks to the `"output"` function, and check its dependencies. For each dependency, this process is repeated: Get the module, find the dependencies, and do the same for them; Until we have all the function structure mapped for the BOps. This looks like we're traversing the flow backwards.

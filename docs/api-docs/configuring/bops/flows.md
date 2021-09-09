@@ -3,13 +3,13 @@ sidebar_position: 3
 ---
 
 # Flows
-We described the flows in [this page](../../../architecture/flows), we strongly recommend you to read it before diving in this topic.
+We described the flows in [this page](../../architecture/flows), we strongly recommend you to read it before diving in this topic.
 
 ---
 
 In order to tell your system to do something, you need to specify a sequence of commands, and that is done in the flows. In the configuration file, it is an array of objects, each resolving to a module/function, and mapping its inputs and outputs to the next function in the chain.
 
-This page's content assumes you already know how to declare modules and their dependencies. If not, you should check [this page](../bops-configuration) before.
+This page's content assumes you already know how to declare modules and their dependencies. If not, you should check [this page](bops-configuration) before.
 
 ## Configuring the Flow
 To configure the flow of your Business Operation, you should pay attention mostly to the dependencies of the modules, as are the part that points what should be executed and which information is necessary.
