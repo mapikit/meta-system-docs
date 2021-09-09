@@ -14,7 +14,7 @@ This is where to find the function to be executed. If the module is a package, t
 ### `"moduleType"` - ENUM (required)
 Module Type is the property that defines what kind of module is Meta-System dealing with. The values can be:
 - `"external"` - The module should be downloaded from NPM.
-- `"internal"` - If it is available by default in meta-system's repo, such as `if` and [`add`](../../functions-reference/math/add).
+- `"internal"` - If it is available by default in meta-system's repo, such as `if` and [`add`](../../functions/internal-functions/math/add).
 - `"bop"` - When the module is a function created by another declared `businessOperation`.
 - `"schemaFunction"` - The module is an operation based on a declared [Schema](../schema-config).
 - `"output"` - It is the resolution module of your BOp.
