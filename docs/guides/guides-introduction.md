@@ -7,6 +7,10 @@ If you're on this page, you're much ready to start working on something incredib
 
 Before we proceed, we strongly recommend to read the docs. There you will truly understand the fundamentals.
 
+:::info Disclaimer
+The authors of the packages/functions and protocols are the responsible for documenting and maintaining what is the behavior, and the API of their modules. If you're an author, There are people who can help you at [our discord](https://discord.gg/ndGsnbTW7V).
+:::
+
 ## Guides to Creating Systems
 If you're already familiar with the [configuration of Meta-System](../api-docs/configuring/basics) and just need some inspiration, we have some  in-depth explanations of configurations at the [Tutorials](../tutorials/tutorials) tab.
 
