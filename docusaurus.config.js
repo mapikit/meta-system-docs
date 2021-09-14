@@ -46,7 +46,7 @@ module.exports = {
           type: 'doc',
           docId: 'our-packages/our-packages-intro',
           position: 'left',
-          label: 'Our Packages',
+          label: 'Packages',
         },
         {
           type: 'search',
