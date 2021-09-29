@@ -1,14 +1,14 @@
-# Get
+# Delete
 ### Module Info: 
 ```
 moduleType: "schemaFunction",
-moduleName: "get",
+moduleName: "delete",
 modulePackage: <schemaName>
 ```
 ***Note:*** every schema functions expectes `modulePackage` to be the name of the schema it refers to.
 
 ## Description
-The `get` schema function receives a query input and returns all the entities that match the given query.
+The `delete` schema function receives a query input and deletes all the entities that match the given query.
 
 ## Inputs
 | Name | Type | Required |
@@ -19,9 +19,9 @@ The `get` schema function receives a query input and returns all the entities th
 ## Outputs
 | Name | Type |
 | ------ | ------ |
-| `results` | `cloudedObject` |
-| `getError` | `cloudedObject` |
+| `deletedCount` | `number` |
+| `deleteError` | `cloudedObject` |
 
 
-`getError` will only be defined if there was an error while executing the query
+`deleteError` will only be defined if there was an error while executing the query
 
