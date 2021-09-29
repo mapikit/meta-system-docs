@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # Queries
-When working with some schema functions, namely `get`, `update` and `delete`, you have come across a properrty `query` which receives a query type. But what are queries exactly?
+When working with some schema functions, namely `get`, `update` and `delete`, you have come across a property `query` which receives a query type. But what are queries exactly?
 
 ## What are Queries
 Queries are a way to look for values stored in you database that match some epecific criterias. For instance, lets say you are storing all of your users data in a database. You can use a query to find all the users whose age is higher than 18. Or maybe you want to find all the users who have an email registered. Possibly you want both: the users that are over 18 and have registered an email. **Queries are a simple way to filter the entities stored in you database**
@@ -97,9 +97,10 @@ Here you can find a reference of all the available tags to be used in queries. T
 
 ### String
 The following tags can be applied to any string (text) values you have stored. So names, passwords, emails, descriptions, etc.
+
 | **Tag** | **Decription** |
 | ------- | -------------- |
-| exits | Matches the data if value not undefined |
+| exists | Matches the data if value not undefined |
 | equal_to | Matches the data if value is equal to the query value |
 | not_equal_to | Matches the data if value is **not** equal to the query value |
 | one_of | Matches the data if value is equal to one of the query values |

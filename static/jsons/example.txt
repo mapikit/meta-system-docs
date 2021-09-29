@@ -24,7 +24,8 @@
       "variables": [],
       "configuration": [
         {
-          "moduleRepo": "#push",
+          "moduleType": "internal",
+          "moduleName": "arrayPush",
           "key": 3,
           "dependencies": [
             { "origin": "constants", "originPath": "helloString", "targetPath": "newItems.hello" },
@@ -33,7 +34,8 @@
           ]
         },
         {
-          "moduleRepo": "#join",
+          "moduleType": "internal",
+          "moduleName": "arrayJoin",
           "key": 2,
           "dependencies": [
             { "origin": 3, "originPath": "result.result", "targetPath": "array" },
@@ -41,7 +43,8 @@
           ]
         },
         {
-          "moduleRepo": "%output",
+          "moduleType": "output",
+          "moduleName": "output",
           "key": 1,
           "dependencies": [
             { "origin": 2, "originPath": "result.result", "targetPath": "greet" }
@@ -52,7 +55,7 @@
   ],
   "protocols": [
     {
-      "protocolType": "HTTP_JSONBODY",
+      "protocolType": "http-json-meta-protocol",
       "configuration": {
         "port": 8080,
         "routes": [
