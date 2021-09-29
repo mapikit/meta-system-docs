@@ -122,4 +122,3 @@ If everything goes smoothly, you should see a green success message saying: "Fil
 You're just a command away from getting your protocol ready to be used by everyone who uses Meta-System. Type in `npm publish` and you're set!
 
 For how to use protocols (including your own!), check [this](../api-docs/configuring/protocol-config) documentation page.
-> This page is under construction.
