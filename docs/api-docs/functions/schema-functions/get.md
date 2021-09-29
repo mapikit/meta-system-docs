@@ -5,7 +5,7 @@ moduleType: "schemaFunction",
 moduleName: "get",
 modulePackage: <schemaName>
 ```
-***Note:*** every schema functions expectes `modulePackage` to be the name of the schema it refers to.
+***Note:*** every schema function expects `modulePackage` to be the name of the schema it refers to.
 
 ## Description
 The `get` schema function receives a query input and returns all the entities that match the given query.

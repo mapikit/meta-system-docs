@@ -5,6 +5,8 @@ moduleType: "schemaFunction",
 moduleName: "getById",
 modulePackage: <schemaName>
 ```
+***Note:*** every schema function expects `modulePackage` to be the name of the schema it refers to.
+
 
 ## Description
 The `getById` schema function receives a single input (`id`) and finds the entity with the given id. Do note that, since ids are unique this function always return a single entity.

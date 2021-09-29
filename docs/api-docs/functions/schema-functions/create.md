@@ -2,8 +2,11 @@
 ### Module Info: 
 ```
 moduleType: "schemaFunction",
-moduleName: "create"
+moduleName: "create",
+modulePackage: <schemaName>
 ```
+***Note:*** every schema function expect `modulePackage` to be the name of the schema it refers to.
+
 
 ## Description
 The `create` schema function simply inserts an entity into the database configured in the `modulePackage` property.
