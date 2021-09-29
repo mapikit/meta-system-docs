@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Queries
+# About Queries
 When working with some schema functions, namely `get`, `update` and `delete`, you have come across a property `query` which receives a query type. But what are queries exactly?
 
 ## What are Queries
@@ -98,11 +98,77 @@ Here you can find a reference of all the available tags to be used in queries. T
 ### String
 The following tags can be applied to any string (text) values you have stored. So names, passwords, emails, descriptions, etc.
 
-| **Tag** | **Decription** |
-| ------- | -------------- |
-| exists | Matches the data if value not undefined |
-| equal_to | Matches the data if value is equal to the query value |
-| not_equal_to | Matches the data if value is **not** equal to the query value |
-| one_of | Matches the data if value is equal to one of the query values |
-| not_one_of | Matches the data if value is not equal to any of the query values |
+| **Tag** | **Type** | **Decription** |
+| ------- | ---- |-------------- |
+| exists | `boolean` | Matches the data if value not undefined |
+| equal_to | `string` | Matches the data if value is equal to the query value |
+| not_equal_to | `string` | Matches the data if value is **not** equal to the query value |
+| one_of | `Array<string>` | Matches the data if value is equal to one of the query values |
+| not_one_of | `Arrayy<string>` | Matches the data if value is not equal to any of the query values |
+| regexp | `string` | Matches the data if the string matches the given regular expression (more about regex [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)) |
 
+### Number
+The following tags can be applied to any numeric values you have stored, such as ages or amounts.
+
+| **Tag** | **Type** | **Decription** |
+| ------- | ---- |-------------- |
+| exists | `boolean` | Matches the data if value not undefined |
+| equal_to | `number` | Matches the data if value is equal to the query value |
+| not_equal_to | `number` | Matches the data if value is **not** equal to the query value |
+| one_of | `Array<number>` | Matches the data if value is equal to one of the query values |
+| not_one_of | `Array<number>` | Matches the data if value is not equal to any of the query values |
+| greater_than | `number` | Matches the data if stored value is higher than given value |
+| greater_or_equal_to | `number` | Matches the data if stored value is higher or equal to the given value |
+| lower_than | `number` | Matches the data if stored value is lower than given value |
+| lower_or_equal_to | `number` | Matches the data if stored value is lower or equal to the given value |
+
+### Date
+The following tags can be applied to any date values you have stored, such as birthdates or expiration dates.
+
+| **Tag** | **Type** | **Decription** |
+| ------- | ---- |-------------- |
+| exists | `boolean` | Matches the data if value not undefined |
+| equal_to | `Date` | Matches the data if value is equal to the query value |
+| not_equal_to | `Date` | Matches the data if value is **not** equal to the query value |
+| one_of | `Array<Date>` | Matches the data if value is equal to one of the query values |
+| not_one_of | `Array<Date>` | Matches the data if value is not equal to any of the query values |
+| greater_than | `Date` | Matches the data if stored date comes after the given date |
+| greater_or_equal_to | `Date` | Matches the data if stored date comes after or is equal to the given date |
+| lower_than | `Date` | Matches the data if stored date comes before the given date |
+| lower_or_equal_to | `Date` |  Matches the data if stored date comes before or is equal to the given date |
+
+### Boolean
+The following tags can be applied to any boolean (true/false) values you have stored. Usually used in "flag values" such as `isPremiumUser`, `emailHasBeenConfirmed`, etc.  
+
+| **Tag** | **Type** | **Decription** |
+| ------- | ---- |-------------- |
+| exists | `boolean` | Matches the data if value not undefined |
+| equal_to | `boolean` | Matches the data if value is equal to the query value |
+| not_equal_to | `boolean` | Matches the data if value is **not** equal to the query value |
+
+### Array
+The following tags can be applied to any array (list) values you have stored. This type is used for lists of items, such as owned cars, registed documents, etc.
+
+| **Tag** | **Type** | **Decription** |
+| ------- | ---- |-------------- |
+| size | `number` | Matches the data if the array length (number of stored items) is equal to the given number |
+| all_are | `query` | Matches the data if all values stored in the array match the given query |
+| at_least_one_is | `query` | Matches the data if at least one of the values stored in the array match the given query |
+| exists | `boolean` | Matches the data if value not undefined |
+
+
+An example of an array query would be:
+(supose we are interacting with a user database)
+```javascript
+{
+  dollarBillsInVirtualWallet: { // Applies for the "dollarBillsInVirtualWallet" array
+    at_leat_one_is: { // Requires at least one of the values to match the condition
+      $and: [ //All conditions must match
+        { higher_or_equal_to: 20 }, // Must be higher or equal to 20 AND...
+        { not_equal_to: 100 } // Must not be equal to 100
+      ]
+    }
+  }
+}
+```
+So, to sumarize, this query will match any user that, in their virtual wallet, has at least a dollar bill that is higher or equal to 20 but is not a 100 dollars bill.
