@@ -51,6 +51,8 @@ Schemas define the things your system will work with. If you sell cars, a car sh
 More info can be found in the [Schemas Section](./schema-config).
  
 #### `"businessOperations"` - required Array
-BusinessOperations, or BOps as we like to call them, are the heart of your system. They are what define what your system should do with the information it gets and holds. Here is where you can tell your system what it should do when your user tells the system he/she is 500 years old. Should it refuse to save this info or should it store it in your database anyways? In short, here is where the logic, the brains of the operations lives, so take good care of it!
+BusinessOperations, or BOps as we like to call them, are the heart of your system. They are what define what your system should do with the data it recieves and holds. Here lies your business logic, applied to the data it interacts with.
+
+For instance, you can tell your system what it should do when your user tells the system he/she is 500 years old. Should it refuse to save this info or should it store it in your database anyways? In short, here is where the logic, the brains of the operations lives, so take good care of it!
 
 More info can be found in the [BOps Section](./bops/bops).

@@ -17,7 +17,7 @@ This is the name of the protocol to be downloaded. It must match what we have on
 ### `"configuration"` - Object (required)
 These are the parameters of the protocol you are trying to use. Pay attention to its own documentation, since each protocol can vary immensely on the parameters they accept, and their structure.
 
-### `"proticolVersion"` - String Semver (optional)
+### `"protocolVersion"` - String Semver (optional)
 This is the Version of the protocol to be downloaded. If no specified, It defaults to the latest version available.
 
 ## Example
