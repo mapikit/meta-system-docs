@@ -23,3 +23,6 @@ Just start your new repository and install [`meta-function-helper`](https://www.
 Is there a connection you need to make, or another external provider you want to integrate with your systems? It is a protocol you need!
 
 You can start by downloading [`meta-protocol-helper`](https://www.npmjs.com/package/meta-protocol-helper) with `npm i -g meta-protocol-helper`. Then go to the [Writing Protocols](./writing-protocols) page for the next steps.
+
+## Guides to Contributing to Meta-System
+If would like to help, you are more than welcome to! There are a couple of ways in which you can help on making Meta-System more awesome, and they are all explained under [this documentation page](./contributing.md).
