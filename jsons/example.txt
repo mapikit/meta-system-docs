@@ -55,7 +55,8 @@
   ],
   "protocols": [
     {
-      "protocolType": "http-json-meta-protocol",
+      "protocol": "http-json-meta-protocol",
+      "identifier": "main-Http",
       "configuration": {
         "port": 8080,
         "routes": [
