@@ -27,6 +27,11 @@ Starting by the Protocols, all available protocols are actually NPM libraries. T
 
 This means you can either use ones that were already made, or create your own. For the latter option, check the [Guides](../../guides/guides-introduction) page.
 
+#### DB Protocols
+There is this kind of protocols which requires mention. They are protocols specialized to interact with a database and schemas, actively being used by the schemas to persist information. These DB Protocols can also be created, enabling Meta-System to use virtually any data persistency method (or ephemeral, like Redis).
+
+We also created one DB Protocol for using MongoDB together with Meta-System: [mongodb-db-protocol](https://www.npmjs.com/package/@meta-system/mongodb-db-protocol).
+
 ### Functions (BOps Functions/Modules)
 For the functions, Meta-System contains some already built in, called Internal Functions, and you can check them in the Functions API Reference in the sidebar.
 

@@ -29,9 +29,6 @@ This is the name of your system, it differentiates you from the crowd, so be cre
 #### `"version"` - required string (Semantic Version)
 The current version of your system, so you and your colleagues can identify how far you've come. Again, this does not impact the system's behavior, and can be changed later (and should be, as you update your system with new capabilities!)
 
-#### `"dbConnectionString"` - required string
-This is the connection to the Mongo Database to persist data. This is only required if you specify a Schema ([see below](#schemas)), otherwise it can be an empty string.
-
 #### `"envs"` - required Array
 This Array can be empty. Populate it with static values to be used in your BOps! Different from the `"constants"` in each BOp, this is available for all bops, but similarly, cannot be changed.
 
@@ -41,7 +38,7 @@ If populated the values must be objects with two properties: `key` and `value`, 
 These next values are what you should pay more attention as they are the pieces that define the functionality of the system. Since they have enough details to care about, we have a dedicated page for each.
 
 #### `"protocols"` - required Array
-These determine how your system communicates with the outside world, so it is quite important! Here is where you configure whether your system will use the worldwide spread HTTP or any other type of communication.
+These determine how your system communicates with the outside world, so it is quite important! Here is where you configure whether your system will use the worldwide spread HTTP or any other type of communication. Also you should set here the DB Protocols, used to interact directly with schemas and persist data.
  
 More info can be found in the [Protocols Section](./protocol-config.md).
  

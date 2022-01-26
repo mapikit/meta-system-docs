@@ -10,18 +10,14 @@ modulePackage: <schemaName>
 ## Description
 The `delete` schema function receives a query input and deletes all the entities that match the given query.
 
-## Inputs
+## Recommended Interface
+### Inputs
 | Name | Type | Required |
 |------|------|:-----:|
 | `query` | [`query`](./queries) | <a style={{ color: "green" }}> ✔ </a>
 
-
-## Outputs
+### Outputs
 | Name | Type |
 | ------ | ------ |
-| `deletedCount` | `number` |
-| `deleteError` | `cloudedObject` |
-
-
-`deleteError` will only be defined if there was an error while executing the query
-
+| `success` | `boolean` |
+| `affectedEntities` | `number` |

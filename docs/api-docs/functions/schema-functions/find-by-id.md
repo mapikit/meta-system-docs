@@ -1,14 +1,15 @@
-# Delete By Id
+# Find By Id
 ### Module Info: 
 ```
 moduleType: "schemaFunction",
-moduleName: "deleteById",
+moduleName: "findById",
 modulePackage: <schemaName>
 ```
 ***Note:*** every schema function expects `modulePackage` to be the name of the schema it refers to.
 
+
 ## Description
-The `deleteById` schema function receives a single input (`id`) and deletes the entity associated with the given id, then it returns the deleted entity. Do note that, since ids are unique this function always deletes a single entity.
+The `findById` schema function receives a single input (`id`) and finds the entity with the given id. Do note that, since ids are unique this function always return a single entity.
 
 ## Recommended Interface
 ### Inputs
@@ -21,3 +22,4 @@ The `deleteById` schema function receives a single input (`id`) and deletes the 
 | Name | Type |
 | ------ | ------ |
 | `success` | `boolean` |
+| `data` | `cloudedObject` |

@@ -2,8 +2,12 @@
 sidebar_position: 2
 ---
 
-# About Queries
-When working with some schema functions, namely `get`, `update` and `delete`, you have come across a property `query` which receives a query type. But what are queries exactly?
+# Queries - Recommended Interface
+:::caution
+The query model described here on this page only applies to DB protocols which follow the recommended interface.
+:::
+
+When working with some schema functions, namely `find`, `update` and `delete`, you have come across a property `query` which receives a query type. But what are queries exactly?
 
 ## What are Queries
 Queries are a way to look for values stored in you database that match some epecific criterias. For instance, lets say you are storing all of your users data in a database. You can use a query to find all the users whose age is higher than 18. Or maybe you want to find all the users who have an email registered. Possibly you want both: the users that are over 18 and have registered an email. **Queries are a simple way to filter the entities stored in you database**
@@ -11,7 +15,7 @@ Queries are a way to look for values stored in you database that match some epec
 ## The Query Structure
 Well, now we know what they do, but how do you use them? Well, its quite easy. Queries are an specially structured object where every property corresponds to the namesake property of the stored entities. Inside those properties you can uses some epecific terms to identify the desired condition. This may sound complicated, but lets look at an example and you will soon realise it is quite simple:
 
-Consider you have the following data stored in a collection `users`:
+Consider you have the following data stored in a dataset called `users`:
 ```javascript
 [  
   { name: "John", age: 16, email: "mynameisnotjohnny@gmail.com", login: { username: "johnny33", password: "12345" } },
@@ -39,10 +43,14 @@ In this example the only data that matches the query is
 Another possibility is to make sure a single property matches multiple conditions, for that you'll need the `$and` tag, which receives an array of  conditions and matches only the data that satisfy **all** the conditions. For example, let's say we need all the users whose age is between 16 and 20 (inclusive); we would need the following query:
 ```javascript
 {
-  $and: [
-    { age: { greater_or_equal_to: 16 } },
-    { age: { lower_or_equal_to: 20 } },
-  ]
+  age: {
+    $and: [
+      {
+        greater_or_equal_to: 16,
+        lower_or_equal_to: 20
+      }
+    ]
+  }
 }
 ```
 In this case the only matching data would be:
@@ -73,7 +81,7 @@ This query would only match the data:
 ```
 
 ## One of Query
-Now, lets say you want all the data that matches one of values in a list. For instance. let's say you want all the user data if the age of the user is 16, 18 or 30. You could use an `$or` tag and a few `equalt_to` tag, but a more convinient way of doing this is to simple use the `one_of` tag. This tag matches all the data that is equal to one of the given possibilities. Example:
+Now, lets say you want all the data that matches one of values in a list. For instance. let's say you want all the user data if the age of the user is 16, 18 or 30. You could use an `$or` tag and a few `equal_to` tag, but a more convinient way of doing this is to simple use the `one_of` tag. This tag matches all the data that is equal to one of the given possibilities. Example:
 ```javascript
 {
   age: {
@@ -119,8 +127,8 @@ The following tags can be applied to any numeric values you have stored, such as
 | not_one_of | `Array<number>` | Matches the data if value is not equal to any of the query values |
 | greater_than | `number` | Matches the data if stored value is higher than given value |
 | greater_or_equal_to | `number` | Matches the data if stored value is higher or equal to the given value |
-| lower_than | `number` | Matches the data if stored value is lower than given value |
-| lower_or_equal_to | `number` | Matches the data if stored value is lower or equal to the given value |
+| less_than | `number` | Matches the data if stored value is less than given value |
+| less_or_equal_to | `number` | Matches the data if stored value is less or equal to the given value |
 
 ### Date
 The following tags can be applied to any date values you have stored, such as birthdates or expiration dates.
@@ -134,8 +142,8 @@ The following tags can be applied to any date values you have stored, such as bi
 | not_one_of | `Array<Date>` | Matches the data if value is not equal to any of the query values |
 | greater_than | `Date` | Matches the data if stored date comes after the given date |
 | greater_or_equal_to | `Date` | Matches the data if stored date comes after or is equal to the given date |
-| lower_than | `Date` | Matches the data if stored date comes before the given date |
-| lower_or_equal_to | `Date` |  Matches the data if stored date comes before or is equal to the given date |
+| less_than | `Date` | Matches the data if stored date comes before the given date |
+| less_or_equal_to | `Date` |  Matches the data if stored date comes before or is equal to the given date |
 
 ### Boolean
 The following tags can be applied to any boolean (true/false) values you have stored. Usually used in "flag values" such as `isPremiumUser`, `emailHasBeenConfirmed`, etc.  
@@ -147,28 +155,43 @@ The following tags can be applied to any boolean (true/false) values you have st
 | not_equal_to | `boolean` | Matches the data if value is **not** equal to the query value |
 
 ### Array
-The following tags can be applied to any array (list) values you have stored. This type is used for lists of items, such as owned cars, registed documents, etc.
+The following tags can be applied to any array (list) values you have stored. This type is used for lists of items, such as owned cars, registed documents, etc. Since we can have arrays of any other types, when mentioned "`array type`" we are referring to the kind of the items in the array.
 
 | **Tag** | **Type** | **Decription** |
 | ------- | ---- |-------------- |
+| identical_to | `array` of `array type` | Matches if the array is identical to the given item |
+| contains_all | `array` of `array type` | Matches if the stored list contains all the given items |
+| contains | `array type` | Matches if the stored list contains at least one of the given item |
+| not_contains | `array type` | Matches if the stored list does not contains the given item |
+| contains_one_of | `array` of `array type` | Matches if the stored list has one of the given items |
+| contains_none_of | `array` of `array type` | Matches if the stored list does not contains any of the given items |
 | size | `number` | Matches the data if the array length (number of stored items) is equal to the given number |
-| all_are | `query` | Matches the data if all values stored in the array match the given query |
-| at_least_one_is | `query` | Matches the data if at least one of the values stored in the array match the given query |
 | exists | `boolean` | Matches the data if value not undefined |
 
+In addition to that, the subtypes of arrays have a couple more tags to be used:
+#### Array of Strings
+| **Tag** | **Type** | **Decription** |
+| ------- | ---- |-------------- |
+| contains_regexp | `string` (Regexp-like) | Matches if the array has at least one string that matches the Regexp |
 
-An example of an array query would be:
-(supose we are interacting with a user database)
-```javascript
-{
-  dollarBillsInVirtualWallet: { // Applies for the "dollarBillsInVirtualWallet" array
-    at_leat_one_is: { // Requires at least one of the values to match the condition
-      $and: [ //All conditions must match
-        { higher_or_equal_to: 20 }, // Must be higher or equal to 20 AND...
-        { not_equal_to: 100 } // Must not be equal to 100
-      ]
-    }
-  }
-}
-```
-So, to sumarize, this query will match any user that, in their virtual wallet, has at least a dollar bill that is higher or equal to 20 but is not a 100 dollars bill.
+#### Array of Numbers
+| **Tag** | **Type** | **Decription** |
+| ------- | ---- |-------------- |
+| contains_greater_than | `number` | Matches if the array contains one number greater than the given item |
+| contains_greater_or_equal_to | `number` | Matches if the array contains one number greater or equal to the given item |
+| contains_less_than | `number` | Matches if the array contains one number less than the given item |
+| contains_less_or_equal_to | `number` | Matches if the array contains one number less or equal to the given item |
+
+#### Array of Dates
+| **Tag** | **Type** | **Decription** |
+| ------- | ---- |-------------- |
+| contains_greater_than | `Date` | Matches if the array contains one Date that comes after to the given item |
+| contains_greater_or_equal_to | `Date` | Matches if the array contains one Date that comes after or is equal to  the given item |
+| contains_less_than | `Date` | Matches if the array contains one Date that comes before the given item |
+| contains_less_or_equal_to | `Date` | Matches if the array contains one Date that comes before or is equal to the given item |
+
+> Arrays of Objects and arrays Booleans does not have additional tags.
+
+:::caution
+This query model is still improving and currently there is no manner to concatenate two rules for a single item in an array to match (Like for a number in a list to be at the same time, greater than X, and not equal to Y). This is to be changed in future versions.
+:::
