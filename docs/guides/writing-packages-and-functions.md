@@ -14,7 +14,7 @@ Before we start, be sure to already have:
 Alright, now we should start by installing the single CLI you need for writing new Functions and Packages for Meta-System: `meta-function-helper`. We are going to install it globally since we just need to execute the command `meta-function-check` (or `meta-package-check`) to ensure our new function configuration is compatible with Meta-System.
 
 ```bash
-npm i -g meta-function-helper
+npm i -g @meta-system/meta-function-helper
 ```
 
 Oh, by the way, if you want a quick start on the functions, you can clone and edit this repository: [Bops-Function-Hello-World](https://github.com/mapikit/bops-function-hello-world). If you want to start a new package, you may base it from [Logger-Meta-Functions](https://github.com/mapikit/logger-meta-functions). Both are typescript examples.

@@ -90,21 +90,26 @@ Let's start with an example of that file. Taken from the [CronJob Protocol](http
   "protocolName": "cronjob-protocol",
   "description": "Run functions in a timely fashion",
   "entrypoint": "./dist/index.js",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "className": "CronJob",
   "functionDefinitions": [
     {
       "input": {},
       "output": {},
       "functionName": "stopJob",
-      "description": "stops running job" // Optional
+      "description": "stops running job"
     },
     {
       "input": {},
       "output": {},
       "functionName": "startJob",
-      "description": "Start the job" // Optional
-    }]
+      "description": "Start the job"
+    }
+  ],
+  "configurationFormat": {
+    "arguments": { "type": "cloudedObject" },
+    "bopsName": { "type": "string" },
+    "periodMillis": { "type": "number" }
   }
 }
 ```
@@ -125,11 +130,14 @@ The current semantic version of your protocol. Should match what is in the `pack
 #### `"className"` - String (required)
 It is the name of the class exported in your `"entrypoint"`.
 
-#### `"packageDetails"` - Object (required)
-This object is analogous to the [package details of a meta-package](./writing-packages-and-functions#package-configuration), and uses the same validation, but the only required property of this object is `"functionsDefinitions"`, which is an array of [functions definitions](./writing-packages-and-functions#functionsdefinitions---meta-function-array-required), and may be empty.
+#### `"functionsDefinitions"` - Array (required)
+This array should contain objects of [functions definitions](./writing-packages-and-functions#functionsdefinitions---meta-function-array-required), and may be empty if your protocol has no exported functions.
+
+#### `"configurationFormat"` - [ObjectDefinition](../api-docs/configuring/object-definition) (required)
+This is an object specifying how your protocol should be configured. Meta-System uses this to check for you if the user has provided a valid configuration.
 
 ## 4. Validating
-We're almost there! For validating your protocol, you should just run the command `meta-package-check` at the root of your repository. This command will check your class to see if it has all the required methods and also if it provides the methods declared in your `meta-protocol.json` file. If you're writing a DB protocol, do a `db-protocol-check` instead.
+We're almost there! For validating your protocol, you should just run the command `meta-protocol-check` at the root of your repository. This command will check your class to see if it has all the required methods and also if it provides the methods declared in your `meta-protocol.json` file. If you're writing a DB protocol, do a `db-protocol-check` instead.
 
 If everything goes smoothly, you should see a green success message saying: "File passed validation."
 

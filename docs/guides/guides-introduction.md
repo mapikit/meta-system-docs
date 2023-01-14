@@ -17,12 +17,12 @@ If you're already familiar with the [configuration of Meta-System](../api-docs/c
 ## Guides to Writing Packages and Functions
 You just found yourself wanting your system to do more. The built in functions and what the community has built so far does not suit you well enough. Well, this is your spot, then!
 
-Just start your new repository and install [`meta-function-helper`](https://www.npmjs.com/package/meta-function-helper) with `npm i -g meta-function-helper` and head to the [Writing Packages and Functions](./writing-packages-and-functions) page.
+Just start your new repository and install [`meta-function-helper`](https://www.npmjs.com/package/@meta-system/meta-function-helper) with `npm i -g @meta-system/meta-function-helper` and head to the [Writing Packages and Functions](./writing-packages-and-functions) page.
 
 ## Guides to Writing Protocols
 Is there a connection you need to make, or another external provider you want to integrate with your systems? It is a protocol you need!
 
-You can start by downloading [`meta-protocol-helper`](https://www.npmjs.com/package/meta-protocol-helper) with `npm i -g meta-protocol-helper`. Then go to the [Writing Protocols](./writing-protocols) page for the next steps.
+You can start by downloading [`meta-protocol-helper`](https://www.npmjs.com/package/@meta-system/meta-protocol-helper) with `npm i -g @meta-system/meta-protocol-helper`. Then go to the [Writing Protocols](./writing-protocols) page for the next steps.
 
 ## Guides to Contributing to Meta-System
 If would like to help, you are more than welcome to! There are a couple of ways in which you can help on making Meta-System more awesome, and they are all explained under [this documentation page](./contributing.md).

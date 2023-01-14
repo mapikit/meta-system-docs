@@ -21,7 +21,7 @@ A short description of what is it that your operation does.
 Information your operation needs to have in order to be executed. These are the function parameters.
 
 #### `"output"` - [Object Definition](../object-definition) (required)
-This is the information output by your function.
+This is the information output by your function. What is returns.
 
 #### `"constants"` - Single Parameter Type (required Array)
 This is all the information that your function uses and is not modified throughout its execution. For example, a BOp "plusTwo", that takes in any number and outputs it plus two should have the value `"2"` as a constant.
@@ -40,5 +40,3 @@ Since this is quite a complex subject, we have a page dedicated to the rules of 
 
 #### `"customObjects"` - [Object Definition](../object-definition) (optional Array)
 This is a list of custom types you may want to have in your operation, particularly useful for grouping arguments and information.
-
-> This page is still under construction. Come back later for updates :)
