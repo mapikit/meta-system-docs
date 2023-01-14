@@ -2,8 +2,8 @@
 sidebar_position: 1
 ---
 
-# Getting Started
-Welcome to the Meta-System documentation. Here we will show you the first steps required to run it, teach you about the architecture, in-depth info about functions, and hopefully answer all the questions you might have about the Meta-System.
+# Welcome to the Meta-System documentation
+Here we will show you the first steps required to run it, teach you about the architecture, in-depth info about functions, and hopefully answer all the questions you might have about the Meta-System.
  
 So, in order to answer most of those questions, let's begin with the famous three W's: what is it, who is it for and where do you start.
  
@@ -12,7 +12,7 @@ So, in order to answer most of those questions, let's begin with the famous thre
  
 "Meta" loosely stands for "X about X": metalanguage is the language talking about the language; metadata is data about the data. Well, since that is the case, a **Meta System must be a System that creates systems!**
  
-The idea behind the Meta-System is to simplify the creation and maintenance of simple as well complex systems; from a simple local supermarket backend server to a full blown multinational marketplace. If you are a solitary developer, with low programming knowledge who wants to create an app, meta-system might help you! However, if you represent an already large company which is currently looking to reduce the costs of maintaining a server running properly, well, then Meta-System is also for you and your team!
+The idea behind the Meta-System is to simplify the creation and maintenance of simple as well as complex systems; from a simple local supermarket backend server to a full blown multinational marketplace. If you are a solitary developer, with low programming knowledge who wants to create an app, meta-system might help you! However, if you represent an already large company which is currently looking to reduce the costs of maintaining a server running properly, well, then Meta-System is also for you and your team!
  
 The idea behind it is to be simple, capable and [extensible](./architecture/extending-functionality). Just give the Meta System a configuration file as seen here and watch as it builds http routes, databases, functions and *voilà!* your system should be up and running!
 
@@ -21,13 +21,13 @@ The idea behind it is to be simple, capable and [extensible](./architecture/exte
 So, now you know what it is, what it does and the basics of configuring your system. But how and where do you start?
  
 ### First Steps
-The Meta-System can be downloaded through [NPM](https://www.npmjs.com/). If you have NodeJs installed you probably already have npm and it is a matter of installing with the command
+The Meta-System can be downloaded through [NPM](https://www.npmjs.com/package/meta-system). If you have NodeJs installed you probably already have npm and it is a matter of installing with the command
 `npm install -g meta-system`
 > Note: If you don't have NodeJs and/or npm installed more info on those can be found [here](https://nodejs.org/en/)
  
-After installation all you need to do is have a configuration file (in the json format) and type in the command `meta-system path/to/file/<configuration-name>.json` on Unix Systems or `meta-system path\to\file\<configuration-name>.json` on Windows. As soon as you hit enter Meta-System will begin validating your configuration and, if everything is fine, start your system!
+After installation all you need to do is have a configuration file (in the json format) and type in the command `meta-system run path/to/file/<configuration-name>.json` on Unix Systems or `meta-system run path\to\file\<configuration-name>.json` on Windows. As soon as you hit enter Meta-System will begin validating your configuration and, if everything is fine, start your system!
  
-If you want a quick start you can try out our `example application` below. Alternatively, if you already have a NodeJs project you can have a look at the section `Integrating Meta-System to an existing system` and use it as a NPM package for your project!
+If you want a quick start you can try out our [`example application`](#running-your-first-system) below. Alternatively, if you already have a NodeJs project you can have a look at the section `Integrating Meta-System to an existing system (To be done)` and use it as a NPM package for your project!
  
 ----
 ## Running your first System
@@ -45,10 +45,10 @@ import ExampleConfig from '!!raw-loader!/static/jsons/example.txt';
 
 Simply copy and paste the configuration above into a new text file and save it as `example.json` (you may change the name later, just make sure it is a `.json`). Now, that you have installed Meta-System and have a configuration ready to go, all there is to do is run the command:
 
-- `meta-system path/to/file/example.json --dev` on Unix Systems;
-- `meta-system path\to\file\example.json --dev` on Windows;
+- `meta-system run path/to/file/example.json` on Unix Systems;
+- `meta-system run path\to\file\example.json` on Windows;
 
-> The `--dev` flag makes it so your system restarts whenever you update your configuration. This can also be done manually by entering `rs` in the console.
+> You may restart your system manually by entering `rs` in the console. It will read and validate your configuration again, so it can be used when developing.
 
 Now Lets have a look at the main parts of this configuration:
 
@@ -67,12 +67,12 @@ With your system running, open your prefered web browser and head over to <a hre
 You should have received a simple response with an object `{ result: "Hello World !" }`. Now try changing the route in the address bar to `localhost:8080/myFirstSystem/foo` and hit enter again. As you can see, the text following `myFirstSystem/` will be sent to the system, which will include it in the response. Try changing this text to your name or whatever other text you may like!
 
 Now that we understand what the current config does, let's try changing it a bit:
-Open the `example.json` file with your prefered text editor (such as Atom, VSCode or even notepad) and find, inside the `constants` of the BOp `sayHello` a constant named `"helloString"`. Here you will find three properties: name, type and value. Change "value" from `"Hello"` to `"Goodbye"` and save the file and restart your system (this should be done automaticaly with the `--dev` flag or can be done manually by entering `rs` in the console)
+Open the `example.json` file with your prefered text editor (such as Atom, VSCode or even notepad) and find, inside the `constants` of the Business Operation `sayHello` a constant named `"helloString"`. Here you will find three properties: name, type and value. Change "value" from `"Hello"` to `"Goodbye"` and save the file and restart your system (you can type `rs` on the console to do so).
 
 Now try the same thing again on <a href="localhost:8080/myFirstSystem/My_Friend" target="_blank"> `localhost:8080/myFirstSystem/My_Friend` </a>. As you can see, by simply changing the constant, now you your system responds with goodbye instead of hello.
 
 Wait, you want more? Let's go deeper then! Now, inside this config try finding the block where `"moduleName"` is `"output"`. This determines the output of your system. A bit lower, still inside this block, you'll find a property called `"dependencies"`, and inside that another one called `"origin"`. This origin is from which other module the output originates from. Try changing it from `2` to `3`, save the file and restart you system just like you did before and try the same <a href="localhost:8080/myFirstSystem/My_Friend" target="_blank"> `localhost:8080/myFirstSystem/My_Friend` </a> url again.
 
-Now, this is new! The property result no longer is a text, but a group of properties (also known as an Array) where the first item is `"Goodbye"`, the second is the text you type after `myFirstSystem/` and the third item a solitary `"!"`.
+Now, this is new! The property result no longer is a text, but a group of values (also known as an Array) where the first item is `"Goodbye"`, the second is the text you type after `myFirstSystem/` and the third item a solitary `"!"`.
 
 As you can see, you can easily modify the behavior of your system in just a few minutes! This is the power of Meta-System. Now, if you truly want to do wonders with this tool, you can keep playing around with this example config and when you are done head to the [Configuration Section](./configuring/basics.md) to learn all nooks and crannies of the Meta-System Configuration, and make your ideas come to life!

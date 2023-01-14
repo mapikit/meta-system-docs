@@ -4,23 +4,22 @@ sidebar_position: 5
 
 
 # Meta-System CLI
-> This Page is under construction
-
 Meta-System has a pretty simple CLI to use, and here we will list all that it supports.
+You can get an overview of the CLI by simply running `meta-system` with no commands.
+## Commands
+As of version V0.3 Mercury, there's just two commands, `run` and `test-bop`.
 
-To begin with, there are no other commands than just "run".
+### run
+This is the main command for using MSYS. it uses the specified configuration to configure your system, validate it, and subsequently run it.
+- Example: `meta-system run ./path-to/configuration.json`
+- Syntax: `meta-system run [options] <path-to-configuration>`
 
-## The Arguments
-Whenever you use the `meta-system` command, the next argument is the path for the configuration file you are trying to run:
+Type `meta-system help run` to get more information on the options you can pass to this command.
 
-`meta-system <file-to-path>`
+### test-bop
+Use this function to test how a BOp of yours is responding without needing to spin up all your system and protocols. When using this command, after your configuration is validated, you will be prompted for the required inputs of your Business Operation.
 
-## The Flags and Options
-### Version
-Firstly, `-v` shows you the version you are running of Meta-System.
+- Example: `meta-system test-bop ./path-to/configuration.json bopName`
+- Syntax: `meta-system test-bop <config> <bop>`
 
-### Prop Validation Bypass
-Next, we also have a validation bypass flag `--skip-prop-validation`. This skips the types and arguments validation of the functions inside your BOps. Such validation is still in beta, but in the future, using this flag will show an "unsafe" warning.
-
-### Watch JSON file (Dev mode) 
-It is possible to make Meta-System watch for file changes in your configuration files and restart upon changes. To do so, just add the `-dev` flag.
+There are no options for this command.

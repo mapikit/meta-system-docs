@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import LastVersionReleased from '../components/LastVersionReleased';
 import WipWarning from '../components/WipPageWarning';
 const SVGLogo = require('../../static/img/logo_metasystem.svg').default;
 
@@ -37,6 +38,7 @@ export default function Home() {
       <WipWarning />
       <HomepageHeader />
       <main>
+        <LastVersionReleased />
         <HomepageFeatures />
       </main>
     </Layout>
