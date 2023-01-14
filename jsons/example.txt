@@ -3,23 +3,23 @@
   "version": "0.1.0",
   "envs": [],
   "schemas": [],
-  "dbConnectionString": "",
   "businessOperations": [
     {
       "name": "sayHello",
-      "version": "0.1.0",
       "description": "Greets the name given",
       "customObjects": [],
       "input" : {
         "name": { "type": "string" }
       },
       "output" : {
-        "greet": { "type": "string" }
+        "greet": { "type": "string" },
+        "responseCode": { "type": "number" }
       },
       "constants": [
         { "name": "helloString", "type": "string", "value": "Hello" },
         { "name": "exclamationMark", "type": "string", "value": "!" },
-        { "name": "space", "type": "string", "value": " " }
+        { "name": "space", "type": "string", "value": " " },
+        { "name": "responseCode", "type": "number", "value": 200 }
       ],
       "variables": [],
       "configuration": [
@@ -47,7 +47,8 @@
           "moduleName": "output",
           "key": 1,
           "dependencies": [
-            { "origin": 2, "originPath": "result.result", "targetPath": "greet" }
+            { "origin": 2, "originPath": "result.result", "targetPath": "greet" },
+            { "origin": "constants", "originPath": "responseCode", "targetPath": "responseCode" }
           ]
         }
       ]
@@ -56,8 +57,14 @@
   "protocols": [
     {
       "protocol": "http-json-meta-protocol",
+      "protocolVersion": "latest",
       "identifier": "main-Http",
       "configuration": {
+        "enableCors": false,
+        "corsConfig": {
+          "origin": "*",
+          "optionsSuccessStatus": 200
+        },
         "port": 8080,
         "routes": [
           {
@@ -70,7 +77,7 @@
             "resultMapConfiguration": {
               "body": { "result": "greet" },
               "headers": [],
-              "statusCode": 200
+              "statusCode": "responseCode"
             }
           }
         ]
