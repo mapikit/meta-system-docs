@@ -58,6 +58,7 @@
     {
       "protocol": "http-json-meta-protocol",
       "protocolVersion": "latest",
+      "protocolKind": "normal",
       "identifier": "main-Http",
       "configuration": {
         "enableCors": false,
