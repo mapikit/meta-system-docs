@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Software Design Behind Meta-System
+# Meta-System's Design
 
-Meta-System was built from the ground up to be as extensible and modular as possible. If you strip all the extras and helpers built in, this software can be understood as a function-based flow executor.
+Meta-System was built from the ground up to be as extensible and modular as possible. If you strip all the extras and helpers built in, this software can be understood as a function-based flow executor - a no-code engine.
 
 ## Theory
 
@@ -17,7 +17,7 @@ The **Data** is contextualized information, such as in a car (context), how many
 
 With chaining and defining each of this things, it is possible, in theory, to create any system, and that is what we wanted Meta-System to be capable of.
 
-## The Building Blocks
+## Key Components
 
 In the Meta-System, the data is called **Schemas**, the rules are called **Business Operations**, and the **Protocols** retained its name.
 
