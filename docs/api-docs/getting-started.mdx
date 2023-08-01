@@ -25,7 +25,7 @@ The Meta-System can be downloaded through [NPM](https://www.npmjs.com/package/me
 `npm install -g meta-system`
 > Note: If you don't have NodeJs and/or npm installed, more info on those can be found [here](https://nodejs.org/en/).
 
-### 2. Running your first system
+### 2. Configuring your first system
 For you to make Meta-System into your very own system, you'll need a configuration file. [Here](./configuring/basics.md) you can check in depth how to configure Meta-System. If you're new around, though, here's a classic:  **FizzBuzz**!
 
 Let's get going:
@@ -40,14 +40,25 @@ import ExampleConfig from '!!raw-loader!/static/jsons/example.txt';
 </details><br/>
 
 Simply copy and paste the configuration above into a new text file and save it as `example.json` (you may change the name later, just make sure it is a `.json`).
-Now, that you have installed Meta-System and have a configuration ready to go, all there is to do is run the command:
+Now, that you have installed Meta-System and have a configuration ready to go, all there is to do is run Meta-System!
+
+### 3. Launching Meta-System
+You can launch instances of Meta-System my the CLI command `meta-system run`. To continue our example, try doing:
 
 - `meta-system run path/to/file/example.json` on Unix Systems;
 - `meta-system run path\to\file\example.json` on Windows;
 
 You should be now seeing your configuration being validated, then brought to life by Meta-System, ready-to-go.
 
-Cool, right? Let's now touch on what every bit of this file is doing!
+## Use-Cases
+What people can build with MSYS? What is possible?
+
+As an engine, Meta-System can be used to power any kind of software, as long as the target platform allows for running NodeJS or browser-based JavaScript.
+Also, because it is extensible, you're never limited to only what you have in the engine. The combination of these properties sets Meta-System as a versatile lightweight no-code tool for almost any task.
+- **A Backup Daemon** : Configured to automatically run at startup, backs up a preconfigured set of files timely.
+- **An authenticated API for accessing a DataSet** : With access to a DataBase, filters, orders and joins data for a front end application to display.
+- **A Live Sync tool for a Collaborative Software** : Used to be the source of truth for a user interface to sync data live with peers using a protocol such as WebRTC.
+
 
 #### Business Operation (sayHello)
 We have a single BOp called "sayHello" that receives a name property and returns an object where the greet property is a string saying `Hello <name given> !`. 
