@@ -2,16 +2,12 @@
 sidebar_position: 1
 ---
 
-# Meta-System's Design
+# Base Concepts
 
-Meta-System was built from the ground up to be as extensible and modular as possible. If you strip all the extras and helpers built in, this software can be understood as a function-based flow executor - a no-code engine.
+Meta-System was built from the ground up to be as extensible and modular as possible. If we remove all the built-in extra functionality, Meta-System can be understood as a no-code engine with interfaces for modifying it.
 
 ## Theory
-
-In order to build a structure capable of representing any software, we needed to come up with a theory. We believe that any system in the world is composed of three things:
-- Data
-- Rules
-- Protocols
+As an engine to be capable of powering (almost) any software, Meta-System is required to have a structure capable of representing any software, just as the torque from an engine's axle can have its energy converted, stored, moved and used in hundreds of ways.
 
 The **Data** is contextualized information, such as in a car (context), how many seats there are (information). The **Rules** are logic constraints that apply while acting upon information. For instance, it is not possible to put more seats in a car than what its interior space allows. Lastly, the **Protocols** are the bridge that allows communication with outside the boundaries of the system, be it the internet, a Bluetooth device, a step motor, or even the UI of a fancy app.
 
