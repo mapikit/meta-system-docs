@@ -7,12 +7,12 @@ sidebar_position: 2
 As explained in [Software Design](./software-design.md), Meta-System was built to be extensible. This document explains what mechanisms we have for anyone to add new functionality to the software but without requiring a change in the [source code](https://github.com/mapikit/meta-system).
 
 ## What is Extensible?
+The short and sweet answer for this is: **Every part of Meta-System is made to be modified and extended.** However, there's method to the madness.
 
-Meta-System's architecture shares many similarities with a [functional programming language](https://en.wikipedia.org/wiki/Functional_programming), it is the foundation for every action in a Business Operation flow.
+Similar to a [functional programming language](https://en.wikipedia.org/wiki/Functional_programming), Meta-System is built to be modular and composable.
 
-Each flow uses small pieces of code to execute specific tasks in each step, to then achieve the desired functionality. Since such tasks are no different from eachother in the engine's perspective, **you may add any custom function to extend functionalities in the system**.
+By design, it is expected for you to increment Meta-System with your own set of instructions, and as mentioned in the ["Into real world" section](./software-design#into-real-world), there is a specific step in which this happens, the "data extension" step.
 
-Another extensible aspect of Meta-System lies in the mechanism to launch those flows. As explained in [the Building Blocks](./software-design#the-building-blocks), the Protocols are what we use for interacting with the system, and they can also be created and extended.
 
 ## And How Do We Extend It?
 
@@ -22,19 +22,4 @@ There are many places in the configuration file, in which, if you specify an ext
 
 For more information on the configuration, start by reading [the basics](../configuring/basics).
 
-### Protocols
-Starting by the Protocols, all available protocols are actually NPM libraries. The team behind Meta-System developed some of them, like the [CronJob](https://www.npmjs.com/package/cronjob-protocol) or [HttpJson](https://www.npmjs.com/package/http-json-meta-protocol).
 
-This means you can either use ones that were already made, or create your own. For the latter option, check the [Guides](../../guides/guides-introduction) page.
-
-#### DB Protocols
-There is this kind of protocols which requires mention. They are protocols specialized to interact with a database and schemas, actively being used by the schemas to persist information. These DB Protocols can also be created, enabling Meta-System to use virtually any data persistency method (or ephemeral, like Redis).
-
-We also created one DB Protocol for using MongoDB together with Meta-System: [mongodb-db-protocol](https://www.npmjs.com/package/@meta-system/mongodb-db-protocol).
-
-### Functions (BOps Functions/Modules)
-For the functions, Meta-System contains some already built in, called Internal Functions, and you can check them in the Functions API Reference in the sidebar of this very documentation.
-
-There are also the External functions (and packages of functions). Some examples are the [logger](https://www.npmjs.com/package/logger-meta-functions), which is a function package, and the [bops-hello-world](https://www.npmjs.com/package/bops-function-hello-world), which is a standalone function. Meta-System downloads them from npm if you require them, this means that if you publish a function or package with a compatible interface, you can also start using it on your BOps rightaway.
-
-Check the guides for doing that: [Writing Packages and Functions](../../guides/writing-packages-and-functions).
