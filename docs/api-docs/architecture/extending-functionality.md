@@ -4,22 +4,18 @@ sidebar_position: 2
 
 # Extending Functionality
 
-As explained in [Software Design](./software-design.md), Meta-System was built to be extensible. This document explains what mechanisms we have for anyone to add new functionality to the software but without requiring a change in the [source code](https://github.com/mapikit/meta-system).
+As explained in the [Base Concepts](./software-design.md), Meta-System was built to be extensible. This document explains what mechanisms there are for anyone to add new functionality to the software but without requiring changes in the [source code](https://github.com/mapikit/meta-system).
 
-## What is Extensible?
-The short and sweet answer for this is: **Every part of Meta-System is made to be modified and extended.** However, there's method to the madness.
+## What is Extensible
+MSYS fully embraces the idea of being just an engine, so that **Every part of it is made to be modified and extended**.
 
-Similar to a [functional programming language](https://en.wikipedia.org/wiki/Functional_programming), Meta-System is built to be modular and composable.
+In other words, you can modify, extend, and use the data used to build the functions that compose Meta-System, as well as the built functions themselves.
 
-By design, it is expected for you to increment Meta-System with your own set of instructions, and as mentioned in the ["Into real world" section](./software-design#into-real-world), there is a specific step in which this happens, the "data extension" step.
+## How to Extend
+By design, it is expected for you to increment Meta-System with your own set of instructions (or other open-source Addons), and as mentioned in the ["Into real world" section](./software-design#into-real-world), there is a specific step in which this happens, the "data extension" step.
 
+In other words, you can simply declare an Addon in the system configuration. When the system is booting up, and the process reaches the "data extension" step, Addons can have access to the current state of the data, being able to read it, modify it, delete it, and even insert more data.
 
-## And How Do We Extend It?
-
-Firstly, there are mechanisms for you to do that without any change in the source code of Meta-System; By design, it is expected for you to find the best solutions that suit your problem, or create your own.
-
-There are many places in the configuration file, in which, if you specify an external package, Meta-System will try to download it from NPM and add it to your system. **Protocols** are always external, always downloaded, and the **Functions** are mostly external, with a few exceptions of frequently used data manipulation, and mathematical operations ones.
-
-For more information on the configuration, start by reading [the basics](../configuring/basics).
-
-
+:::info Built-in Functionality
+Although it provides a sort of "standard library" (that is actually just some useful functions for data manipulation), Meta-System makes no assumption of use, which makes it lightweight and versatile. Consequently, this enables a higher degree of control, because the user is required to specify what else they need in their Meta-System.
+:::

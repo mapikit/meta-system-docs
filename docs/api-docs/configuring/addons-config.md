@@ -2,19 +2,14 @@
 sidebar_position: 4
 ---
 
-# Protocols
+# Addons
 
-In the root of the system configuration file, there is this `"protocols"` property. This refers to an array of protocols, which are used to create a connection between your BOps and Schemas and everything else in the outside world.
+In the root of the system configuration file, there is the `"addons"` property. This refers to a list of MSYS extensions that can be used to all sorts of things, from having a healthcheck HTTP endpoint for your system, to adding behavior to Schemas.
 
-For Meta-System, all protocols are external, which means that they are a library that is downloaded during system setup. For example, we have [`http-json-meta-protocol`](https://www.npmjs.com/package/http-json-meta-protocol) and [`cronjob-protocol`](https://www.npmjs.com/package/cronjob-protocol). By referring to their names in your configuration, you are telling Meta-System to download them and execute them for you, with their own configuration.
-
-## Protocol Kinds
-There are two kinds of protocols.
-- Normal - Used to trigger a Business Operation flow,
-- DB Protocol - Used by schemas to interact with the data
+For Meta-System, all addons are external, which means that they are a library that is imported during system setup.
 
 ## Configuring Each Protocol
-In the `"protocols"` array, each object is a single protocol reference. This object accepts these following parameters:
+In the `"addons"` array, each object is a single addon to be imported. This object accepts these following parameters:
 
 ### `"protocol"` - String (required)
 This is the name of the protocol to be downloaded. It must match what there is on NPM.
@@ -29,7 +24,8 @@ These are the parameters of the protocol you are trying to use. Pay attention to
 This is the Version of the protocol to be downloaded. If no specified, It defaults to the latest version available.
 
 ### `"identifier"` - String (required)
-Since you can have multiple instances of the same protocol on the same system, you must give all of them an identifier. This is used in the BOps to get functions from the protocol, if it provides any. It is also used to set a schema's DB connection with a specific DB Protocol.
+Since you can have multiple instances of the same addon on the same system, you must give all of them an unique identifier.
+
 ## Example
 In the following example, we will use the version `1.0.0` of [`http-json-meta-protocol`](https://www.npmjs.com/package/http-json-meta-protocol) to listen to an HTTP route calling a ficticious BOps named `register`.
 

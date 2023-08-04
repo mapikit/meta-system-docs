@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 # Configuration Basics
-In this documentation section, you will be presented with all the configuration file details for `meta-system`. If you want to learn a bit more of how things work under the hood, check the [Architecture](../architecture/software-design.md) section before! You will possibly have a better experience tuning your system if you do so.
+In this documentation section, you will be presented with all the configuration file details for Meta-System. If you want to learn a bit more of how things work under the hood, check the [Architecture](../architecture/software-design.md) section before! You will possibly have a better experience tuning your system if you do so.
 
 ## Starting a New Config
 A new configuration is what stands between you and your brand new system. Don't panic! Here we have all the instructions needed for you to overcome the challenges you may face. Let's start by handing you this sweet clean sample of a configuration.
@@ -37,19 +37,21 @@ If populated the values must be objects with two properties: `key` and `value`, 
 ### Deep Properties
 These next values are what you should pay more attention as they are the pieces that define the functionality of the system. Since they have enough details to care about, we have a dedicated page for each.
 
-#### `"protocols"` - required Array
-These determine how your system communicates with the outside world, so it is quite important! Here is where you configure whether your system will use the worldwide spread HTTP or any other type of communication. Also you should set here the DB Protocols, used to interact directly with schemas and persist data.
+#### `"addons"` - required Array
+Addons are how you modify your system beyond what MSYS comes with out of the box. Non exaustively, Addons can modify or create Schemas, make more functions available to use within BOps, create new BOps, or even execute them.
+
+For info on how you can create your own Addon, head to the [Creating Your Addon](../../guides/creating-addons.md) guide.
  
-More info can be found in the [Protocols Section](./protocol-config.md).
+Information on how to configure addons can be found in the [Addons Section](./addons-config.md).
  
 #### `"schemas"` - required Array
-Schemas define the things your system will work with. If you sell cars, a car should be defined with properties that matter to you such as the amount of doors, the engine power and the price. Once that is defined your system will be able to store and manage info about individual cars.
+Schemas define the format of the entities your system will work with. If you sell cars, a car should be defined with properties that matter to you such as the amount of seats, the engine power and the price. Once that is defined your system will know about this kind of entity, and Addons can learn about it and provide you with actions to do with those entities.
  
 More info can be found in the [Schemas Section](./schema-config.md).
  
 #### `"businessOperations"` - required Array
 BusinessOperations, or BOps as we like to call them, are the heart of your system. They are what define what your system should do with the data it recieves and holds. Here lies your business logic, applied to the data it interacts with.
 
-For instance, you can tell your system what it should do when your user tells the system he/she is 500 years old. Should it refuse to save this info or should it store it in your database anyways? In short, here is where the logic, the brains of the operations lives, so take good care of it!
+For instance, you can tell your system what it should do when your user tells the system they are 500 years old. Should it refuse to save this info or should it store it in your database anyways? In short, here is where the logic, the brains of the operations lives, so take good care of it!
 
 More info can be found in the [BOps Section](./bops/bops.md).
