@@ -26,8 +26,5 @@ The name of your entity type. This name will be used to access and modify the da
 
 This is the expected structre for this schema. This is used to parse the queries into something the database understands.
 
-#### **`"dbProtocol"` - string**
-This field should be the [identifier of the DB protocol](./protocol-config#identifier---string-required) you want to use in your schema.
-
 #### **`"identifier"` - string**
 Since the name of your schema can be changed, we need something to be static about this data. This is what this field is for. DB Protocols often use this field to compare different versions of schemas and apply structural changes to the dabases when needed.

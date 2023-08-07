@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 # About BOps
-The BOps are the heart of your business, they can be whatever you need them to be, and should specify the rules that guide your business on a daily basis.
+The Business Operations are the heart of your business, they can be whatever you need them to be, and should represent a process in your system.
 
 Users cannot be younger than 13 years old? That's a business operation. Should you send an email when users complete their 10th purchase? Another BOps!
 
@@ -37,6 +37,3 @@ There are specific built in functions for modifying these values. Check [Constan
 This is the soul of your business operation, where all the logic is set and the flow is executed. It is a list of all the steps that exists in the operation, their dependencies, data, and the functions themselves.
 
 Since this is quite a complex subject, we have a page dedicated to the rules of this function, and what it does. See [BOps Configuration](./bops-configuration).
-
-#### `"customObjects"` - [Object Definition](../object-definition) (optional Array)
-This is a list of custom types you may want to have in your operation, particularly useful for grouping arguments and information.

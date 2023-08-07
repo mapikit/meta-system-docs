@@ -9,34 +9,34 @@ In the root of the system configuration file, there is the `"addons"` property. 
 For Meta-System, all addons are external, which means that they are a library that is imported during system setup.
 
 ## Configuring Each Protocol
-In the `"addons"` array, each object is a single addon to be imported. This object accepts these following parameters:
+In the `"addons"` array, each object is a single addon to be imported into Meta-System. This object accepts these following parameters:
 
-### `"protocol"` - String (required)
-This is the name of the protocol to be downloaded. It must match what there is on NPM.
+### `"source"` - String (required)
+Where to aqcuire the Addon from. This property is used to retrieve the Addon, working together with the `"collectStrategy"`.
 
-### `"protocolKind"` - String (required)
-This property sets how the protocol should be loaded. Since there are two kinds of protocols, `"normal"` and `"db-protocol"`, this value should match the kind of your protocol.
+- For a Collect Strategy of `"npm"`, the **Source** is the name of the npm package.
+- For a Collect Strategy of `"file"`, **Source** should be a path to an Addon.
+- For a Collect Strategy of `"url"`, the **Source** is a URL to a zipped Addon.
 
 ### `"configuration"` - Object (required)
-These are the parameters of the protocol you are trying to use. Pay attention to its own documentation, since each protocol can vary immensely on the parameters they accept, and their structure.
+These are the parameters of the addon you are trying to use. Pay attention to the addon own documentation, since each of them can vary immensely on the parameters they accept, and their structure.
 
-### `"protocolVersion"` - String Semver (optional)
-This is the Version of the protocol to be downloaded. If no specified, It defaults to the latest version available.
+### `"version"` - String Semver (optional)
+This is the Version of the Addon to be downloaded. If no specified, It defaults to the latest version available. Only works with `collectStrategy` = `"npm"`
 
 ### `"identifier"` - String (required)
 Since you can have multiple instances of the same addon on the same system, you must give all of them an unique identifier.
 
 ## Example
-In the following example, we will use the version `1.0.0` of [`http-json-meta-protocol`](https://www.npmjs.com/package/http-json-meta-protocol) to listen to an HTTP route calling a ficticious BOps named `register`.
+In the following example, we will use the version `4.0.0` of [`http-meta-protocol`](https://www.npmjs.com/package/http-meta-protocol) to listen to an HTTP route calling a ficticious BOps named `register`.
 
 ```json
 {
   "protocols": [
     {
-      "protocol": "http-json-meta-protocol",
-      "protocolKind": "normal",
-      "identifier": "Main Routes Protocol",
-      "protocolVersion": "1.0.0",
+      "source": "http-meta-protocol",
+      "identifier": "main-routes-protocol",
+      "protocolVersion": "4.0.0",
       "configuration": {
         "port": 8080,
         "routes": [
