@@ -11,12 +11,6 @@ In the configuration file, `"businessOperations"` is a list of objects. Each of 
 
 ### BOps Properties
 A BOps can have the following properties specified:
-#### `"name"` - String (required)
-This is the name of your BOp. It is used to call the operation in runtime, either inside other BOps or by protocols.
-
-#### `"description"` - String (required)
-A short description of what is it that your operation does.
-
 #### `"input"` - [Object Definition](../object-definition) (required)
 Information your operation needs to have in order to be executed. These are the function parameters.
 
@@ -37,3 +31,9 @@ There are specific built in functions for modifying these values. Check [Constan
 This is the soul of your business operation, where all the logic is set and the flow is executed. It is a list of all the steps that exists in the operation, their dependencies, data, and the functions themselves.
 
 Since this is quite a complex subject, we have a page dedicated to the rules of this function, and what it does. See [BOps Configuration](./bops-configuration).
+
+#### `"ttl"` - Number (optional)
+Defines a Time To Live for this BOps. If this time is exceeded in milliseconds, MSYS will reject the promise of the BOp.
+
+#### `"identifier"` - String (required)
+Identifies this BOp with a string for Meta-System. This string will be used to reference the BOp anywhere in your system.

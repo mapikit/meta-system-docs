@@ -4,22 +4,12 @@ sidebar_position: 2
 # Schemas
 Schemas, in short, are the specifications of the data structure common to all the system. If your system is about cars, you will need to say what properties are relevant for your system about the cars. Which brand is it? What color, which year, the model, seat count? Any information can be put in the schemas.
 
-When you creante schemas, you will also need ways to fetch/save that data, and Meta-System requires you to specify such a way through declaring a [DB Protocol](./protocol-config.md) with some functions to interact with the data under that schema:
-- Insert
-- Delete
-- Delete By Id
-- Update
-- Update By Id
-- Find
-- Find By Id
+When you create schemas, you only create a data structure for Meta-System to know. For you to give actions to your schemas, such as saving them to a DB, fetching them, or any other action, you should [extend your system with an Addon](../architecture/extending-functionality.md).
 
-Such DB Protocols is what connects your schema with the data storage of your choice, like a Redis, MongoDB, or even the memory of the system.
-
-Now let's see how we can define a schema.
-
+Let's see how we can define a schema.
 ## Properties
 #### **`"name"` - string**
-The name of your entity type. This name will be used to access and modify the data.
+The name of your entity type. This name will be used to access your schema and its actions.
 
 #### **`"format"` - ObjectDefinition**
 > *ObjectDefinition* is a type present in multiple parts of meta-system. It is the standard we created for defining types of objects. [Click here to Learn More](./object-definition).
