@@ -29,12 +29,10 @@ All the core features are outlined in the [Roadmap](https://github.com/mapikit/m
 
 When we already started working on a feature for a version, there will be an issue made for it on this [list](https://github.com/mapikit/meta-system/issues), which we use to track development. If you don't see a feature for a next version there, it probably means we haven't started working on it yet, so in this case, you're welcome to adopt a task!
 
-## Ecosystem
-Perhaps even more important than the core of the Meta-System itself, there is the ecosystem to support its usage. The ecosystem is composed of all the libraries that support both the development of the core, and the development of packages and protocols.
+## Addons
+Perhaps even more important than the core of the Meta-System itself, there is the Addons ecosystem, and yes, we do consider this as a contribution! Addons are what makes Meta-System to be more useful to more people. We assume that we simply cannot make Meta-System capable of solving all the possible cases, so, instead, we give the users tools for them to increase the usability of MSYS.
 
-Contributing to the ecosystem consists in improving the quality of the libraries and helpers, making them more useful and stable, as well as better documented overall.
+By creating and maintaining such packages, you are creating functionality for every user of Meta-System too. :heart:
 
-## Packages, Functions, and Protocols
-Yes, we do consider this as a contribution! Packages and protocols are what makes Meta-System to be more useful to more people. We assume that we simply cannot make a software capable of solving all the possible cases, so, instead, we give the users tools for them to increase the usability of the software.
-
-By creating and maintaining packages and protocols, you are creating functionality for every user of Meta-System too. :heart:
+## Meta-Editor (Coming Soon!)
+We're already hard at work to provide an application for everyone to be able to create their MSYS-based services by a drag'n'drop GUI. Ping us at our [Discord](https://discord.gg/ndGsnbTW7V) for more information or to know how you can help!
