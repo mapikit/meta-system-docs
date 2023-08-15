@@ -48,7 +48,7 @@ The permission Object itself has two properties: `entity`, and  `permissions`, b
 Here's an example of Permission, allowing an Addon to modify and create Schemas:
 ```json
 {
-  "eentity": "schemas",
+  "entity": "schemas",
   "permissions": [
     "modify_schema",
     "create_schema"
@@ -57,4 +57,45 @@ Here's an example of Permission, allowing an Addon to modify and create Schemas:
 ```
 
 ### The Entrypoint
-This file is used to wire your code with MSYS internals.
+This file is used to wire your code with MSYS internals. It is supposed to contain two exported functions, `"configure"` and `"boot"`, even if they're empty. Both functions can be Async.
+
+#### The `configure` Function
+It receives two arguments, first, a [broker](./broker.md) containing the entities and methods you specified in your permissions list, and second, the user configuration for your Addon, following the Object Definition you specified.
+
+Use this function to extract, add, or modify data as you see necessary for your addon. For example, if your addon adds functions to be used inside a BOp, you could add them as the following:
+
+```javascript
+// Imported example from the Addon meta-authorize.
+import { createTokenFunction, hashFunction, matchesHashFunction, verifyTokenFunction } from "./definitions.js"
+
+export const configure = (broker, _configration) => {
+  const functions = [createTokenFunction, verifyTokenFunction, hashFunction, matchesHashFunction];
+
+  for (const func of functions) {
+    broker.addonsFunctions.register(func.function, func.definition)
+  }
+
+  broker.done();
+}
+
+export const boot = () => {}
+```
+
+The Configure function has no specific return type. **The data returned in this function will be passed as a parameter to the `"boot"` function.**
+
+You must call `broker.done()` before ending the function. It tells the engine that you finished setting up your addon. Additionally, the `done()` function removes properties of the broker that would allow for changing a system configuration while the system is running.
+
+#### The `boot` Function
+This function is supposed to initialize your addon if required. It recieves two arguments, the first being a [broker](./broker.md), and the second is the return value of the `configure` function.
+
+As an example, you may use this function to start listening to HTTP endpoints, to start listening to STDIN, or even constantly logging to a file. If there is any continuous behavior your addon does, start them here.
+
+## Your Code
+Well, actually your code can be structured in any way. There's no recommended way for doing this, as all the wiring-up is done in the entrypoint file. Have fun!
+
+## Examples
+There are real world examples we built and use them today, all also open-source. Here is a non-exaustive list of them.
+
+- [CronJob](https://github.com/mapikit/cronjob-protocol) : Executes a BOP in a set time interval.
+- [Nethere](https://github.com/mapikit/nethere) : Downloads any files or repositories from the web, with unpacking/unzipping capabilites.
+- [HTTP Meta Protocol](https://github.com/mapikit/http-json-meta-protocol) : Gives full HTTP support for Meta-System.
