@@ -14,8 +14,8 @@ In other words, you can modify, extend, and use the data used to build the funct
 ## How to Extend
 By design, it is expected for you to increment Meta-System with your own set of instructions (or other open-source Addons), and as mentioned in the ["Into real world" section](./software-design#into-real-world), there is a specific step in which this happens, the "data extension" step.
 
-In other words, you can simply declare an Addon in the system configuration. When the system is booting up, and the process reaches the "data extension" step, Addons can have access to the current state of the data, being able to read it, modify it, delete it, and even insert more data.
+In other words, you can simply declare an [Addon](./components/addons.md) in the [system configuration](../configuring/basics.md). When the system is booting up, and the process reaches the "data extension" step, Addons can have access to the current state of the data, being able to read it, modify it, delete it, and even insert more data.
 
 :::info Built-in Functionality
-Although it provides a sort of "standard library" (that is actually just some useful functions for data manipulation), Meta-System makes no assumption of use, which makes it lightweight and versatile. Consequently, this enables a higher degree of control, because the user is required to specify what else they need in their Meta-System.
+Although MSYS provides a sort of "standard library" (that is actually just some useful functions for data manipulation), Meta-System makes no assumption of use, which makes it lightweight and versatile. Consequently, this enables a higher degree of control, because the user is required to specify what else they need in their Meta-System.
 :::

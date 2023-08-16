@@ -8,8 +8,14 @@ In the root of the system configuration file, there is the `"addons"` property. 
 
 For Meta-System, all addons are external, which means that they are a library that is imported during system setup.
 
-## Configuring Each Protocol
+For more information on the Addons as a component of the architecture, refer to the [Addons page](../../api-docs/architecture/components/addons.md).
+
+## Configuring Each Addon
 In the `"addons"` array, each object is a single addon to be imported into Meta-System. This object accepts these following parameters:
+
+:::warning Array order matters!
+As specified in the [**Addons Concept and Components page**](../architecture/components/addons.md), the order of declaration of Addons matter, as they may use and/or modify the same entities.
+:::
 
 ### `"source"` - String (required)
 Where to aqcuire the Addon from. This property is used to retrieve the Addon, working together with the `"collectStrategy"`.
@@ -17,6 +23,12 @@ Where to aqcuire the Addon from. This property is used to retrieve the Addon, wo
 - For a Collect Strategy of `"npm"`, the **Source** is the name of the npm package.
 - For a Collect Strategy of `"file"`, **Source** should be a path to an Addon.
 - For a Collect Strategy of `"url"`, the **Source** is a URL to a zipped Addon.
+
+### `"collectStrategy"` - ENUM (required)
+Sets where to get the files for the Addon. Possible values are:
+- `"npm"`
+- `"file"`
+- `"url"`
 
 ### `"configuration"` - Object (required)
 These are the parameters of the addon you are trying to use. Pay attention to the addon own documentation, since each of them can vary immensely on the parameters they accept, and their structure.
@@ -32,11 +44,12 @@ In the following example, we will use the version `4.0.0` of [`http-meta-protoco
 
 ```json
 {
-  "protocols": [
+  "addons": [
     {
+      "collectStrategy": "npm",
       "source": "http-meta-protocol",
       "identifier": "main-routes-protocol",
-      "protocolVersion": "4.0.0",
+      "version": "4.0.0-rc1",
       "configuration": {
         "port": 8080,
         "routes": [
