@@ -6,8 +6,8 @@
     {
       "identifier": "isDivisibleBy",
       "input": {
-        "number": { "type": "number", "reuqired": true },
-        "divisor": { "type": "number", "reuqired": true }
+        "number": { "type": "number", "required": true },
+        "divisor": { "type": "number", "required": true }
       },
       "output": {
         "boolean": { "type": "boolean", "required": true }
@@ -50,7 +50,7 @@
     {
       "identifier": "fizzBuzz",
       "input": {
-        "number": { "type": "number", "reuqired": true }
+        "number": { "type": "number", "required": true }
       },
       "output": {
         "text": { "type": "string", "required": true }
