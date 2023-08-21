@@ -4,5 +4,5 @@
   "envs": [],
   "schemas": [],
   "businessOperations": [],
-  "protocols": []
+  "addons": []
 }

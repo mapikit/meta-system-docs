@@ -6,7 +6,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 import LastVersionReleased from '../components/LastVersionReleased';
-import WipWarning from '../components/WipPageWarning';
 const SVGLogo = require('../../static/img/logo_metasystem.svg').default;
 
 function HomepageHeader() {
@@ -34,8 +33,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="A system to be any system">
-      <WipWarning />
+      description="Extensible and modular no-code engine, built for everyone, free and open-source.">
       <HomepageHeader />
       <main>
         <LastVersionReleased />

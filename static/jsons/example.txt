@@ -1,84 +1,161 @@
 {
-  "name": "ExampleSystem",
-  "version": "0.1.0",
+  "name": "fizz-buzz HTTP Example",
+  "version": "0.0.1",
   "envs": [],
-  "schemas": [],
   "businessOperations": [
     {
-      "name": "sayHello",
-      "description": "Greets the name given",
-      "customObjects": [],
-      "input" : {
-        "name": { "type": "string" }
+      "identifier": "isDivisibleBy",
+      "input": {
+        "number": { "type": "number", "required": true },
+        "divisor": { "type": "number", "required": true }
       },
-      "output" : {
-        "greet": { "type": "string" },
-        "responseCode": { "type": "number" }
+      "output": {
+        "boolean": { "type": "boolean", "required": true }
       },
       "constants": [
-        { "name": "helloString", "type": "string", "value": "Hello" },
-        { "name": "exclamationMark", "type": "string", "value": "!" },
-        { "name": "space", "type": "string", "value": " " },
-        { "name": "responseCode", "type": "number", "value": 200 }
+        { "type": "boolean", "value": true, "name": "true" },
+        { "type": "boolean", "value": true, "name": "false" },
+        { "type": "number", "value": 0, "name": "zero" }
       ],
       "variables": [],
       "configuration": [
         {
-          "moduleType": "internal",
-          "moduleName": "arrayPush",
-          "key": 3,
-          "dependencies": [
-            { "origin": "constants", "originPath": "helloString", "targetPath": "newItems.hello" },
-            { "origin": "inputs",  "originPath": "name", "targetPath": "newItems.name" },
-            { "origin": "constants",  "originPath": "exclamationMark", "targetPath": "newItems.mark" }
-          ]
-        },
-        {
-          "moduleType": "internal",
-          "moduleName": "arrayJoin",
-          "key": 2,
-          "dependencies": [
-            { "origin": 3, "originPath": "result.result", "targetPath": "array" },
-            { "origin": "constants", "originPath": "space", "targetPath": "separator" }
-          ]
-        },
-        {
-          "moduleType": "output",
-          "moduleName": "output",
           "key": 1,
           "dependencies": [
-            { "origin": 2, "originPath": "result.result", "targetPath": "greet" },
-            { "origin": "constants", "originPath": "responseCode", "targetPath": "responseCode" }
+            { "origin": "input", "originPath": "number", "targetPath": "A" },
+            { "origin": "input", "originPath": "divisor", "targetPath": "B" }
+          ],
+          "moduleName": "modulus",
+          "moduleType": "internal"
+        },
+        {
+          "key": 2,
+          "dependencies": [
+            { "origin": 1, "originPath": "result.result", "targetPath": "A" },
+            { "origin": "constant", "originPath": "zero", "targetPath": "B" }
+          ],
+          "moduleName": "equalTo",
+          "moduleType": "internal"
+        },
+        {
+          "key": 0,
+          "dependencies": [
+            { "origin": 2, "originPath": "result.isEqual", "targetPath": "boolean" }
+          ],
+          "moduleName": "output",
+          "moduleType": "output"
+        }
+      ]
+    },
+    {
+      "identifier": "fizzBuzz",
+      "input": {
+        "number": { "type": "number", "required": true }
+      },
+      "output": {
+        "text": { "type": "string", "required": true }
+      },
+      "constants": [
+        { "type": "string", "value": "Fizz!", "name": "fizz" },
+        { "type": "string", "value": "Buzz!", "name": "buzz" },
+        { "type": "string", "value": "FizzBuzz!", "name": "fizzBuzz" },
+        { "type": "number", "value": 3, "name": "fizzDivisor" },
+        { "type": "number", "value": 5, "name": "buzzDivisor" }
+      ],
+      "variables": [],
+      "configuration": [
+        {
+          "key": 2,
+          "moduleName": "isDivisibleBy",
+          "moduleType": "bop",
+          "dependencies": [
+            { "origin": "input", "originPath": "number", "targetPath": "number" },
+            { "origin": "constants", "originPath": "fizzDivisor", "targetPath": "divisor" }
           ]
+        },
+        {
+          "key": 3,
+          "moduleName": "isDivisibleBy",
+          "moduleType": "bop",
+          "dependencies": [
+            { "origin": "input", "originPath": "number", "targetPath": "number" },
+            { "origin": "constants", "originPath": "buzzDivisor", "targetPath": "divisor" }
+          ]
+        },
+        {
+          "key": 4,
+          "moduleName": "and",
+          "moduleType": "internal",
+          "dependencies": [
+            { "origin": 2, "originPath": "result.boolean", "targetPath": "A" },
+            { "origin": 3, "originPath": "result.boolean", "targetPath": "B" }
+          ]
+        },
+        {
+          "key": 6,
+          "moduleName": "if",
+          "moduleType": "internal",
+          "dependencies": [
+            { "origin": 3, "originPath": "result.boolean", "targetPath": "boolean" },
+            { "origin": "constant", "originPath": "buzz", "targetPath": "ifTrue" },
+            { "origin": "input", "originPath": "number", "targetPath": "ifFalse" }
+          ]
+        },
+        {
+          "key": 5,
+          "moduleName": "if",
+          "moduleType": "internal",
+          "dependencies": [
+            { "origin": 2, "originPath": "result.boolean", "targetPath": "boolean" },
+            { "origin": "constant", "originPath": "fizz", "targetPath": "ifTrue" },
+            { "origin": 6, "originPath": "result.outputValue", "targetPath": "ifFalse" }
+          ]
+        },
+        {
+          "key": 1,
+          "moduleName": "if",
+          "moduleType": "internal",
+          "dependencies": [
+            { "origin": 4, "originPath": "result.bothTrue", "targetPath": "boolean" },
+            { "origin": "constant", "originPath": "fizzBuzz", "targetPath": "ifTrue" },
+            { "origin": 5, "originPath": "result.outputValue", "targetPath": "ifFalse" }
+          ]
+        },
+        {
+          "key": 0,
+          "dependencies": [
+            { "origin": 1, "originPath": "result.outputValue", "targetPath": "text" }
+          ],
+          "moduleName": "output",
+          "moduleType": "output"
         }
       ]
     }
   ],
-  "protocols": [
+  "schemas": [],
+  "addons": [
     {
-      "protocol": "http-json-meta-protocol",
-      "protocolVersion": "latest",
-      "protocolKind": "normal",
-      "identifier": "main-Http",
+      "identifier": "http",
+      "version": "4.0.0-rc5",
+      "source": "http-meta-protocol",
+      "collectStrategy": "npm",
       "configuration": {
-        "enableCors": false,
-        "corsConfig": {
-          "origin": "*",
-          "optionsSuccessStatus": 200
-        },
         "port": 8080,
+        "host": "0.0.0.0",
         "routes": [
           {
-            "route": "/myFirstSystem/:hello",
-            "businessOperation": "sayHello",
+            "route": "/number/:value",
+            "businessOperation": "fizzBuzz",
             "method": "GET",
             "inputMapConfiguration": [
-              { "origin": "route", "originPath": "hello", "targetPath": "name" }
+              { "origin": "route", "originPath": "value", "targetPath": "number" }
             ],
             "resultMapConfiguration": {
-              "body": { "result": "greet" },
+              "statusCode": 200,
               "headers": [],
-              "statusCode": "responseCode"
+              "body": {
+                "result": "text"
+              }
             }
           }
         ]

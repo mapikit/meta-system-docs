@@ -5,11 +5,9 @@ sidebar_position: 3
 # Execution Flows
 
 ## What are Flows
-All systems are made of execution flows, tailored to the needs of the business they are serving. Flows are what makes the business have its shape, and work like it does.
+All systems are made of execution flows, tailored to the needs of their use-case. Meta-System provides a framework for planning your flows and reusing common steps in the operation. This is what we call Business Operations, or **BOps** for short.
 
-The Meta-System provides a framework for planning your flows and reusing common steps in the operation. This is what we call Business Operations, or **BOps** for short.
-
-Those operations are composed of small steps called "modules" or "BOps Functions". By chaining them together we can build any functionality a system may perform.
+Those operations are composed of small steps called "modules" or "BOps Functions". By chaining them together it is possible to build any functionality a system may perform.
 
 :::warning Glossary Disambiguation
 By saying **BOps**, we're refferring to the flows. By saying **module** or **BOps Function**, we are talking about each of the said "steps" of a BOps. Finally, **BOps Engine** is the engine responsible for "compiling" your configuration, *[see below](#bops-engine-using-declared-bops)*.
@@ -17,9 +15,9 @@ By saying **BOps**, we're refferring to the flows. By saying **module** or **BOp
 
 ## Declaring BOps
 
-When configuring a BOps, we must specify each function that needs to be executed in that specific BOp. This takes place in the property [`"configuration"`](../configuring/bops/bops-configuration) on your business operation data.
+When configuring a BOps, each function that needs to be executed in that specific BOp must be specified. This takes place in the property [`"configuration"`](../configuring/bops/bops-configuration) on your business operation data.
 
-For Meta-System this property is a list that contains every function, their dependencies, and an **attributed key**. This means that you don't explicitly describe the flow, you declare the BOps Functions that need to be executed, what their input data is, and their **functional dependencies**.
+For MSYS this property is a list that contains every function, their dependencies, and an **attributed key**. This means that you don't explicitly describe the flow, you declare the BOps Functions that need to be executed, what their input data is, and their **functional dependencies**. **This approach makes MSYS conceptually close to [functional programming](https://en.wikipedia.org/wiki/Functional_programming)**.
 
 > **The key of a function** is what Meta-System uses internally to know what function a dependency is refferring to, as it is possible to contain multiple functions with the same body (Eg: A multiplication function), but different dependencies and outputs in the same flow.
 

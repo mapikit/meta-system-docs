@@ -2,77 +2,81 @@
 sidebar_position: 1
 ---
 
-# Welcome to the Meta-System documentation
-Here we will show you the first steps required to run it, teach you about the architecture, in-depth info about functions, and hopefully answer all the questions you might have about the Meta-System.
- 
-So, in order to answer most of those questions, let's begin with the famous three W's: what is it, who is it for and where do you start.
- 
- 
-## What is "Meta System" ?
- 
-"Meta" loosely stands for "X about X": metalanguage is the language talking about the language; metadata is data about the data. Well, since that is the case, a **Meta System must be a System that creates systems!**
- 
-The idea behind the Meta-System is to simplify the creation and maintenance of simple as well as complex systems; from a simple local supermarket backend server to a full blown multinational marketplace. If you are a solitary developer, with low programming knowledge who wants to create an app, meta-system might help you! However, if you represent an already large company which is currently looking to reduce the costs of maintaining a server running properly, well, then Meta-System is also for you and your team!
- 
-The idea behind it is to be simple, capable and [extensible](./architecture/extending-functionality). Just give the Meta System a configuration file as seen here and watch as it builds http routes, databases, functions and *voilà!* your system should be up and running!
+# Meta-System
+<img src="/meta-system-docs/img/docs/v04_Andromeda_launch.png" height="380px" />
 
-----
-## Download & Execution
-So, now you know what it is, what it does and the basics of configuring your system. But how and where do you start?
+Meta-System is an extensible and modular no-code engine, built for everyone, free and open-source.
+
+It aims to simplify software as a whole, freeing you, the developer, to work on what makes your software truly unique. It does so by being simple, capable, and [extensible](./architecture/extending-functionality): Just give Meta-System (**MSYS** for short) a configuration file and watch as it builds http routes, databases, functions and *voilà!* Your system should be up and running!
+
+-----
+## Features
+- **Build Anything!** : Meta-System wasn't made for "a type" of software, meaning you can build anything you like!
+- **Simple, Yet Extensible** : Its modular design allows you for adding, creating **and sharing** Add-ons, expanding your possibilities as far as you need them.
+- **Unopinionated** : Meta-System doesn't make decisions for you, instead, it opens the path for you to focus only in what is necessary. Of course, however, you can extend it with your own opinions as you wish.
+- **The Power of JSON** : Your Meta-System is configured using human-readable, and machine-parseable JSON.
+- **GUI for Configuring your System** : (Coming Soon!) A graphical editor for your Meta-System configuration files, turning your JSON system into a beautiful set of cards and flows.
+
+## How To Use
+Oversimplifying, It is actually as easy as:
+1. Download Meta-System.
+2. Configure your system's behavior.
+3. Launch!
  
-### First Steps
+### 1. Downloading Meta-System
 The Meta-System can be downloaded through [NPM](https://www.npmjs.com/package/meta-system). If you have NodeJs installed you probably already have npm and it is a matter of installing with the command
 `npm install -g meta-system`
-> Note: If you don't have NodeJs and/or npm installed more info on those can be found [here](https://nodejs.org/en/)
- 
-After installation all you need to do is have a configuration file (in the json format) and type in the command `meta-system run path/to/file/<configuration-name>.json` on Unix Systems or `meta-system run path\to\file\<configuration-name>.json` on Windows. As soon as you hit enter Meta-System will begin validating your configuration and, if everything is fine, start your system!
- 
-If you want a quick start you can try out our [`example application`](#running-your-first-system) below. Alternatively, if you already have a NodeJs project you can have a look at the section `Integrating Meta-System to an existing system (To be done)` and use it as a NPM package for your project!
- 
-----
-## Running your first System
-In order to tell the Meta-System what you want it to do, you'll need a special configuration file. Here is an example config you can use to get you going:
+> Note: If you don't have NodeJs and/or npm installed, more info on those can be found [here](https://nodejs.org/en/).
+
+### 2. Configuring your first system
+For you to make Meta-System into your very own system, you'll need a configuration file. [Here](./configuring/basics.md) you can check in depth how to make Meta-System into your own software. If you're new around, though, here's a classic:  **FizzBuzz**!
+
+Let's get going:
 
 import CodeBlock from '@theme/CodeBlock';
 import ExampleConfig from '!!raw-loader!/static/jsons/example.txt';
 
 <details>
-  <summary><b>Click to Show Example Config | <nbsp/>
-  <a href="pathname:///jsons/example.txt" download="example.json">Click to Download Config</a>
+  <summary><b>Click to Show Example Config <nbsp/>
 </b></summary>
 <CodeBlock className="language-json">{ExampleConfig}</CodeBlock>
 </details><br/>
 
-Simply copy and paste the configuration above into a new text file and save it as `example.json` (you may change the name later, just make sure it is a `.json`). Now, that you have installed Meta-System and have a configuration ready to go, all there is to do is run the command:
+Simply copy and paste the configuration above into a new text file and save it as `example.json` (you may change the name later, just make sure it is a `.json`).
+Now, that you have installed Meta-System and have a configuration ready to go, all there is to do is run Meta-System!
+
+### 3. Launching Meta-System
+You can launch instances of Meta-System using the CLI command `meta-system run`. To continue our example, try doing:
 
 - `meta-system run path/to/file/example.json` on Unix Systems;
 - `meta-system run path\to\file\example.json` on Windows;
 
-> You may restart your system manually by entering `rs` in the console. It will read and validate your configuration again, so it can be used when developing.
+You should be now seeing your configuration being validated, then brought to life by Meta-System, ready-to-go.
 
-Now Lets have a look at the main parts of this configuration:
+Let's quickly test it! With your Meta-System running, open a web-page and go to the address: [http://localhost:8080/number/2](http://localhost:8080/number/2)
 
-#### Business Operation (sayHello)
-We have a single BOp called "sayHello" that receives a name property and returns an object where the greet property is a string saying `Hello <name given> !`. 
+Now change the number after the last slash (/) to any other, and see the results! 🚀
 
-#### Protocol (HTTP_JSONBODY)
-We also have a single http protocol that reads the string given on the route and passes that string as the `name` property to the "sayHello" BOp.
+Want to know more about this fizz-buzz example? How it is like it is? Lets head to [it's tutorial page](../tutorials/fizz-buzz) to know more!
 
-Can you guess what that config does? Well, if you can't, there is no need for guesses. Let's try it out! 
+## Use-Cases
+What people can build with MSYS? What is possible?
 
-### Time To Experiment!
+As an engine, Meta-System can be used to power any kind of software, as long as the target platform allows for running NodeJS or browser-based JavaScript.
+Also, because it is extensible, you're never limited to only what you have in the engine. The combination of these properties sets Meta-System as a versatile lightweight no-code tool for almost any task! Here's some inspirations:
+- **A Backup Daemon** : Configured to automatically run at startup, backs up a preconfigured set of files timely.
+- **An authenticated API for accessing a DataSet** : With access to a DataBase, it filters, orders and joins data for a front end application to display.
+- **A Live Sync tool for a Collaborative Software** : Used as the source of truth for an user interface to sync data live with peers using a protocol such as WebRTC.
+- **A No-Code tool for Enterprise** : You can use Addons to inject business entities and their actions into Meta-System, and allow for wiring their business rules from within MSYS
 
-With your system running, open your prefered web browser and head over to <a href="localhost:8080/myFirstSystem/World" target="_blank"> `localhost:8080/myFirstSystem/World` </a> ! 
+## Getting in Touch & Contributing
+Meta-System has many many moving parts for you to wrap your head around. For making learning and building easier, there's our [discord server](https://discord.gg/ndGsnbTW7V), where you can get help from the community, learn and master different configuration techniques, and also share your own creations.
 
-You should have received a simple response with an object `{ result: "Hello World !" }`. Now try changing the route in the address bar to `localhost:8080/myFirstSystem/foo` and hit enter again. As you can see, the text following `myFirstSystem/` will be sent to the system, which will include it in the response. Try changing this text to your name or whatever other text you may like!
+That's also the place to go if you want to become a contributor and help develop Meta-System, or even getting help developing your own awesome Addon. All core contributors are active around there.
 
-Now that we understand what the current config does, let's try changing it a bit:
-Open the `example.json` file with your prefered text editor (such as Atom, VSCode or even notepad) and find, inside the `constants` of the Business Operation `sayHello` a constant named `"helloString"`. Here you will find three properties: name, type and value. Change "value" from `"Hello"` to `"Goodbye"` and save the file and restart your system (you can type `rs` on the console to do so).
+--------
 
-Now try the same thing again on <a href="localhost:8080/myFirstSystem/My_Friend" target="_blank"> `localhost:8080/myFirstSystem/My_Friend` </a>. As you can see, by simply changing the constant, now you your system responds with goodbye instead of hello.
+#### Disclaimers
+- Meta-System is completely Open-Source, following the GPL-3.0 License.
+- Currently Meta-System is at version 0.4, which means the API might receive breaking changes faster than you expect. However, The team will make conscious effort to only make such changes if there are tangible benefits in doing so.
 
-Wait, you want more? Let's go deeper then! Now, inside this config try finding the block where `"moduleName"` is `"output"`. This determines the output of your system. A bit lower, still inside this block, you'll find a property called `"dependencies"`, and inside that another one called `"origin"`. This origin is from which other module the output originates from. Try changing it from `2` to `3`, save the file and restart you system just like you did before and try the same <a href="localhost:8080/myFirstSystem/My_Friend" target="_blank"> `localhost:8080/myFirstSystem/My_Friend` </a> url again.
-
-Now, this is new! The property result no longer is a text, but a group of values (also known as an Array) where the first item is `"Goodbye"`, the second is the text you type after `myFirstSystem/` and the third item a solitary `"!"`.
-
-As you can see, you can easily modify the behavior of your system in just a few minutes! This is the power of Meta-System. Now, if you truly want to do wonders with this tool, you can keep playing around with this example config and when you are done head to the [Configuration Section](./configuring/basics.md) to learn all nooks and crannies of the Meta-System Configuration, and make your ideas come to life!

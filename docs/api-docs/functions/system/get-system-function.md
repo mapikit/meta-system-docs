@@ -11,7 +11,7 @@ This function gets any function that your system can execute. It can be a built 
 > The Get System Function uses, internally, the exact same mechanism the BOps use to get and build your functions.
 
 ## Inputs
-The inputs are similar to the declaration functions/modules to be used in flows. [**See Reference**](../../../configuring/bops/bops-configuration).
+The inputs are similar to the declaration functions/modules to be used in flows. [**See Reference**](../../configuring/bops/bops-configuration).
 
 | Name | Type | Required
 |------|------|:-----:|

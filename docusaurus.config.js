@@ -1,10 +1,9 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Meta-System',
-  tagline: 'A system to be any system',
+  tagline: 'An extensible and modular no-code engine, built for everyone, free and open-source.',
   url: 'https://mapikit.github.io',
   baseUrl: '/meta-system-docs/',
   onBrokenLinks: 'throw',
@@ -41,12 +40,6 @@ module.exports = {
           docId: 'tutorials/tutorials',
           position: 'left',
           label: 'Tutorials',
-        },
-        {
-          type: 'doc',
-          docId: 'our-packages/our-packages-intro',
-          position: 'left',
-          label: 'Packages',
         },
         {
           type: 'search',

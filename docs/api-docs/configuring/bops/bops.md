@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 # About BOps
-The BOps are the heart of your business, they can be whatever you need them to be, and should specify the rules that guide your business on a daily basis.
+The Business Operations are the heart of your business, they can be whatever you need them to be, and should represent a process in your system.
 
 Users cannot be younger than 13 years old? That's a business operation. Should you send an email when users complete their 10th purchase? Another BOps!
 
@@ -11,12 +11,6 @@ In the configuration file, `"businessOperations"` is a list of objects. Each of 
 
 ### BOps Properties
 A BOps can have the following properties specified:
-#### `"name"` - String (required)
-This is the name of your BOp. It is used to call the operation in runtime, either inside other BOps or by protocols.
-
-#### `"description"` - String (required)
-A short description of what is it that your operation does.
-
 #### `"input"` - [Object Definition](../object-definition) (required)
 Information your operation needs to have in order to be executed. These are the function parameters.
 
@@ -38,5 +32,8 @@ This is the soul of your business operation, where all the logic is set and the 
 
 Since this is quite a complex subject, we have a page dedicated to the rules of this function, and what it does. See [BOps Configuration](./bops-configuration).
 
-#### `"customObjects"` - [Object Definition](../object-definition) (optional Array)
-This is a list of custom types you may want to have in your operation, particularly useful for grouping arguments and information.
+#### `"ttl"` - Number (optional)
+Defines a Time To Live for this BOps. If this time is exceeded in milliseconds, MSYS will reject the promise of the BOp.
+
+#### `"identifier"` - String (required)
+Identifies this BOp with a string for Meta-System. This string will be used to reference the BOp anywhere in your system.

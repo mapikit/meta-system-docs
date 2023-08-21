@@ -85,3 +85,16 @@ You may also indicate whether a property is required or not, by using `"required
 ```
 
 > The absence of `"required"` is interpreted as `"required": false`.
+
+## Multiple Types
+On top of all said in page, you can type a prop with multiple types at the same time. This can be useful for a variable schema, in which a property can be both a string, or an array of strings, for instance.
+
+For doing this, simply group types in an array:
+
+```json
+{
+  "foods": [{ "type": "string", "required": true }, { "type": "array", "subtype": "string", "required": true }],
+  "age": { "type": "number", "required": false },
+  "nickname": { "type": "string" }
+}
+```
