@@ -93,9 +93,12 @@ As an example, you may use this function to start listening to HTTP endpoints, t
 ## Your Code
 Well, actually your code can be structured in any way. There's no recommended way for doing this, as all the wiring-up is done in the entrypoint file. Have fun!
 
+## Important Notes
+We reccomend you to use the system-wide available Logger instead of going `console.log()` or even adding another logger as a dependency of your addon. Meta-System's logger already comes with built-in log levels and color coding. Access the logger in the broker by `broker.logger`. See [the Reference](./broker.md#entity-logger---brokerlogger).
+
 ## Examples
 There are real world examples we built and use them today, all also open-source. Here is a non-exaustive list of them.
 
 - [CronJob](https://github.com/mapikit/cronjob-protocol) : Executes a BOP in a set time interval.
 - [Nethere](https://github.com/mapikit/nethere) : Downloads any files or repositories from the web, with unpacking/unzipping capabilites.
-- [HTTP Meta Protocol](https://github.com/mapikit/http-json-meta-protocol) : Gives full HTTP support for Meta-System.
+- [HTTP Meta Protocol](https://github.com/mapikit/http-json-meta-protocol) : Gives full HTTP support for Meta-System, cookies, and middlewares included!

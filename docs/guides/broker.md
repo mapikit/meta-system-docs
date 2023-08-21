@@ -132,6 +132,163 @@ Gets all Addons from the System.
 |:----:|:----:|:-----:|-----|
 | `getAll` | `get_all` | <a style={{ color: "green" }}> ✔ </a> | `.getAll() => Addon[]` |
 
+### Entity: Schema Functions - `broker.schemaFunctions`
+This is the Broker section about the Schema Functions. Schemas by themselves have no function other than just being a known entity for your system. When adding a function to a schema, though, you enable operations to be done using that object format, sort of like adding methods to a class.
 
+Some applications of Schema functions include:
+- Saving/Retrieving an entity in/from a Data Base
+- Computing a Value from a property in the Schema
 
+Schema Functions does not necessarily need to receive an Schema as part of its input. If your function does so, however, it is recommended to leave the type as a `cloudedObject` (by the [Object Definition](../api-docs/configuring/object-definition.md)). On later versions, MSYS will provide a custom type that will fill the appropriate schema type for you, so in the upcoming Meta-Editor (Meta-System's configuration graphical editor) users always have the correct type to use.
 
+For this Section when `MetaFunction` type is mentioned, refer to this type:
+```typescript
+type MetaFunction = {
+  description ?: string;
+  input : ObjectDefinition;
+  output : ObjectDefinition;
+  functionName : stirng;
+}
+```
+#### Action: Set Schema Functions
+Sets an schema function to a single schema. 
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `setSchemaFunction` | `set_functions` | <a style={{ color: "red" }}> ✖ </a> | `.setSchemaFunction(schemaIdentifier: string, func: Function, metaFunc: MetaFunction) => void` |
+
+#### Action: Get Schema Functions
+Gets a schema function (the callable Function) from a schema.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `getSchemaFunction` | `get_functions` | <a style={{ color: "green" }}> ✔ </a> | `.getSchemaFunction(functionName: string, schemaIdentifier: string) => Function` |
+
+#### Action: Preregister Schema Functions
+Declares only a function type for a Schema Function, leaving to set the callable function later, by using `.setRegisteredSchemaFunction()`. This is useful in cases where you cannot give the engine a callable function before your Addon is properly booted.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `preRegisterSchemaFunction` | `preregister_functions` | <a style={{ color: "red" }}> ✖ </a> | `.preRegisterSchemaFunction( schemaIdentifier: string, metaFunc: MetaFunction) => void` |
+
+#### Action: Set Registered Schema Functions
+Sets a previously registered schema function.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `setRegisteredSchemaFunction` | `set_registered_functions` | <a style={{ color: "green" }}> ✔ </a> | `.setRegisteredSchemaFunction( schemaIdentifier: string, functionName: string, func: Function) => void` |
+
+### Entity: Business Operation Functions - `broker.bopFunctions`
+This is the Broker section about Business Operation Functions. These are the callable functions that MSYS builds (stitches) from the system configuration input.
+
+#### Action: Get BOp Function
+Gets a callable Business Operation Function from the System.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `getBopFunction` | `get_function` | <a style={{ color: "green" }}> ✔ </a> | `.getBopFunction(bopIdentifier: string) => Function` |
+
+#### Action: Get All BOp Functions
+Gets all callable Business Operation Function from the System. Returns an array of the following type:
+```typescript
+type FunctionEntity = {
+  description ?: string;
+  input : ObjectDefinition;
+  output : ObjectDefinition;
+  functionName : stirng;
+  identifier: String;
+  callable : Function;
+}
+```
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `getAll` | `get_all` | <a style={{ color: "green" }}> ✔ </a> | `.getAll() => FunctionEntity[]` |
+
+#### Action: Override BOp Call
+Replaces a built BOp with another function. Only affects future calls made to `.getAll()` and `.getBopFunction()`. The Stitching process is only affected if this is called during the `"configure"` Addon step.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `overrideBopCall` | `override_call` | <a style={{ color: "green" }}> ✔ </a> | `.overrideBopCall(bopIdentifier: string, func: Function, metaFunc: MetaFunction) => void` |
+
+#### Action: Add Bop Call
+Adds a new Bop Function, as if MSYS has built it. Similar to the override action, only affects future calls made to `.getAll()` and `.getBopFunction()`. The Stitching process is only affected if this is called during the `"configure"` Addon step.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `addBopCall` | `add_function` | <a style={{ color: "green" }}> ✔ </a> | `.addBopCall(bopIdentifier: string, func: Function, metaFunc: MetaFunction) => void` |
+
+### Entity: Addons Functions - `broker.addonFunctions`
+This section refers to the Addons Functions. They are functions available for every BOp to use, just like internal ones.
+
+#### Action: Register Addon Function
+Adds a new Addon function into the system.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `register` | `register` | <a style={{ color: "red" }}> ✖ </a> | `.register(func: Function, metaFunc: MetaFunction) => void` |
+
+#### Action: Get Addon Function
+Gets addons functions set by you.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `getFunction` | `get` | <a style={{ color: "green" }}> ✔ </a> | `.getFunction(functionName: string) => Function` |
+
+#### Action: Get Others Addon Functions
+Get addons functions added by any addons. Requires knowing system-installed addons' identifiers.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `getAddonFunction` | `getOthers` | <a style={{ color: "green" }}> ✔ </a> | `.getAddonFunction(addonIdentifier, func: Function) => Function` |
+
+#### Action: Get All Functions
+Gets in a list, all addons functions in the system. Returns an array of the following type:
+```typescript
+type FunctionEntity = {
+  description ?: string;
+  input : ObjectDefinition;
+  output : ObjectDefinition;
+  functionName : stirng;
+  identifier: String;
+  callable : Function;
+}
+```
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `getAll` | `getAll` | <a style={{ color: "red" }}> ✖ </a> | `.getAll() => FunctionEntity[]` |
+
+#### Action: Get Functions From Identifier
+Gets all addons functions set by a specific addon. Also returns an array of `FunctionEntity`.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `getFromIdentifier` | `getFromIdentifier` | <a style={{ color: "red" }}> ✖ </a> | `.getFromIdentifier(identifier: string) => FunctionEntity[]` |
+
+#### Action: Preregister Addon Functions
+Declares only the function type for an Addon Function, leaving to set the callable function later, by using `.setRegistered()`. This is useful in cases where you cannot give the engine a callable function before your Addon is properly booted.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `preregister` | `preregister` | <a style={{ color: "red" }}> ✖ </a> | `.preregister(metaFunc: MetaFunction) => void` |
+
+#### Action: Set Registered Addon Functions
+Sets a previously registered addon function.
+
+| Name | Permission | Callable at Runtime | Usage |
+|:----:|:----:|:-----:|-----|
+| `setRegistered` | `set_registered` | <a style={{ color: "green" }}> ✔ </a> | `.setRegistered(functionName: string, func: Function) => void` |
+
+### Entity: Logger - `broker.logger`
+Meta-System makes available for all addons to leverage the built in logger, so you don't have to go console-logging your way. All logger actions are available both before and during runtime, and require no permissions. All functions accept anything as an arugment.
+
+Available functions are:
+- fatal
+- success
+- operation
+- error
+- warn
+- info
+- debug
