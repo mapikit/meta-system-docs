@@ -6,7 +6,7 @@ sidebar_position: 1
 In this documentation section, you will be presented with all the configuration file details for Meta-System. If you want to learn a bit more of how things work under the hood, check the [Architecture](../architecture/software-design.md) section before! You will possibly have a better experience tuning your system if you do so.
 
 :::success GUI Tool - Meta-Editor
-Meta-Editor, the Open-Source tool for configuring your Meta-System is under development right now! You can check the [**Discord**](https://discord.gg/ndGsnbTW7V) for more information, and help supporting the developers [**here**](./basics.md).
+Meta-Editor, the Open-Source tool for configuring your Meta-System is under development right now! You can check the [**Discord**](https://discord.gg/ndGsnbTW7V) for more information.
 :::
 
 ## Starting a New Config
