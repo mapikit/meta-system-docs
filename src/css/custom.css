@@ -81,6 +81,14 @@
   --ifm-code-background: rgba(185, 185, 206, 0.192) !important;
   --ifm-menu-color-background-active: rgba(185, 185, 206, 0.116) !important;
   --ifm-menu-color-background-hover: rgba(185, 185, 206, 0.068) !important;
+  --ifm-heading-font-family: 'Quicksand';
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url(/static/fonts/Quicksand-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 .hero--primary {
@@ -103,6 +111,10 @@ z
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+* {
+  font-family: 'Quicksand';
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {

@@ -11,7 +11,7 @@ import CodeBlock from '@theme/CodeBlock';
 import ExampleConfig from '!!raw-loader!/static/jsons/example.txt';
 
 <details>
-  <summary><b> Reveal Result <nbsp/>
+  <summary><b> Reveal Result
 </b></summary>
 <CodeBlock className="language-json">{ExampleConfig}</CodeBlock>
 </details>
@@ -225,7 +225,7 @@ Now that we have defined the business operations, it's time to configure the HTT
 By now you should have a working Fizz Buzz service!
 
 <details>
-  <summary><b> Reveal Result <nbsp/>
+  <summary><b> Reveal Result
 </b></summary>
 <CodeBlock className="language-json">{ExampleConfig}</CodeBlock>
 </details>

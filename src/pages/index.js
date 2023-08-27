@@ -4,8 +4,6 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HomepageFeatures from '../components/HomepageFeatures';
-import LastVersionReleased from '../components/LastVersionReleased';
 const SVGLogo = require('../../static/img/logo_metasystem.svg').default;
 
 function HomepageHeader() {
@@ -36,8 +34,6 @@ export default function Home() {
       description="Extensible and modular no-code engine, built for everyone, free and open-source.">
       <HomepageHeader />
       <main>
-        <LastVersionReleased />
-        <HomepageFeatures />
       </main>
     </Layout>
   );

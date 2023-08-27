@@ -1,5 +1,3 @@
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Meta-System',
@@ -74,28 +72,25 @@ module.exports = {
         },
       ],
       copyright: `Meta-System was built by Mapikit and follows the GPL-3.0 License. Documentation page built with Docusaurus.`,
-    },
-    prism: {
-      theme: darkCodeTheme,
-      darkTheme: darkCodeTheme,
-    },
+    }
   },
-  presets: [
-    [
-      '@docusaurus/preset-classic',
+  presets: [],
+  plugins: [
+    require.resolve('@cmfcmf/docusaurus-search-local'),
+    ['@docusaurus/plugin-content-docs',
       {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/mapikit/meta-system-docs/edit/main/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
+        path: 'docs',
+        breadcrumbs: true,
+        sidebarPath: require.resolve('./sidebars.js'),
+        editUrl:
+          'https://github.com/mapikit/meta-system-docs/edit/main/',
+      }
+    ],
+    ['@docusaurus/theme-classic',
+      {
+        customCss: require.resolve('./src/css/custom.css'),
       },
     ],
-  ],
-  plugins: [
-    require.resolve('@cmfcmf/docusaurus-search-local')
+    ['@docusaurus/plugin-content-pages', {}]
   ]
 };
