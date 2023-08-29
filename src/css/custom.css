@@ -82,17 +82,39 @@
   --ifm-menu-color-background-active: rgba(185, 185, 206, 0.116) !important;
   --ifm-menu-color-background-hover: rgba(185, 185, 206, 0.068) !important;
   --ifm-heading-font-family: 'Quicksand';
+  --ifm-heading-font-weight: bold;
 }
 
 @font-face {
   font-family: 'Quicksand';
   src: url(/static/fonts/Quicksand-VariableFont_wght.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url(/static/fonts/Livvic-Medium.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Livvic';
+  src: url('/static/fonts/Livvic-SemiBold.ttf');
+  font-weight: 600;
+}
+
 .hero--primary {
   background-color: #171730ff;
+}
+
+.hero__title {
+  font-weight: 800;
+  margin-bottom: 0.1em;
+}
+
+.hero__subtitle {
+  margin-bottom: 18vh;
 }
 
 .menu__link--sublist:after {
@@ -131,6 +153,11 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   margin-left: 12px;
 }
 
+.navbar * {
+  font-family: 'Livvic';
+  font-weight: 600;
+}
+
 .header-icon {
  width: 30px;
  height: 30px;
@@ -140,3 +167,9 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .header-icon:hover {
   opacity: 0.6;
 }
+
+.navbar__logo {
+  height: 1.4em;
+  margin-right: 1.4em;
+}
+

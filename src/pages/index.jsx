@@ -4,14 +4,15 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-const SVGLogo = require('../../static/img/logo_metasystem.svg').default;
+import ScrollSection from '../components/scroll-section.jsx';
 
-function HomepageHeader() {
+function HomeHero() {
   const {siteConfig} = useDocusaurusContext();
   return (
+    <ScrollSection>
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <SVGLogo />
+      <div className={styles['container']}>
+        <div className={styles['main-logo']}> <div className={styles['actual-logo']}/> </div>
         <h1 className={"hero__title " + styles.title}>{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
@@ -23,6 +24,7 @@ function HomepageHeader() {
         </div>
       </div>
     </header>
+    </ScrollSection >
   );
 }
 
@@ -32,7 +34,7 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="Extensible and modular no-code engine, built for everyone, free and open-source.">
-      <HomepageHeader />
+      <HomeHero />
       <main>
       </main>
     </Layout>
