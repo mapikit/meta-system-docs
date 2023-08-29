@@ -1,8 +1,10 @@
 # Meta-System Docs
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This is the homepage for the Meta-System's documentation.It was built using [Docusaurus](https://docusaurus.io/).
 
 ## Installation
+
+you can use either NPM or Yarn for this, but Yarn in preferred.
 
 ```console
 yarn install

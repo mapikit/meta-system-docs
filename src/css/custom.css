@@ -120,3 +120,23 @@ z
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+.header-github {
+  background-image: url('/static/img/icons/github.svg');
+}
+
+.header-discord {
+  background-image: url('/static/img/icons/discord-new.svg');
+  background-size: contain;
+  margin-left: 12px;
+}
+
+.header-icon {
+ width: 30px;
+ height: 30px;
+ transition: all 0.15s;
+}
+
+.header-icon:hover {
+  opacity: 0.6;
+}

@@ -45,12 +45,14 @@ module.exports = {
         },
         {
           href: 'https://github.com/mapikit/meta-system',
-          label: 'GitHub',
+          className: 'header-github header-icon',
+          'aria-label': 'GitHub Repository',
           position: 'right',
         },
         {
           href: 'https://discord.gg/ndGsnbTW7V',
-          label: 'Discord',
+          className: 'header-discord header-icon',
+          'aria-label': 'Discord Server',
           position: 'right'
         },
       ],
