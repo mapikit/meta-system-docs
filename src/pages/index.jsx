@@ -15,17 +15,27 @@ function HomeHero() {
         <div className={styles['main-logo']}> <div className={styles['actual-logo']}/> </div>
         <h1 className={"hero__title " + styles.title}>{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/api-docs/getting-started">
-            Let's get started!
-          </Link>
-        </div>
+      </div>
+      <div className={styles.buttons}>
+        <Link
+          className="button button--secondary button--lg"
+          to="/docs/api-docs/getting-started">
+          Get To Know Us!
+        </Link>
       </div>
     </header>
     </ScrollSection >
   );
+}
+
+function ConcreteSection() {
+  return (
+    <ScrollSection>
+      <div>
+        test 
+      </div>
+    </ScrollSection>
+  )
 }
 
 export default function Home() {
@@ -35,6 +45,7 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Extensible and modular no-code engine, built for everyone, free and open-source.">
       <HomeHero />
+      <ConcreteSection />
       <main>
       </main>
     </Layout>
