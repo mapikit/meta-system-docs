@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import ScrollSection from '../components/scroll-section.jsx';
+import TextCall from '../components/text-call.jsx' 
 
 function HomeHero() {
   const {siteConfig} = useDocusaurusContext();
@@ -20,22 +21,12 @@ function HomeHero() {
         <Link
           className="button button--secondary button--lg"
           to="/docs/api-docs/getting-started">
-          Get To Know Us!
+          Learn More!
         </Link>
       </div>
     </header>
     </ScrollSection >
   );
-}
-
-function ConcreteSection() {
-  return (
-    <ScrollSection>
-      <div>
-        test 
-      </div>
-    </ScrollSection>
-  )
 }
 
 export default function Home() {
@@ -45,7 +36,7 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Extensible and modular no-code engine, built for everyone, free and open-source.">
       <HomeHero />
-      <ConcreteSection />
+      <TextCall />
       <main>
       </main>
     </Layout>

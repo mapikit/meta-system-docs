@@ -1,0 +1,11 @@
+.text-call-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text-call span {
+  color: var(--ifm-navbar-link-hover-color)
+}

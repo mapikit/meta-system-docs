@@ -3,3 +3,8 @@
   height: 100vh;
 }
 
+@media screen and (max-width: 966px) {
+  .scroll-section > * {
+    padding: 0 2rem;
+  }
+}
