@@ -14,14 +14,11 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   background: linear-gradient(-35deg ,#101023, #272757);
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
+
 
 .container {
   position: relative;
@@ -61,4 +58,22 @@
   background-position: center center;
   height: 10em;
   width: 14em;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+
+  .actual-logo {
+    height: 8em;
+  }
+
+  .heroBanner h1 {
+    font-size: 38px;
+  }
+
+  .heroBanner p {
+    font-size: 20px
+  }
 }

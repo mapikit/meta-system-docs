@@ -78,7 +78,12 @@ module.exports = {
   },
   presets: [],
   plugins: [
-    require.resolve('@cmfcmf/docusaurus-search-local'),
+    [ require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        indexBlog: false,
+        indexPages: true
+      }
+    ],
     ['@docusaurus/plugin-content-docs',
       {
         path: 'docs',

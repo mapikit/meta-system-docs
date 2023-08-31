@@ -1,10 +1,15 @@
 .scroll-section {
   width: 100vw;
-  height: 100vh;
+/*  min-height: 100vh;*/
+}
+
+.scroll-section > * {
+/*  align-self: stretch;*/
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 966px) {
   .scroll-section > * {
-    padding: 0 2rem;
+    padding: 2rem;
   }
 }
