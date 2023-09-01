@@ -6,6 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import ScrollSection from '../components/scroll-section.jsx';
 import TextCall from '../components/text-call.jsx' 
+import ThreeStep from '../components/three-step';
 
 function HomeHero() {
   const {siteConfig} = useDocusaurusContext();
@@ -37,6 +38,7 @@ export default function Home() {
       description="Extensible and modular no-code engine, built for everyone, free and open-source.">
       <HomeHero />
       <TextCall />
+      <ThreeStep />
       <main>
       </main>
     </Layout>

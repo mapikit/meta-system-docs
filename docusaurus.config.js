@@ -6,6 +6,7 @@ module.exports = {
   baseUrl: '/meta-system-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  staticDirectories: ['static'],
   favicon: 'img/favicon.ico',
   organizationName: 'mapikit', // Usually your GitHub org/user name.
   projectName: 'meta-system-docs', // Usually your repo name.
