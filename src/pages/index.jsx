@@ -7,6 +7,7 @@ import styles from './index.module.css';
 import ScrollSection from '../components/scroll-section.jsx';
 import TextCall from '../components/text-call.jsx' 
 import ThreeStep from '../components/three-step';
+import ImageDescriptionSection from '../components/image-description-section';
 
 function HomeHero() {
   const {siteConfig} = useDocusaurusContext();
@@ -39,6 +40,13 @@ export default function Home() {
       <HomeHero />
       <TextCall />
       <ThreeStep />
+      <ImageDescriptionSection
+        description="test"
+        title="anotherTest"
+        imagePath="/img/boiler_plate_illustration.webp"
+        direction="row"
+        titleColor="orange"
+      />
       <main>
       </main>
     </Layout>
