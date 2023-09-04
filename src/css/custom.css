@@ -186,19 +186,19 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   margin: 0 18px;
 }
 
-.menu__list-item {
+.navbar .menu__list-item:not(.theme-doc-sidebar-item-category) {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.menu__list-item > .header-icon {
+.navbar .menu__list-item > .header-icon {
   margin-left: 1em;
   margin-top: 0.5em;
 }
 
-.menu__list-item > .header-github {
+.navbar .menu__list-item > .header-github {
   margin-top: 2em;
 }
 
