@@ -1,28 +1,30 @@
 .container {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  overflow-y: visible;
+  overflow: visible;
   position: relative;
-  height: 76em;
+  min-height: 0;
+  margin-bottom: 4em;
 }
 
 .illustrations {
-  position: absolute;
   width: 100%;
   z-index: -1;
-  height: 84em;
+  height: 85vw;
   background-image: url("/img/purpose_driven_illustration.webp");
-  background-size: cover;
-  background-position: center center;
+  background-size: contain;
+  background-position: top center;
   background-repeat: no-repeat;
-  transform: translateY(-11em);
+  margin-top: -12vw;
 }
 
 .texts {
+  position: absolute;
   max-width: 35em;
-  margin-top: 5em;
+  margin-top: 0em;
+  margin: 0 2em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -43,22 +45,29 @@
 }
 
 .button-position {
-  transform: translateY(-1.5em);
+  position: absolute;
+  bottom: -1.5em;
 }
 
-@media screen and (max-width: 1200px) {
-  .button-position {
-    transform: translateY(1.5em);
-  }
-
+@media screen and (max-width: 960px) {
   .illustrations {
-    height: 45em;
-    transform: translateY(0);
+    margin-top: 0vw;
   }
 
   .container {
     min-height: 0;
-    height: 49em;
+    padding: 0
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .illustrations {
+    margin-top: 18vw;
+  }
+
+  .container {
+    min-height: 0;
+    padding: 0
   }
 }
 
