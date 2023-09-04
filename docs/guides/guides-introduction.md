@@ -12,7 +12,7 @@ The authors of the Addons are the responsible for documenting and maintaining wh
 :::
 
 ## Guides to Creating Systems
-If you're already familiar with the [configuration of Meta-System](../api-docs/configuring/basics) and just need some inspiration, we have some examples and in-depth explanations of configurations at the [Tutorials](../tutorials/tutorials) tab.
+If you're already familiar with the [configuration of Meta-System](../api-docs/configuring/basics) and just need some inspiration, we have some examples and in-depth explanations of configurations at the [Tutorials](../tutorials/tutorials.md) tab.
 
 ## Guides to Writing Addons
 You just found yourself wanting your system to do more. The built in functions and what the community has built so far does not suit you well enough, or you thnk there is some secret logic you require and don't want it being passed around. If this describes your situation, you'll need to create your own Addon.

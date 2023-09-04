@@ -18,7 +18,7 @@ Module Type is the property that defines what kind of module is Meta-System deal
 - `"bop"` - When the module is a function created by another declared `businessOperation`.
 - `"schemaFunction"` - The module is an operation based on a declared [Schema](../schema-config).
 - `"output"` - It is the resolution module of your BOp.
-- `"variable"` - It is an operation with the [variables](./bops#variables---single-parameter-type-required-array) of your BOp.
+- `"variable"` - It is an operation with the [variables](./bops.md#variables---single-parameter-type-required-array) of your BOp.
 
 ### `"modulePackage"` - String (optional)
 This is the property responsible for pointing to the correct function package name. Although this is not a required property by default, some particular configurations do require it.
