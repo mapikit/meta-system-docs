@@ -8,6 +8,7 @@ import ScrollSection from '../components/scroll-section.jsx';
 import TextCall from '../components/text-call.jsx' 
 import ThreeStep from '../components/three-step';
 import ImageDescriptionSection from '../components/image-description-section';
+import PurposeDrivenSection from '../components/purpose-driven-section';
 
 function HomeHero() {
   const {siteConfig} = useDocusaurusContext();
@@ -41,11 +42,26 @@ export default function Home() {
       <TextCall />
       <ThreeStep />
       <ImageDescriptionSection
-        description="test"
-        title="anotherTest"
+        description="Meta-System handles the heavy lifting of structuring and connecting your software components, ensuring you can effortlessly compose entire systems without ever worrying about intricate software architecture. And it's incredibly easy to get started."
+        title="Instant Architecture, Zero Hassle"
         imagePath="/img/boiler_plate_illustration.webp"
-        direction="row"
+        direction="text-first"
+        titleColor="red"
+      />
+      <ImageDescriptionSection
+        description="You can add new functionality to your system by using compatible NPM libraries, or even create your own novel solution. All of this without re-building the core."
+        title="Modular and Extensible"
+        imagePath="/img/modular_and_extensible_illustration.webp"
+        direction=""
         titleColor="orange"
+      />
+      <PurposeDrivenSection />
+      <ImageDescriptionSection
+        description="Anyone can use, contribute, or even review Meta-System's code free of charge, forever. Meta-System is built for you, by you."
+        title="Free and Open Source"
+        imagePath="/img/open_source_illustration.webp"
+        titleColor="green"
+        direction="text-first"
       />
       <main>
       </main>

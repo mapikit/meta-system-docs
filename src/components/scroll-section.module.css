@@ -8,6 +8,11 @@
   min-height: 100vh;
 }
 
+.overflowed {
+  overflow-y: visible;
+  z-index: 1;
+}
+
 @media screen and (max-width: 966px) {
   .scroll-section > * {
     padding: 2rem;
