@@ -104,6 +104,10 @@
   font-weight: 600;
 }
 
+svg * {
+  transform-box: fill-box;
+}
+
 .hero--primary {
   background-color: #171730ff;
   display: flex;

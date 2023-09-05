@@ -9,6 +9,7 @@ import TextCall from '../components/text-call.jsx'
 import ThreeStep from '../components/three-step';
 import ImageDescriptionSection from '../components/image-description-section';
 import PurposeDrivenSection from '../components/purpose-driven-section';
+import LogoAnimation from '../components/logo-animation';
 
 function HomeHero() {
   const {siteConfig} = useDocusaurusContext();
@@ -38,6 +39,7 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="Extensible and modular no-code engine, built for everyone, free and open-source.">
+      <LogoAnimation />
       <HomeHero />
       <TextCall />
       <ThreeStep />
