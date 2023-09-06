@@ -2,13 +2,15 @@ import React, {useEffect, useRef} from "react";
 import anime from "animejs/lib/anime.es.js";
 import styles from "./logo-animation.module.css";
 
-function MetaSystemLogo () {
+function MetaSystemLogo ({ onComplete }) {
   const animation = useRef(null);
   const animationMainShadow = useRef(null);
   const containerIntro = useRef(null);
   const drop1 = useRef(null);
   const drop2 = useRef(null);
   const drop3 = useRef(null);
+  const containerOutro = useRef(null);
+  const nameAnimation = useRef(null);
   
   useEffect(() => {
     drop1.current = anime({
@@ -44,7 +46,30 @@ function MetaSystemLogo () {
       delay: 500,
       duration: 500,
       easing: "easeOutQuint"
-    })
+    });
+
+    containerOutro.current = anime({
+      targets: "#main-animation",
+      keyframes: [
+        { scale: 1, opacity: 1, easing: "easeInOutQuad" },
+        { scale: 0.9, opacity: 1, duration: 500, delay: 2900, easing: "easeInOutQuart" },
+        { scale: 1.15, opacity: 1,duration: 900, easing: "easeInOutQuart" },
+        { scale: 1, opacity: 1, duration: 1500, easing: "easeOutBack" },
+        { scale: 0.75, opacity: 0, duration: 800, delay: 1000, easing: "easeInCubic"}
+      ],
+    });
+
+    if (onComplete) {
+      containerOutro.current.finished.then(onComplete);
+    }
+
+    nameAnimation.current = anime({
+      targets: `.${styles["name"]}`,
+      keyframes: [
+        { opacity: 0, scale: 0.7, translateY: -100, easing: "easeInOutQuad" },
+        { opacity: 1, scale: 1, translateY: 0, easing: "easeOutBack", delay: 3650, duration: 1200 }
+      ]
+    });
 
     animation.current = anime({
       targets: "#main-line",
@@ -58,7 +83,7 @@ function MetaSystemLogo () {
 
     animationMainShadow.current = anime({
       targets: ["#main-line-back", ".shadow"],
-      opacity: [0, 1],
+      opacity: [0, 0.4],
       easing: "easeInOutQuad",
       duration: 800,
       delay: 1000,
@@ -66,8 +91,6 @@ function MetaSystemLogo () {
       loop: false
     });
   }, []);
-
-  //animation.current.play();
 
   return ( <div id="main-animation" className={styles["svg-container"]}>
     <svg width="32.673mm" height="23.385mm" version="1.1" viewBox="0 0 32.673 23.385" xmlns="http://www.w3.org/2000/svg">
@@ -81,15 +104,32 @@ function MetaSystemLogo () {
         <path id="drop2" d="m448.18 278.21c0.40758-0.70595 0.32636-1.8084-0.63294-2.3622-0.9593-0.55385-3.0729-0.44103-3.3603 0.0567-0.28737 0.49774 0.68433 2.3919 1.631 2.9385 0.94667 0.54656 1.9546 0.073 2.3622-0.63299z" fill="#3cf691"/>
         <path id="drop3" d="m415.97 278.21c-0.40758-0.70595-0.32636-1.8084 0.63294-2.3622 0.9593-0.55385 3.0729-0.44103 3.3603 0.0567 0.28737 0.49774-0.68433 2.3919-1.631 2.9385-0.94667 0.54656-1.9546 0.073-2.3622-0.63299z" fill="#3cf691"/>
       </g>
-    </svg> </div>
+    </svg>
+      <h1 className={styles["name"]}> Meta-System </h1>
+    </div>
   );
 }
 
 
-export default function logoAnimation () {
+export default function logoAnimation ({ onComplete }) {
+  const containerAnimation = useRef(null);
+
+  useEffect(() => {
+    containerAnimation.current = anime({
+      targets: `.${styles['animation-container']}`,
+      keyframes: [
+        { opacity: 1, easing: "easeInCubic" },
+        { opacity: 1, delay: 7200, easing: "easeOutCubic" },
+        { opacity: 0, duration: 500, easing: "easeOutQuint" }
+      ],
+    });
+  }, [])
+
   return (
     <div className={styles['animation-container']}>
-      <MetaSystemLogo />
+      <MetaSystemLogo
+        onComplete={onComplete}
+      />
     </div>
   )
 }
