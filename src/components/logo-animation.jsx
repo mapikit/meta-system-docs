@@ -52,9 +52,9 @@ function MetaSystemLogo ({ onComplete }) {
       targets: "#main-animation",
       keyframes: [
         { scale: 1, opacity: 1, easing: "easeInOutQuad" },
-        { scale: 0.9, opacity: 1, duration: 500, delay: 2900, easing: "easeInOutQuart" },
-        { scale: 1.15, opacity: 1,duration: 900, easing: "easeInOutQuart" },
-        { scale: 1, opacity: 1, duration: 1500, easing: "easeOutBack" },
+        { scale: 0.9, opacity: 1, duration: 1300, delay: 2300, easing: "easeInOutQuart" },
+        { scale: 1.1, opacity: 1,duration: 400, easing: "easeInOutQuart" },
+        { scale: 1, opacity: 1, duration: 1500, easing: "easeOutQuint" },
         { scale: 0.75, opacity: 0, duration: 800, delay: 1000, easing: "easeInCubic"}
       ],
     });
@@ -67,7 +67,7 @@ function MetaSystemLogo ({ onComplete }) {
       targets: `.${styles["name"]}`,
       keyframes: [
         { opacity: 0, scale: 0.7, translateY: -100, easing: "easeInOutQuad" },
-        { opacity: 1, scale: 1, translateY: 0, easing: "easeOutBack", delay: 3650, duration: 1200 }
+        { opacity: 1, scale: 1, translateY: 0, easing: "easeOutBack", delay: 3450, duration: 1200 }
       ]
     });
 

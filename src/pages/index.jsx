@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -10,6 +10,7 @@ import ThreeStep from '../components/three-step';
 import ImageDescriptionSection from '../components/image-description-section';
 import PurposeDrivenSection from '../components/purpose-driven-section';
 import LogoAnimation from '../components/logo-animation';
+import { PageContext } from '../contexts';
 
 function HomeHero() {
   const {siteConfig} = useDocusaurusContext();
@@ -33,14 +34,29 @@ function HomeHero() {
   );
 }
 
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+function Body ({ setAnimationPlayed }) {
+  const [ animationStatus, setAnimation ] = useState("initialized");
+  const { animationPlayed } = useContext(PageContext);
+
+  const animationElement = (animationStatus === "initialized") && !animationPlayed ? (
+    <LogoAnimation
+      onComplete={() => { setAnimation("complete"); setAnimationPlayed(true); }}
+    />
+  ) : null;
+
+  useEffect(() => {
+    const page = document.getElementsByTagName("html")[0];
+    if (animationPlayed) {
+      page.style.overflow = 'unset';
+    } else {
+      window.scrollTo(0,0);
+      page.style.overflow = 'hidden';
+    }
+  }, [ animationPlayed ])
 
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Extensible and modular no-code engine, built for everyone, free and open-source.">
-      <LogoAnimation />
+    <>
+      {animationElement}
       <HomeHero />
       <TextCall />
       <ThreeStep />
@@ -68,6 +84,23 @@ export default function Home() {
       />
       <main>
       </main>
+    </>
+
+  );
+
+}
+
+export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
+  const [ animationPlayed, setAnimationPlayed ] = useState(false);
+
+  return (
+    <Layout
+      title={`${siteConfig.title}`}
+      description="Extensible and modular no-code engine, built for everyone, free and open-source.">
+      <PageContext.Provider value={{ animationPlayed }}>
+        <Body setAnimationPlayed={setAnimationPlayed}/>
+      </PageContext.Provider>
     </Layout>
   );
 }

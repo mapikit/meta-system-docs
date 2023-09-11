@@ -34,3 +34,13 @@
   opacity: 0;
 }
 
+@media screen and (max-width: 966px) {
+  .svg-container {
+    width: 16em;
+    height: 16em;
+  }
+
+  .name {
+    font-size: 32px
+  }
+}
