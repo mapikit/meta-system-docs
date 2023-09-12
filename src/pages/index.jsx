@@ -11,6 +11,7 @@ import ImageDescriptionSection from '../components/image-description-section';
 import PurposeDrivenSection from '../components/purpose-driven-section';
 import LogoAnimation from '../components/logo-animation';
 import { PageContext } from '../contexts';
+import SupporterSection from '../components/supporter-section';
 
 function HomeHero() {
   const {siteConfig} = useDocusaurusContext();
@@ -82,6 +83,7 @@ function Body ({ setAnimationPlayed }) {
         titleColor="green"
         direction="text-first"
       />
+      <SupporterSection />
       <main>
       </main>
     </>
@@ -92,7 +94,7 @@ function Body ({ setAnimationPlayed }) {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  const [ animationPlayed, setAnimationPlayed ] = useState(false);
+  const [ animationPlayed, setAnimationPlayed ] = useState(true);
 
   return (
     <Layout
