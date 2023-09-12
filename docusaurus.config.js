@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Meta-System',
-  tagline: 'A sytem to be any system.',
+  tagline: 'A system to be any system.',
   url: 'https://mapikit.github.io',
   baseUrl: '/meta-system-docs/',
   onBrokenLinks: 'throw',
