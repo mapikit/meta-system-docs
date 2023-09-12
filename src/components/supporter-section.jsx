@@ -23,10 +23,10 @@ export default function SupporterSection () {
     <ScrollSection>
       <div className={styles["background"]}>
         <div className={styles["texts"]}>
-          <h1> You'll be in Good Company </h1>
+          <h1 className={styles["title"]}> You'll be in Good Company </h1>
           {/* Change the text when we have sponsors! :) */}
           <p> Love it so far? Consider supporting Meta-System and claim a spot below.  </p>
-          <span> (And in our hearts) </span>
+          <span className={styles["bottom-text"]}> (And in our hearts) </span>
         </div>
         <div className={styles["sponsor-slots"]}>
           <Slot />

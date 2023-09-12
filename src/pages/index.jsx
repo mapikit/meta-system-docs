@@ -96,8 +96,15 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   const [ animationPlayed, setAnimationPlayed ] = useState(false);
 
+  useEffect(() => {
+    let vh = Number(window.innerHeight * 0.01).toFixed(2);
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }, [])
+
+
   return (
     <Layout
+      className="aaaaaaaaaaaaa"
       title={`${siteConfig.title}`}
       description="Extensible and modular no-code engine, built for everyone, free and open-source.">
       <PageContext.Provider value={{ animationPlayed }}>
