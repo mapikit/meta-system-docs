@@ -94,7 +94,7 @@ function Body ({ setAnimationPlayed }) {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  const [ animationPlayed, setAnimationPlayed ] = useState(true);
+  const [ animationPlayed, setAnimationPlayed ] = useState(false);
 
   return (
     <Layout
