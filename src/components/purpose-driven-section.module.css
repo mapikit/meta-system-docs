@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+  min-height: 0;
+  margin-bottom: 4em;
+}
+
+.illustrations {
+  width: 100%;
+  z-index: -1;
+  height: 85vw;
+  background-image: url("/img/purpose_driven_illustration.webp");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin-top: -12vw;
+}
+
+.texts {
+  position: absolute;
+  max-width: 35em;
+  margin-top: 0em;
+  margin: 0 2em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #17162c;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: 0px 6px 82px -23px #080816;
+}
+
+.texts h1 {
+  color: #749bf0;
+}
+
+.texts p {
+  font-family: 'Livvic';
+  margin-bottom: 0;
+}
+
+.button-position {
+  position: absolute;
+  bottom: -1.5em;
+}
+
+@media screen and (max-width: 960px) {
+  .illustrations {
+    margin-top: 0vw;
+  }
+
+  .container {
+    min-height: 0;
+    padding: 0
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .illustrations {
+    margin-top: 18vw;
+  }
+
+  .container {
+    min-height: 0;
+    padding: 0
+  }
+}
+

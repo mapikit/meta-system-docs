@@ -16,10 +16,13 @@
   },
   "dependencies": {
     "@cmfcmf/docusaurus-search-local": "^1.1.0",
-    "@docusaurus/core": "2.4.1",
-    "@docusaurus/preset-classic": "2.4.1",
+    "@docusaurus/core": "^2.4.1",
+    "@docusaurus/plugin-content-docs": "^2.4.1",
+    "@docusaurus/plugin-content-pages": "^2.4.1",
+    "@docusaurus/theme-classic": "^2.4.1",
     "@mdx-js/react": "^1.6.22",
     "@svgr/webpack": "^8.0.1",
+    "animejs": "^3.2.1",
     "clsx": "^1.2.1",
     "file-loader": "^6.2.0",
     "prism-react-renderer": "^1.3.5",
@@ -40,8 +43,9 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.4.1",
+    "@docusaurus/module-type-aliases": "^2.4.1",
     "@tsconfig/docusaurus": "^1.0.5",
+    "@types/animejs": "^3.1.7",
     "raw-loader": "^4.0.2",
     "typescript": "^4.7.4"
   },

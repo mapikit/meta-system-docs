@@ -62,29 +62,63 @@
   --ifm-color-content-inverse: #ff00dd !important; /*??*/
   --ifm-color-content-secondary: rgb(104, 104, 133) !important; /* next page button name */
   --ifm-color-emphasis-100: #00000000 !important; /* Table cell BG */
-  --ifm-color-emphasis-200: #ff00dd !important;
+  --ifm-color-emphasis-200: #272757 !important;
   --ifm-color-emphasis-300: #37375bff !important; /* comment block */
   --ifm-color-emphasis-400: #54dcf2 !important;
-  --ifm-color-emphasis-600: #ff00dd !important;
+  --ifm-color-emphasis-600: #54dcf2 !important;
   --ifm-color-emphasis-900: #ff00dd !important;
   --ifm-font-color-base: #ffffff !important;
   --ifm-font-color-base-inverse: #ffffff !important; /* Page Title */
   --ifm-font-color-secondary: #ff00dd !important;
-  --ifm-toc-border-color: rgb(70, 70, 90) !important; /* Sidebar line */
-  --ifm-toc-link-color: rgb(70, 70, 90) !important; /* Page Anchor right sidebar inactive */
+  --ifm-toc-border-color: rgb(80, 80, 110) !important; /* Sidebar line */
+  --ifm-toc-link-color: rgb(80, 80, 110) !important; /* Page Anchor right sidebar inactive */
   --ifm-tabs-color-active: #ff00dd !important;
   --ifm-hero-text-color: #ff00dd !important;
   --ifm-footer-link-color: #54dcf2 !important;
-  --ifm-menu-color: rgb(70, 70, 90) !important; /* sidebar navigation inactive */ 
+  --ifm-menu-color: rgb(80, 80, 110) !important; /* sidebar navigation inactive */ 
   --ifm-blockquote-border-color:rgb(104, 104, 133) !important; /*comment block sidediv*/
   --ifm-blockquote-background-color:rgb(34, 34, 51) !important; /*comment block sidediv*/
   --ifm-code-background: rgba(185, 185, 206, 0.192) !important;
   --ifm-menu-color-background-active: rgba(185, 185, 206, 0.116) !important;
   --ifm-menu-color-background-hover: rgba(185, 185, 206, 0.068) !important;
+  --ifm-heading-font-family: 'Quicksand';
+  --ifm-heading-font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url(/static/fonts/Quicksand-VariableFont_wght.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url(/static/fonts/Livvic-Medium.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url('/static/fonts/Livvic-SemiBold.ttf');
+  font-weight: 600;
+}
+
+svg * {
+  transform-box: fill-box;
 }
 
 .hero--primary {
   background-color: #171730ff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__title {
+  font-weight: 800;
+  margin-bottom: 0.1em;
 }
 
 .menu__link--sublist:after {
@@ -97,7 +131,6 @@
   background-color: var(--ifm-menu-color-background-active);
 }
 
-z
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -105,6 +138,86 @@ z
   padding: 0 var(--ifm-pre-padding);
 }
 
+* {
+  font-family: 'Quicksand';
+}
+
+html,body {
+  height: 100%;
+}
+
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+.button--secondary {
+  font-family: 'Livvic';
+  font-weight: 600;
+}
+
+.header-icon.header-github:hover {
+  background: none;
+  background-image: url('/static/img/icons/github.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-icon.header-discord:hover {
+  background: none;
+  background-image: url('/static/img/icons/discord-new.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-github {
+  background-image: url('/static/img/icons/github.svg');
+  background-repeat: no-repeat;
+}
+
+.header-discord {
+  background-image: url('/static/img/icons/discord-new.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navbar * {
+  font-family: 'Livvic';
+  font-weight: 600;
+}
+
+.navbar__items--right > a {
+  margin: 0 18px;
+}
+
+.navbar .menu__list-item:not(.theme-doc-sidebar-item-category) {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .menu__list-item > .header-icon {
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+
+.navbar .menu__list-item > .header-github {
+  margin-top: 2em;
+}
+
+.header-icon {
+ width: 30px;
+ height: 30px;
+ transition: all 0.15s;
+
+}
+
+.header-icon:hover {
+  opacity: 0.8;
+}
+
+.navbar__logo {
+  height: 1.4em;
+  margin-right: 1.4em;
+}
+

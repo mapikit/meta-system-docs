@@ -47,7 +47,7 @@ If you're looking for how to configure it, check [this page](../configuring/bops
 ### Stitching Stage
 Firstly, Meta-System looks to the `"output"` function, and check its dependencies. For each dependency, this process is repeated: Get the module, find the dependencies, and do the same for them; Until we have all the function structure mapped for the BOps. This looks like we're traversing the flow backwards.
 
-<img src="/meta-system-docs/img/docs/stitch-process.png" height="380px" />
+<img src="/meta-system-docs/img/docs/stitch-process.png"  style={{ height:"auto", width:"100%", objectFit:"contain" }}/>
 
 The arrows represent the dicovery direction.
 
@@ -56,7 +56,7 @@ When the process is done, all the functions and intermediary mappers are "stitch
 ### Execution Stage
 This stage only happens when the function is called, either manually of from a Protocol. It is the data propagating through each function, and being mapped to the next on the chain until the output, then the final value is returned.
 
-<img src="/meta-system-docs/img/docs/execution-process.png" height="380px" />
+<img src="/meta-system-docs/img/docs/execution-process.png"  style={{ height:"auto", width:"100%", objectFit:"contain" }}/>
 
 The arrows represent the data flow direction.
 

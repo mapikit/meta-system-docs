@@ -1,13 +1,12 @@
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Meta-System',
-  tagline: 'An extensible and modular no-code engine, built for everyone, free and open-source.',
+  tagline: 'A system to be any system.',
   url: 'https://mapikit.github.io',
   baseUrl: '/meta-system-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  staticDirectories: ['static'],
   favicon: 'img/favicon.ico',
   organizationName: 'mapikit', // Usually your GitHub org/user name.
   projectName: 'meta-system-docs', // Usually your repo name.
@@ -47,12 +46,14 @@ module.exports = {
         },
         {
           href: 'https://github.com/mapikit/meta-system',
-          label: 'GitHub',
+          className: 'header-github header-icon',
+          'aria-label': 'GitHub Repository',
           position: 'right',
         },
         {
           href: 'https://discord.gg/ndGsnbTW7V',
-          label: 'Discord',
+          className: 'header-discord header-icon',
+          'aria-label': 'Discord Server',
           position: 'right'
         },
       ],
@@ -74,28 +75,30 @@ module.exports = {
         },
       ],
       copyright: `Meta-System was built by Mapikit and follows the GPL-3.0 License. Documentation page built with Docusaurus.`,
-    },
-    prism: {
-      theme: darkCodeTheme,
-      darkTheme: darkCodeTheme,
-    },
+    }
   },
-  presets: [
-    [
-      '@docusaurus/preset-classic',
+  presets: [],
+  plugins: [
+    [ require.resolve('@cmfcmf/docusaurus-search-local'),
       {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/mapikit/meta-system-docs/edit/main/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
+        indexBlog: false,
+        indexPages: true
+      }
+    ],
+    ['@docusaurus/plugin-content-docs',
+      {
+        path: 'docs',
+        breadcrumbs: true,
+        sidebarPath: require.resolve('./sidebars.js'),
+        editUrl:
+          'https://github.com/mapikit/meta-system-docs/edit/main/',
+      }
+    ],
+    ['@docusaurus/theme-classic',
+      {
+        customCss: require.resolve('./src/css/custom.css'),
       },
     ],
-  ],
-  plugins: [
-    require.resolve('@cmfcmf/docusaurus-search-local')
+    ['@docusaurus/plugin-content-pages', {}]
   ]
 };

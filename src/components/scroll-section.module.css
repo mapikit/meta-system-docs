@@ -1,0 +1,16 @@
+.scroll-section > * {
+/*  align-self: stretch;*/
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.overflowed {
+  overflow-y: visible;
+  z-index: 1;
+}
+
+@media screen and (max-width: 966px) {
+  .scroll-section > * {
+    padding: 2rem;
+  }
+}

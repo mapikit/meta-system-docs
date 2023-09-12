@@ -1,0 +1,52 @@
+.background {
+  background: linear-gradient(0deg, #101023, #141529 60%);
+  margin-top: -2em;
+  min-height: 0;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.title {
+  color: #3cf691;
+}
+
+.texts {
+  padding-top: 5em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-text {
+  color: white;
+  opacity: 0.7;
+  margin-top: -1em;
+}
+
+.sponsor-slots {
+  margin-top: 4em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap; 
+}
+
+.slot {
+  margin: 1em;
+  opacity: 0.5;
+  transition-duration: 0.34s;
+}
+
+.slot:hover {
+  opacity: 1;
+}
+
+.button-position {
+  margin: 2em 0 4em 0;
+  font-size: large;
+}
+

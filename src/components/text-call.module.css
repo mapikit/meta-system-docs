@@ -1,0 +1,81 @@
+.text-call-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text-call {
+  max-width: 43em;
+}
+
+.text-call p {
+  font-family: 'Livvic';
+  font-size: 18px;
+}
+
+.text-call span {
+  color: var(--ifm-navbar-link-hover-color)
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+.logo-container {
+  margin-left: 10em;
+}
+
+.big-logo {
+  background-image: url('/static/img/big_msys_logo.webp');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 17em;
+  width: 17em;
+}
+
+.bg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-graph {
+  background-image: url('/static/img/braphbg.webp');
+  width: 100%;
+  height: 85%;
+  opacity: 0.04;
+  background-size: cover;
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #17162c, #12162c00);
+}
+
+@media screen and (max-width: 966px) {
+  .text-call-container {
+    flex-flow: column nowrap;
+  }
+
+  .logo-container {
+    margin-left: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .big-logo {
+    height: 14em;
+    width: 14em;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
